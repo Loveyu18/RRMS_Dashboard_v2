@@ -1,0 +1,89 @@
+
+[
+{
+    "administrative":"回收處理機構",
+    "factory":"回收業",
+    "industryResult":
+    {
+        "States":"已具資格",
+        "verify":"審核通過",
+        "totalQuantity":479,
+        "material":
+            {
+            "cars":100,
+            "plasticContainer":466,
+            "nonPlasticContainer":255,
+            "informationItems":196,
+            "tire":444,
+            "ieadStorageBattery":447,
+            "battery":500,
+            "lightingSource":250
+            } 
+    }
+},
+{
+    "administrative":"回收處理機構",
+    "factory":"處理業",
+    "industryResult":
+    {
+        "States":"已具資格",
+        "verify":"審核通過",
+        "totalQuantity":1736,
+        "material":
+            {
+            "cars":999,
+            "plasticContainer":500,
+            "nonPlasticContainer":500,
+            "informationItems":500,
+            "tire":500,
+            "ieadStorageBattery":500,
+            "battery":500,
+            "lightingSource":500
+            } 
+    }
+},
+{
+    "administrative":"受補貼機構",
+    "factory":"回收業",
+    "industryResult":
+    {
+        "States":"已具資格",
+        "verify":"審核通過",
+        "totalQuantity":736,
+        "material":
+            {
+            "cars":999,
+            "plasticContainer":500,
+            "nonPlasticContainer":500,
+            "informationItems":500,
+            "tire":500,
+            "ieadStorageBattery":500,
+            "battery":500,
+            "lightingSource":500
+            } 
+    }
+},
+{
+    "administrative":"受補貼機構",
+    "factory":"處理業",
+    "industryResult":
+    {
+        "States":"已具資格",
+        "verify":"審核通過",
+        "totalQuantity":236,
+        "material":
+            {
+            "cars":999,
+            "plasticContainer":500,
+            "nonPlasticContainer":500,
+            "informationItems":500,
+            "tire":500,
+            "ieadStorageBattery":500,
+            "battery":500,
+            "lightingSource":500
+            } 
+    }
+}
+]  
+
+
