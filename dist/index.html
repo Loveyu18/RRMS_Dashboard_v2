@@ -314,7 +314,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 									</div>
 								</div>
 								<div class="font-weight-bolder font-size-h2 text-dark-75 position-absolute"
-									id="localVerifyQuantity"></div>
+									id="localVerify_Quantity"></div>
 								<canvas id="kt_stats_widget_2_1_chart"
 									style="height: 130px; width: 130px; display: block;" width="110" height="110"
 									class="chartjs-render-monitor"></canvas>
@@ -325,14 +325,14 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 								<!--begin::legend-->
 								<div class="legend d-flex align-items-center py-1">
 									<span class="label label-dot label-danger mr-2"></span>
-									<span id="localRecycleQuantity"
+									<span id="localRecycle_Quantity"
 										class="font-weight-bolder font-size-lg text-muted"></span>
 								</div>
 								<!--end::legend-->
 								<!--begin::legend-->
 								<div class="legend d-flex align-items-center py-1">
 									<span class="label label-dot label-primary mr-2"></span>
-									<span id="localDealQuantity"
+									<span id="localDeal_Quantity"
 										class="font-weight-bolder font-size-lg text-muted"></span>
 								</div>
 								<!--end::legend-->
@@ -420,7 +420,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 									</div>
 								</div>
 								<div class="font-weight-bolder font-size-h2 text-dark-75 position-absolute"
-									id="subsidyVerifyQuantity"></div>
+									id="subVerify_Quantity"></div>
 								<canvas id="kt_stats_widget_2_2_chart"
 									style="height: 130px; width: 130px; display: block;" width="110" height="110"
 									class="chartjs-render-monitor"></canvas>
@@ -431,14 +431,14 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 								<!--begin::legend-->
 								<div class="legend d-flex align-items-center py-1">
 									<span class="label label-dot label-danger mr-2"></span>
-									<span id="subsidyRecycleQuantity"
+									<span id="subRecycle_Quantity"
 										class="font-weight-bolder font-size-lg text-muted"></span>
 								</div>
 								<!--end::legend-->
 								<!--begin::legend-->
 								<div class="legend d-flex align-items-center py-1">
 									<span class="label label-dot label-primary mr-2"></span>
-									<span id="subsidyDealQuantity"
+									<span id="subDeal_Quantity"
 										class="font-weight-bolder font-size-lg text-muted"></span>
 								</div>
 								<!--end::legend-->
@@ -1872,8 +1872,12 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 		<!--end::Dashboard-->
 	</div>
 
+	<p id="ajax_test"></p>
+
 	<!-- jquery js -->
 	<script src="assets/js/pages/jquery-3.6.1.min.js"></script>
+	<!-- axios cdn -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.js"></script>
 
 
 	<script>var HOST_URL = "https://preview.keenthemes.com/keen/theme/tools/preview";</script>
@@ -1895,6 +1899,9 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 	<script src="assets/js/pages/my-script.js"></script>
 	<!--end::Page Scripts-->
 
+	<script>
+
+	</script>
 
 </body>
 <!--end::Body-->

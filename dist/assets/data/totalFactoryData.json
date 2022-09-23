@@ -1,4 +1,5 @@
-
+{
+    "totalFactoryData":
 [
 {
     "administrative":"回收處理機構",
@@ -33,12 +34,12 @@
             {
             "cars":999,
             "plasticContainer":500,
-            "nonPlasticContainer":500,
-            "informationItems":500,
-            "tire":500,
-            "ieadStorageBattery":500,
+            "nonPlasticContainer":600,
+            "informationItems":300,
+            "tire":800,
+            "ieadStorageBattery":100,
             "battery":500,
-            "lightingSource":500
+            "lightingSource":400
             } 
     }
 },
@@ -53,13 +54,13 @@
         "material":
             {
             "cars":999,
-            "plasticContainer":500,
+            "plasticContainer":900,
             "nonPlasticContainer":500,
-            "informationItems":500,
-            "tire":500,
-            "ieadStorageBattery":500,
-            "battery":500,
-            "lightingSource":500
+            "informationItems":800,
+            "tire":520,
+            "ieadStorageBattery":50,
+            "battery":530,
+            "lightingSource":100
             } 
     }
 },
@@ -74,16 +75,95 @@
         "material":
             {
             "cars":999,
-            "plasticContainer":500,
-            "nonPlasticContainer":500,
+            "plasticContainer":400,
+            "nonPlasticContainer":100,
             "informationItems":500,
-            "tire":500,
-            "ieadStorageBattery":500,
-            "battery":500,
-            "lightingSource":500
+            "tire":520,
+            "ieadStorageBattery":700,
+            "battery":580,
+            "lightingSource":590
             } 
     }
 }
-]  
-
+],
+    "case_history":
+[
+    {
+        "administrative":"回收處理機構",
+        "year":"111年",
+        "month":
+        {
+            "Jan":80,
+            "Feb":90,
+            "Mar":70,
+            "Apr":84,
+            "May":103,
+            "Jun":105,
+            "Jul":150,
+            "Aug":75,
+            "Sep":90,
+            "Oct":80,
+            "Nov":0,
+            "Dec":0
+        }
+    },
+    {
+        "administrative":"回收處理機構",
+        "year":"110年",
+        "month":
+        {
+            "Jan":70,
+            "Feb":89,
+            "Mar":20,
+            "Apr":54,
+            "May":80,
+            "Jun":199,
+            "Jul":145,
+            "Aug":80,
+            "Sep":99,
+            "Oct":80,
+            "Nov":123,
+            "Dec":99
+        }
+    },
+    {
+        "administrative":"受補貼機構",
+        "year":"111年",
+        "month":
+        {
+            "Jan":80,
+            "Feb":90,
+            "Mar":70,
+            "Apr":84,
+            "May":103,
+            "Jun":105,
+            "Jul":150,
+            "Aug":75,
+            "Sep":90,
+            "Oct":80,
+            "Nov":0,
+            "Dec":0
+        }
+    },
+    {
+        "administrative":"受補貼機構",
+        "year":"110年",
+        "month":
+        {
+            "Jan":70,
+            "Feb":89,
+            "Mar":20,
+            "Apr":54,
+            "May":80,
+            "Jun":199,
+            "Jul":145,
+            "Aug":80,
+            "Sep":99,
+            "Oct":80,
+            "Nov":123,
+            "Dec":99
+        }
+    }
+] 
+}
 
