@@ -497,4 +497,70 @@ axios
   .finally(function () {
     console.log("finally");
   });
+
+axios
+  .get("./assets/data/announcement.json")
+  .then((res) => {
+    let get_system_data = res.data.system_announcement;
+    let get_public_data = res.data.public_announcement;
+    const system_announcement_1 = document.querySelector(
+      "#system_announcement_1"
+    );
+    system_announcement_1.innerHTML = `
+    <tr>
+    <th scope="row">${get_system_data[0].row}</th>
+    <td> <span class="label label-inline label-light-success font-weight-bold">
+    ${get_system_data[0].date.year}/${get_system_data[0].date.month}/${get_system_data[0].date.day}
+      </span></td>
+    <td class="text-left">${get_system_data[0].content}</td>
+    <td>
+      <span class="label label-inline label-light-primary font-weight-bold">
+      ${get_system_data[0].source}
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">${get_system_data[1].row}</th>
+    <td> <span class="label label-inline label-light-success font-weight-bold">
+        ${get_system_data[1].date.year}/${get_system_data[1].date.month}/${get_system_data[1].date.day}
+      </span></td>
+    <td class="text-left">${get_system_data[1].content}</td>
+    <td>
+      <span class="label label-inline label-light-primary font-weight-bold">
+      ${get_system_data[1].source}
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">${get_system_data[2].row}</th>
+    <td> <span class="label label-inline label-light-success font-weight-bold">
+    ${get_system_data[2].date.year}/${get_system_data[2].date.month}/${get_system_data[2].date.day}
+      </span></td>
+    <td class="text-left">${get_system_data[2].content}</td>
+    <td>
+      <span class="label label-inline label-light-primary font-weight-bold">
+      ${get_system_data[2].source}
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">${get_system_data[3].row}</th>
+    <td> <span class="label label-inline label-light-success font-weight-bold">
+    ${get_system_data[3].date.year}/${get_system_data[3].date.month}/${get_system_data[3].date.day}
+      </span></td>
+    <td class="text-left">${get_system_data[3].content}</td>
+    <td>
+      <span class="label label-inline label-light-primary font-weight-bold">
+      ${get_system_data[3].source}
+      </span>
+    </td>
+  </tr>
+    `;
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(function () {
+    console.log("finally");
+  });
 // end::ajax
