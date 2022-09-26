@@ -506,13 +506,19 @@ axios
     const system_announcement_1 = document.querySelector(
       "#system_announcement_1"
     );
+    const system_announcement_2 = document.querySelector(
+      "#system_announcement_2"
+    );
+
     system_announcement_1.innerHTML = `
     <tr>
     <th scope="row">${get_system_data[0].row}</th>
     <td> <span class="label label-inline label-light-success font-weight-bold">
     ${get_system_data[0].date.year}/${get_system_data[0].date.month}/${get_system_data[0].date.day}
       </span></td>
-    <td class="text-left">${get_system_data[0].content}</td>
+    <td class="text-left">
+    <span id="announcement_text">${get_system_data[0].content}</span>
+    </td>
     <td>
       <span class="label label-inline label-light-primary font-weight-bold">
       ${get_system_data[0].source}
@@ -524,7 +530,9 @@ axios
     <td> <span class="label label-inline label-light-success font-weight-bold">
         ${get_system_data[1].date.year}/${get_system_data[1].date.month}/${get_system_data[1].date.day}
       </span></td>
-    <td class="text-left">${get_system_data[1].content}</td>
+    <td class="text-left">
+    <span id="announcement_text">${get_system_data[1].content}</span>
+    </td>
     <td>
       <span class="label label-inline label-light-primary font-weight-bold">
       ${get_system_data[1].source}
@@ -536,7 +544,9 @@ axios
     <td> <span class="label label-inline label-light-success font-weight-bold">
     ${get_system_data[2].date.year}/${get_system_data[2].date.month}/${get_system_data[2].date.day}
       </span></td>
-    <td class="text-left">${get_system_data[2].content}</td>
+    <td class="text-left">
+    <span id="announcement_text">${get_system_data[2].content}</span>
+    </td>
     <td>
       <span class="label label-inline label-light-primary font-weight-bold">
       ${get_system_data[2].source}
@@ -548,7 +558,9 @@ axios
     <td> <span class="label label-inline label-light-success font-weight-bold">
     ${get_system_data[3].date.year}/${get_system_data[3].date.month}/${get_system_data[3].date.day}
       </span></td>
-    <td class="text-left">${get_system_data[3].content}</td>
+    <td class="text-left">
+    <span id="announcement_text">${get_system_data[3].content}</span>
+    </td>
     <td>
       <span class="label label-inline label-light-primary font-weight-bold">
       ${get_system_data[3].source}
@@ -556,7 +568,880 @@ axios
     </td>
   </tr>
     `;
+    system_announcement_2.innerHTML = `
+    <tr>
+    <th scope="row">${get_public_data[0].row}</th>
+    <td> <span class="label label-inline label-light-danger font-weight-bold">
+    ${get_public_data[0].date.year}/${get_public_data[0].date.month}/${get_public_data[0].date.day}
+      </span></td>
+    <td class="text-left">
+    <span id="announcement_text">${get_public_data[0].content}</span>
+    </td>
+    <td>
+      <span class="label label-inline label-light-warning font-weight-bold">
+      ${get_public_data[0].source}
+      </span>
+    </td>
+  </tr>
+    <tr>
+    <th scope="row">${get_public_data[1].row}</th>
+    <td> <span class="label label-inline label-light-danger font-weight-bold">
+    ${get_public_data[1].date.year}/${get_public_data[1].date.month}/${get_public_data[1].date.day}
+      </span></td>
+    <td class="text-left">
+    <span id="announcement_text">${get_public_data[1].content}</span>
+    </td>
+    <td>
+      <span class="label label-inline label-light-warning font-weight-bold">
+      ${get_public_data[1].source}
+      </span>
+    </td>
+  </tr>
+    <tr>
+    <th scope="row">${get_public_data[2].row}</th>
+    <td> <span class="label label-inline label-light-danger font-weight-bold">
+    ${get_public_data[2].date.year}/${get_public_data[2].date.month}/${get_public_data[2].date.day}
+      </span></td>
+    <td class="text-left">
+    <span id="announcement_text">${get_public_data[2].content}</span>
+    </td>
+    <td>
+      <span class="label label-inline label-light-warning font-weight-bold">
+      ${get_public_data[2].source}
+      </span>
+    </td>
+  </tr>
+    <tr>
+    <th scope="row">${get_public_data[3].row}</th>
+    <td> <span class="label label-inline label-light-danger font-weight-bold">
+    ${get_public_data[3].date.year}/${get_public_data[3].date.month}/${get_public_data[3].date.day}
+      </span></td>
+    <td class="text-left">
+    <span id="announcement_text">${get_public_data[3].content}</span>
+    </td>
+    <td>
+      <span class="label label-inline label-light-warning font-weight-bold">
+      ${get_public_data[3].source}
+      </span>
+    </td>
+  </tr>
+  
+    `;
+
+    // begin:: 判斷超過 35 字元，斷句變 ...more
+    const len = 35;
+    const announcement_text = document.querySelectorAll("#announcement_text");
+    announcement_text.forEach((item) => {
+      if (item.innerHTML.length > len) {
+        let txt = item.innerHTML.substring(0, len) + "...more";
+        item.innerHTML = txt;
+      }
+    });
+    // end:: 判斷超過 35 字元，斷句變 ...more
   })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(function () {
+    console.log("finally");
+  });
+
+axios
+  .get("./assets/data/case_manager.json")
+  .then((res) => {
+    // 取得 json 資料
+    let getCase_manager = res.data.case_manager;
+    console.log(getCase_manager);
+    // 案件數量加總
+    let local_total_states =
+      getCase_manager[0].states.new +
+      getCase_manager[0].states.change +
+      getCase_manager[0].states.extend +
+      getCase_manager[0].states.review +
+      getCase_manager[1].states.new +
+      getCase_manager[1].states.change +
+      getCase_manager[1].states.extend +
+      getCase_manager[1].states.review;
+    let sub_total_states =
+      getCase_manager[2].states.new +
+      getCase_manager[2].states.change +
+      getCase_manager[2].states.extend +
+      getCase_manager[2].states.review +
+      getCase_manager[3].states.new +
+      getCase_manager[3].states.change +
+      getCase_manager[3].states.extend +
+      getCase_manager[3].states.review;
+    let local_total_early_warning =
+      getCase_manager[0].early_warning.expire +
+      getCase_manager[0].early_warning.day7_to_0 +
+      getCase_manager[0].early_warning.day8_to_14 +
+      getCase_manager[0].early_warning.day15_to_30 +
+      getCase_manager[1].early_warning.expire +
+      getCase_manager[1].early_warning.day7_to_0 +
+      getCase_manager[1].early_warning.day8_to_14 +
+      getCase_manager[1].early_warning.day15_to_30;
+    let sub_total_early_warning =
+      getCase_manager[2].early_warning.expire +
+      getCase_manager[2].early_warning.day7_to_0 +
+      getCase_manager[2].early_warning.day8_to_14 +
+      getCase_manager[2].early_warning.day15_to_30 +
+      getCase_manager[3].early_warning.expire +
+      getCase_manager[3].early_warning.day7_to_0 +
+      getCase_manager[3].early_warning.day8_to_14 +
+      getCase_manager[3].early_warning.day15_to_30;
+    // 取得 tag 並填入 dom :案件總數
+    let getid_local_total_states = document.querySelector('#local_total_states')
+    getid_local_total_states.innerHTML = "共 "+local_total_states+" 件"
+    let getid_sub_total_states = document.querySelector('#sub_total_states')
+    getid_sub_total_states.innerHTML = "共 "+sub_total_states+" 件"
+    let getid_local_total_early_warning = document.querySelector('#local_total_early_warning')
+    getid_local_total_early_warning.innerHTML = "共 "+local_total_early_warning+" 件"
+    let getid_sub_total_early_warning = document.querySelector('#sub_total_early_warning')
+    getid_sub_total_early_warning.innerHTML = "共 "+sub_total_early_warning+" 件"
+    // 取得 tag 並填入 dom :個別案件數
+    // 地方 - 待審 
+    let getid_local_recycle_states_tab = document.querySelector('#kt_tab_mixed_1_1')
+    let getid_local_deal_states_tab = document.querySelector('#kt_tab_mixed_1_2')
+    getid_local_recycle_states_tab.innerHTML=`
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn btn-light-success pulse pulse-primary mr-5">
+          &nbsp;&nbsp;&nbsp;&nbsp;NEW&nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+        <a href="https://rrms2.eri.com.tw/DNC/Factory_Data/Verify_Search?tp=1"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">新登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-success mr-10">
+          <span class="position-relative">${getCase_manager[0].states.new}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-warning pulse pulse-primary mr-5">
+          CHANGE
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">變更登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-warning mr-10">
+          <span class="position-relative">${getCase_manager[0].states.change}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-danger pulse pulse-primary mr-6">
+          &nbsp;EXTEND&nbsp;
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">展延登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-danger mr-10">
+          <span class="position-relative">${getCase_manager[0].states.extend}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-primary pulse pulse-primary mr-5">
+          &nbsp;REVIEW&nbsp;
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">申請覆核</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-primary mr-10">
+          <span class="position-relative">${getCase_manager[0].states.review}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    `
+    getid_local_deal_states_tab.innerHTML=`
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn btn-light-success pulse pulse-primary mr-5">
+          &nbsp;&nbsp;&nbsp;&nbsp;NEW&nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">新登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-success mr-10">
+          <span class="position-relative">${getCase_manager[1].states.new}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-warning pulse pulse-primary mr-5">
+          CHANGE
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">變更登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-warning mr-10">
+          <span class="position-relative">${getCase_manager[1].states.change}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-danger pulse pulse-primary mr-6">
+          &nbsp;EXTEND&nbsp;
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">展延登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-danger mr-10">
+          <span class="position-relative">${getCase_manager[1].states.extend}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-primary pulse pulse-primary mr-5">
+          &nbsp;REVIEW&nbsp;
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">申請覆核</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-primary mr-10">
+          <span class="position-relative">${getCase_manager[1].states.review}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    `
+    // 地方 - 預警 
+    let getid_local_recycle_early_warning_tab = document.querySelector('#kt_tab_mixed_2_1')
+    let getid_local_deal_early_warning_tab = document.querySelector('#kt_tab_mixed_2_2')
+    getid_local_recycle_early_warning_tab.innerHTML=`
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-danger pulse pulse-danger mr-5">
+          <i class="flaticon2-information"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">已逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-danger mr-10">
+        <span class="position-relative">${getCase_manager[0].early_warning.expire}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-warning pulse pulse-warning mr-5">
+          <i class="flaticon2-bell-5"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">7日內逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-warning mr-10">
+        <span class="position-relative">${getCase_manager[0].early_warning.day7_to_0}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-success pulse pulse-success mr-5">
+          <i class="flaticon2-bell-5"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">8~14日逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-success mr-10">
+        <span class="position-relative">${getCase_manager[0].early_warning.day8_to_14}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-primary pulse pulse-primary mr-5">
+          <i class="flaticon2-protected"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">15~30日逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-primary mr-10">
+        <span class="position-relative">${getCase_manager[0].early_warning.day15_to_30}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    `
+    getid_local_deal_early_warning_tab.innerHTML=`
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-danger pulse pulse-danger mr-5">
+          <i class="flaticon2-information"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">已逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-danger mr-10">
+        <span class="position-relative">${getCase_manager[1].early_warning.expire}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-warning pulse pulse-warning mr-5">
+          <i class="flaticon2-bell-5"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">7日內逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-warning mr-10">
+        <span class="position-relative">${getCase_manager[1].early_warning.day7_to_0}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-success pulse pulse-success mr-5">
+          <i class="flaticon2-bell-5"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">8~14日逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-success mr-10">
+        <span class="position-relative">${getCase_manager[1].early_warning.day8_to_14}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-primary pulse pulse-primary mr-5">
+          <i class="flaticon2-protected"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">15~30日逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-primary mr-10">
+        <span class="position-relative">${getCase_manager[1].early_warning.day15_to_30}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    `
+    // 受補貼 - 待審 
+    let getid_sub_recycle_states_tab = document.querySelector('#kt_tab_mixed_3_1')
+    let getid_sub_deal_states_tab = document.querySelector('#kt_tab_mixed_3_2')
+    getid_sub_recycle_states_tab.innerHTML=`
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn btn-light-success pulse pulse-primary mr-5">
+          &nbsp;&nbsp;&nbsp;&nbsp;NEW&nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">新登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-success mr-10">
+          <span class="position-relative">${getCase_manager[2].states.new}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-warning pulse pulse-primary mr-5">
+          CHANGE
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">變更登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-warning mr-10">
+          <span class="position-relative">${getCase_manager[2].states.change}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-danger pulse pulse-primary mr-6">
+          &nbsp;EXTEND&nbsp;
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">展延登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-danger mr-10">
+          <span class="position-relative">${getCase_manager[2].states.extend}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-primary pulse pulse-primary mr-5">
+          &nbsp;REVIEW&nbsp;
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">申請覆核</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-primary mr-10">
+          <span class="position-relative">${getCase_manager[2].states.review}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    `
+    getid_sub_deal_states_tab.innerHTML=`
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn btn-light-success pulse pulse-primary mr-5">
+          &nbsp;&nbsp;&nbsp;&nbsp;NEW&nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">新登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-success mr-10">
+          <span class="position-relative">${getCase_manager[3].states.new}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-warning pulse pulse-primary mr-5">
+          CHANGE
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">變更登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-warning mr-10">
+          <span class="position-relative">${getCase_manager[3].states.change}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-danger pulse pulse-primary mr-6">
+          &nbsp;EXTEND&nbsp;
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">展延登記</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-danger mr-10">
+          <span class="position-relative">${getCase_manager[3].states.extend}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn  btn-light-primary pulse pulse-primary mr-5">
+          &nbsp;REVIEW&nbsp;
+        </a>
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">申請覆核</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::text-->
+      <div class="d-flex align-items-center">
+        <span class="label pulse pulse-primary mr-10">
+          <span class="position-relative">${getCase_manager[3].states.review}</span>
+          <span class="pulse-ring"></span>
+        </span>
+      </div>
+      <!--end::text-->
+    </div>
+    <!--end::Item-->
+    `
+    // 受補貼 - 預警 
+    let getid_sub_recycle_early_warning_tab = document.querySelector('#kt_tab_mixed_4_1')
+    let getid_sub_deal_early_warning_tab = document.querySelector('#kt_tab_mixed_4_2')
+    getid_sub_recycle_early_warning_tab.innerHTML=`
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-danger pulse pulse-danger mr-5">
+          <i class="flaticon2-information"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">已逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-danger mr-10">
+        <span class="position-relative">${getCase_manager[2].early_warning.expire}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-warning pulse pulse-warning mr-5">
+          <i class="flaticon2-bell-5"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">7日內逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-warning mr-10">
+        <span class="position-relative">${getCase_manager[2].early_warning.day7_to_0}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-success pulse pulse-success mr-5">
+          <i class="flaticon2-bell-5"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">8~14日逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-success mr-10">
+        <span class="position-relative">${getCase_manager[2].early_warning.day8_to_14}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-primary pulse pulse-primary mr-5">
+          <i class="flaticon2-protected"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">15~30日逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-primary mr-10">
+        <span class="position-relative">${getCase_manager[2].early_warning.day15_to_30}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    `
+    getid_sub_deal_early_warning_tab.innerHTML=`
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-danger pulse pulse-danger mr-5">
+          <i class="flaticon2-information"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">已逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-danger mr-10">
+        <span class="position-relative">${getCase_manager[3].early_warning.expire}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-warning pulse pulse-warning mr-5">
+          <i class="flaticon2-bell-5"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">7日內逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-warning mr-10">
+        <span class="position-relative">${getCase_manager[3].early_warning.day7_to_0}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-success pulse pulse-success mr-5">
+          <i class="flaticon2-bell-5"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">8~14日逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-success mr-10">
+        <span class="position-relative">${getCase_manager[3].early_warning.day8_to_14}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    <!--begin::Item-->
+    <div class="d-flex align-items-center justify-content-between mb-6">
+
+      <!--begin::Text-->
+      <div class="d-flex align-items-center">
+        <!--begin::未審案件提醒圖標-->
+        <a href="#" class="btn btn-icon btn-light-primary pulse pulse-primary mr-5">
+          <i class="flaticon2-protected"></i>
+          <span class="pulse-ring"></span>
+        </a>
+        <!--end::未審案件提醒圖標-->
+        <a href="#"
+          class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">15~30日逾期案件</a>
+      </div>
+      <!--end::Text-->
+      <!--begin::pulse-ring-->
+      <span class="label pulse pulse-primary mr-10">
+        <span class="position-relative">${getCase_manager[3].early_warning.day15_to_30}</span>
+        <span class="pulse-ring"></span>
+      </span>
+      <!--end::pulse-ring-->
+    </div>
+    <!--end::Item-->
+    `
+
+
+
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(function () {
+    console.log("finally");
+  });
+
+axios
+  .get("")
+  .then((res) => {})
   .catch(function (error) {
     console.log(error);
   })

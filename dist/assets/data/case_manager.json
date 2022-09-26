@@ -1,0 +1,76 @@
+{
+    "case_manager":[
+        {
+        "administrative": "回收處理機構",
+        "factory": "回收業",
+        "states":
+        {
+            "new":99,
+            "change":547,
+            "extend":75,
+            "review":55
+        },
+        "early_warning":
+        {
+            "expire":9,
+            "day7_to_0":2,
+            "day8_to_14":4,
+            "day15_to_30":6
+        }
+        },
+        {
+            "administrative": "回收處理機構",
+            "factory": "處理業",
+            "states":
+            {
+                "new":199,
+                "change":1547,
+                "extend":175,
+                "review":155
+            },
+            "early_warning":
+            {
+                "expire":9,
+                "day7_to_0":2,
+                "day8_to_14":4,
+                "day15_to_30":6
+            }
+            },
+            {
+                "administrative": "受補貼機構",
+                "factory": "回收業",
+                "states":
+                {
+                    "new":9,
+                    "change":47,
+                    "extend":75,
+                    "review":55
+                },
+                "early_warning":
+                {
+                    "expire":9,
+                    "day7_to_0":2,
+                    "day8_to_14":4,
+                    "day15_to_30":6
+                }
+                },
+                {
+                    "administrative": "受補貼機構",
+                    "factory": "處理業",
+                    "states":
+                    {
+                        "new":99,
+                        "change":547,
+                        "extend":75,
+                        "review":55
+                    },
+                    "early_warning":
+                    {
+                        "expire":19,
+                        "day7_to_0":22,
+                        "day8_to_14":44,
+                        "day15_to_30":67
+                    }
+                    }
+    ]
+}
