@@ -1,0 +1,41 @@
+審查案件管理-地方
+[GET] local_review_case
+{
+    "localPendingRecycle": [
+        {
+            "new": "19",
+            "change": "21",
+            "extend": "10",
+            "review": "16",
+            "totalCounts": "50"
+        }
+    ],
+    "localPendingDealWith": [
+        {
+            "new": "1",
+            "change": "1",
+            "extend": "1",
+            "review": "3",
+            "totalCounts": "6"
+        }
+    ],
+    "localUntrialRecycle": [
+        {
+            "overdue": "18",
+            "overdue7": "18",
+            "overdue14": "25",
+            "overdue30": "40"        
+        }
+    ],
+    "localUntrialDealWith": [
+        {
+            "popularAuthors": "83",
+            "newUsers": "47",
+            "topAuthors": "65",
+            "activeCustomers": "71"
+        }
+    ],
+    "status":"success"
+   
+
+}

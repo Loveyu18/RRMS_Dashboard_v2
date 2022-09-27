@@ -1,0 +1,33 @@
+取得公告列表
+[GET] system_bulletin
+[Parameters]
+ 1.page:0 
+ 2.keyword:'' 
+ 3.limit:4 
+{
+   "data":[
+       {
+           "date":"2022/07/5",
+           "content":"公告內容",
+           "author":"環保署基金會"
+       }
+    
+   ],
+   "total":10,
+   "status":"success"
+   
+},
+
+發布訊息
+[POST] system_bulletin
+[Parameters]
+ 1.date:''
+ 2.content:'' 
+ 3.status:1|0
+ 4.author_id:0 
+
+{
+   "message":"新增成功|新增失敗..",
+   "status":"success|fail"
+   
+}

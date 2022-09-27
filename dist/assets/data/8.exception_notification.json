@@ -1,0 +1,29 @@
+廢四機聯單異常通報
+[GET] exception_notification
+
+{
+    "data": [
+        {
+            "id":"01",
+            "message": "聯單範圍重複",
+            "total": "99"
+            
+        },
+        {
+            "id":"02",
+            "message": "聯單範圍重複",
+            "total": "99"
+            
+        },
+        {
+            "id":"03",
+            "message": "聯單範圍重複",
+            "total": "99"
+            
+        }
+        
+    ],
+    "status":"success"
+   
+
+}

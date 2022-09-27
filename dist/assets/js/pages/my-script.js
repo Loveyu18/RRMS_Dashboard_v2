@@ -1440,8 +1440,9 @@ axios
   });
 
 axios
-  .get("")
-  .then((res) => {})
+  .get("./assets/data/3.local_operator_status.json")
+  .then((res) => {
+  })
   .catch(function (error) {
     console.log(error);
   })

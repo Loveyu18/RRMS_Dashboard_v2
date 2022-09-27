@@ -1,0 +1,57 @@
+取得業者分析現況-地方
+[GET] local_operator_status
+{
+    "localRegistry": [
+        {
+            "total": "8345",
+            "recycle": "99",
+            "dealwith": "435"    
+        }
+    ],
+    "localIndustryMaterial": [
+        {
+            "car": "87",
+            "plastic": "35",
+            "non-plastic": "44",    
+            "information": "56",  
+            "tire": "36",  
+            "leadStorageBattery": "10",  
+            "dryBattery": "58",  
+            "lighting": "72"
+        }
+    ],
+    "localCaseSupportNew": [
+        {
+            "january": "21",
+            "february": "50",
+            "march": "70",    
+            "april": "10",  
+            "may": "30",  
+            "june": "55",  
+            "july": "75",  
+            "august": "0",
+            "september": "0",
+            "october": "0",
+            "november": "0",
+            "december": "0"
+        }
+        
+    ],
+    "localCaseSupportOld": [
+        {
+            "january": "21",
+            "february": "50",
+            "march": "70",    
+            "april": "10",  
+            "may": "30",  
+            "june": "55",  
+            "july": "75",  
+            "august": "0",
+            "september": "0",
+            "october": "0",
+            "november": "0",
+            "december": "0"
+        }
+    ],
+    "status":"success"
+}

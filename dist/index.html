@@ -178,220 +178,6 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 
 		</div>
 		<!--end::announcementBlock-->
-
-		<!--begin::Dashboard-->
-		<!--begin::H2 Title-->
-		<h2>業者現況分析</h2>
-		<!--end::H2 Title-->
-		<!--begin::Row-->
-		<div class="row">
-			<div class="col-xl-3">
-				<!--begin::Stats Widget 2-->
-				<div class="card card-custom card-stretch gutter-b wave wave-animate-fast wave-success">
-					<!--begin::Header-->
-					<div class="card-header border-0 pt-6">
-						<h3 class="card-title">
-							<a href="#" class="btn btn-light-success font-weight-bold mr-2 disabled"
-								aria-disabled="true">地方</a>
-							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">完成登記家數</span>
-						</h3>
-
-					</div>
-					<!--end::Header-->
-					<!--begin::Body-->
-					<div class="card-body d-flex align-items-start justify-content-center pt-7 flex-wrap">
-
-						<!--begin::Visuals-->
-						<div class="d-flex align-items-center flex-column">
-
-							<!--begin::Chart-->
-							<div class="d-flex flex-center position-relative">
-								<div class="chartjs-size-monitor">
-									<div class="chartjs-size-monitor-expand">
-										<div class=""></div>
-									</div>
-									<div class="chartjs-size-monitor-shrink">
-										<div class=""></div>
-									</div>
-								</div>
-								<div class="font-weight-bolder font-size-h2 text-dark-75 position-absolute"
-									id="localVerify_Quantity"></div>
-								<canvas id="kt_stats_widget_2_1_chart"
-									style="height: 130px; width: 130px; display: block;" width="110" height="110"
-									class="chartjs-render-monitor"></canvas>
-							</div>
-							<!--end::Chart-->
-							<!--begin::legends-->
-							<div class="d-flex flex-column mr-4 mt-3">
-								<!--begin::legend-->
-								<div class="legend d-flex align-items-center py-1">
-									<span class="label label-dot label-danger mr-2"></span>
-									<span id="localRecycle_Quantity"
-										class="font-weight-bolder font-size-lg text-muted"></span>
-								</div>
-								<!--end::legend-->
-								<!--begin::legend-->
-								<div class="legend d-flex align-items-center py-1">
-									<span class="label label-dot label-primary mr-2"></span>
-									<span id="localDeal_Quantity"
-										class="font-weight-bolder font-size-lg text-muted"></span>
-								</div>
-								<!--end::legend-->
-							</div>
-							<!--end::legends-->
-						</div>
-						<!--end::Visuals-->
-					</div>
-					<!--end::Body-->
-				</div>
-				<!--end::Stats Widget 2-->
-			</div>
-			<div class="col-xl-5">
-				<!--begin::Stats Widget 2-->
-				<div class="card card-custom card-stretch gutter-b ">
-					<!--begin::Header-->
-					<div class="card-header border-0 pt-6">
-						<h3 class="card-title">
-							<a href="#" class="btn btn-light-success font-weight-bold mr-2 disabled"
-								aria-disabled="true">地方</a> <span
-								class="card-label font-weight-bolder font-size-h2 text-dark-75">業者材質分佈</span>
-						</h3>
-
-					</div>
-					<!--end::Header-->
-					<!--begin::Chart-->
-					<div class="" id="subsidyChart1"></div>
-					<!--end::Chart-->
-				</div>
-				<!--end::Stats Widget 2-->
-			</div>
-			<div class="col-xl-4">
-				<!--begin::Stats Widget 3-->
-				<div class="card card-custom card-stretch gutter-b">
-					<!--begin::Header-->
-					<div class="card-header border-0 pt-6">
-						<h3 class="card-title">
-							<a href="#" class="btn btn-light-success font-weight-bold mr-2 disabled"
-								aria-disabled="true">地方</a>
-							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">案件決策支援系統</span>
-						</h3>
-
-					</div>
-					<!--end::Header-->
-					<!--begin::Body-->
-					<div id="caseChart1"></div>
-					<!--end::Body-->
-				</div>
-				<!--end::Stats Widget 3-->
-			</div>
-
-
-
-		</div>
-		<!--end::Row-->
-		<!--begin::Row-->
-		<div class="row">
-			<div class="col-xl-3">
-				<!--begin::Stats Widget 2-->
-				<div class="card card-custom card-stretch gutter-b wave wave-animate wave-danger mb-8 mb-lg-0">
-					<!--begin::Header-->
-					<div class="card-header border-0 pt-6">
-						<h3 class="card-title">
-							<a href="#" class="btn btn-light-danger font-weight-bold mr-2 disabled"
-								aria-disabled="true">受補貼</a>
-							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">完成登記家數</span>
-						</h3>
-
-					</div>
-					<!--end::Header-->
-					<!--begin::Body-->
-					<div class="card-body d-flex align-items-start justify-content-center pt-7 flex-wrap">
-
-						<!--begin::Visuals-->
-						<div class="d-flex align-items-center flex-column">
-
-							<!--begin::Chart-->
-							<div class="d-flex flex-center position-relative">
-								<div class="chartjs-size-monitor">
-									<div class="chartjs-size-monitor-expand">
-										<div class=""></div>
-									</div>
-									<div class="chartjs-size-monitor-shrink">
-										<div class=""></div>
-									</div>
-								</div>
-								<div class="font-weight-bolder font-size-h2 text-dark-75 position-absolute"
-									id="subVerify_Quantity"></div>
-								<canvas id="kt_stats_widget_2_2_chart"
-									style="height: 130px; width: 130px; display: block;" width="110" height="110"
-									class="chartjs-render-monitor"></canvas>
-							</div>
-							<!--end::Chart-->
-							<!--begin::legends-->
-							<div class="d-flex flex-column mr-4 mt-3">
-								<!--begin::legend-->
-								<div class="legend d-flex align-items-center py-1">
-									<span class="label label-dot label-danger mr-2"></span>
-									<span id="subRecycle_Quantity"
-										class="font-weight-bolder font-size-lg text-muted"></span>
-								</div>
-								<!--end::legend-->
-								<!--begin::legend-->
-								<div class="legend d-flex align-items-center py-1">
-									<span class="label label-dot label-primary mr-2"></span>
-									<span id="subDeal_Quantity"
-										class="font-weight-bolder font-size-lg text-muted"></span>
-								</div>
-								<!--end::legend-->
-							</div>
-							<!--end::legends-->
-						</div>
-						<!--end::Visuals-->
-					</div>
-					<!--end::Body-->
-				</div>
-				<!--end::Stats Widget 2-->
-			</div>
-			<div class="col-xl-5">
-				<!--begin::Stats Widget 2-->
-				<div class="card card-custom card-stretch gutter-b">
-					<!--begin::Header-->
-					<div class="card-header border-0 pt-6">
-						<h3 class="card-title">
-							<a href="#" class="btn btn-light-danger font-weight-bold mr-2 disabled"
-								aria-disabled="true">受補貼</a> <span
-								class="card-label font-weight-bolder font-size-h2 text-dark-75">業者材質分佈</span>
-						</h3>
-
-					</div>
-					<!--end::Header-->
-					<!--begin::Chart-->
-					<div class="" id="subsidyChart2"></div>
-					<!--end::Chart-->
-				</div>
-				<!--end::Stats Widget 2-->
-			</div>
-			<div class="col-xl-4">
-				<!--begin::Stats Widget 3-->
-				<div class="card card-custom card-stretch gutter-b">
-					<!--begin::Header-->
-					<div class="card-header border-0 pt-6">
-						<h3 class="card-title">
-							<a href="#" class="btn btn-light-danger font-weight-bold mr-2 disabled"
-								aria-disabled="true">受補貼</a>
-							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">案件決策支援系統</span>
-						</h3>
-
-					</div>
-					<!--end::Header-->
-					<!--begin::Body-->
-					<div id="caseChart2"></div>
-					<!--end::Body-->
-				</div>
-				<!--end::Stats Widget 3-->
-			</div>
-		</div>
-		<!--end::Row-->
 		<!--begin::h2 Title-->
 		<h2>審查案件管理</h2>
 		<!--end::h2 Title-->
@@ -804,6 +590,220 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 
 		</div>
 		<!--end::Row-->
+		<!--begin::Dashboard-->
+		<!--begin::H2 Title-->
+		<h2>業者現況分析</h2>
+		<!--end::H2 Title-->
+		<!--begin::Row-->
+		<div class="row">
+			<div class="col-xl-3">
+				<!--begin::Stats Widget 2-->
+				<div class="card card-custom card-stretch gutter-b wave wave-animate-fast wave-success">
+					<!--begin::Header-->
+					<div class="card-header border-0 pt-6">
+						<h3 class="card-title">
+							<a href="#" class="btn btn-light-success font-weight-bold mr-2 disabled"
+								aria-disabled="true">地方</a>
+							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">完成登記家數</span>
+						</h3>
+
+					</div>
+					<!--end::Header-->
+					<!--begin::Body-->
+					<div class="card-body d-flex align-items-start justify-content-center pt-7 flex-wrap">
+
+						<!--begin::Visuals-->
+						<div class="d-flex align-items-center flex-column">
+
+							<!--begin::Chart-->
+							<div class="d-flex flex-center position-relative">
+								<div class="chartjs-size-monitor">
+									<div class="chartjs-size-monitor-expand">
+										<div class=""></div>
+									</div>
+									<div class="chartjs-size-monitor-shrink">
+										<div class=""></div>
+									</div>
+								</div>
+								<div class="font-weight-bolder font-size-h2 text-dark-75 position-absolute"
+									id="localVerify_Quantity"></div>
+								<canvas id="kt_stats_widget_2_1_chart"
+									style="height: 130px; width: 130px; display: block;" width="110" height="110"
+									class="chartjs-render-monitor"></canvas>
+							</div>
+							<!--end::Chart-->
+							<!--begin::legends-->
+							<div class="d-flex flex-column mr-4 mt-3">
+								<!--begin::legend-->
+								<div class="legend d-flex align-items-center py-1">
+									<span class="label label-dot label-danger mr-2"></span>
+									<span id="localRecycle_Quantity"
+										class="font-weight-bolder font-size-lg text-muted"></span>
+								</div>
+								<!--end::legend-->
+								<!--begin::legend-->
+								<div class="legend d-flex align-items-center py-1">
+									<span class="label label-dot label-primary mr-2"></span>
+									<span id="localDeal_Quantity"
+										class="font-weight-bolder font-size-lg text-muted"></span>
+								</div>
+								<!--end::legend-->
+							</div>
+							<!--end::legends-->
+						</div>
+						<!--end::Visuals-->
+					</div>
+					<!--end::Body-->
+				</div>
+				<!--end::Stats Widget 2-->
+			</div>
+			<div class="col-xl-5">
+				<!--begin::Stats Widget 2-->
+				<div class="card card-custom card-stretch gutter-b ">
+					<!--begin::Header-->
+					<div class="card-header border-0 pt-6">
+						<h3 class="card-title">
+							<a href="#" class="btn btn-light-success font-weight-bold mr-2 disabled"
+								aria-disabled="true">地方</a> <span
+								class="card-label font-weight-bolder font-size-h2 text-dark-75">業者材質分佈</span>
+						</h3>
+
+					</div>
+					<!--end::Header-->
+					<!--begin::Chart-->
+					<div class="" id="subsidyChart1"></div>
+					<!--end::Chart-->
+				</div>
+				<!--end::Stats Widget 2-->
+			</div>
+			<div class="col-xl-4">
+				<!--begin::Stats Widget 3-->
+				<div class="card card-custom card-stretch gutter-b">
+					<!--begin::Header-->
+					<div class="card-header border-0 pt-6">
+						<h3 class="card-title">
+							<a href="#" class="btn btn-light-success font-weight-bold mr-2 disabled"
+								aria-disabled="true">地方</a>
+							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">案件趨勢圖</span>
+						</h3>
+
+					</div>
+					<!--end::Header-->
+					<!--begin::Body-->
+					<div id="caseChart1"></div>
+					<!--end::Body-->
+				</div>
+				<!--end::Stats Widget 3-->
+			</div>
+
+
+
+		</div>
+		<!--end::Row-->
+		<!--begin::Row-->
+		<div class="row">
+			<div class="col-xl-3">
+				<!--begin::Stats Widget 2-->
+				<div class="card card-custom card-stretch gutter-b wave wave-animate wave-danger mb-8 mb-lg-0">
+					<!--begin::Header-->
+					<div class="card-header border-0 pt-6">
+						<h3 class="card-title">
+							<a href="#" class="btn btn-light-danger font-weight-bold mr-2 disabled"
+								aria-disabled="true">受補貼</a>
+							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">完成登記家數</span>
+						</h3>
+
+					</div>
+					<!--end::Header-->
+					<!--begin::Body-->
+					<div class="card-body d-flex align-items-start justify-content-center pt-7 flex-wrap">
+
+						<!--begin::Visuals-->
+						<div class="d-flex align-items-center flex-column">
+
+							<!--begin::Chart-->
+							<div class="d-flex flex-center position-relative">
+								<div class="chartjs-size-monitor">
+									<div class="chartjs-size-monitor-expand">
+										<div class=""></div>
+									</div>
+									<div class="chartjs-size-monitor-shrink">
+										<div class=""></div>
+									</div>
+								</div>
+								<div class="font-weight-bolder font-size-h2 text-dark-75 position-absolute"
+									id="subVerify_Quantity"></div>
+								<canvas id="kt_stats_widget_2_2_chart"
+									style="height: 130px; width: 130px; display: block;" width="110" height="110"
+									class="chartjs-render-monitor"></canvas>
+							</div>
+							<!--end::Chart-->
+							<!--begin::legends-->
+							<div class="d-flex flex-column mr-4 mt-3">
+								<!--begin::legend-->
+								<div class="legend d-flex align-items-center py-1">
+									<span class="label label-dot label-danger mr-2"></span>
+									<span id="subRecycle_Quantity"
+										class="font-weight-bolder font-size-lg text-muted"></span>
+								</div>
+								<!--end::legend-->
+								<!--begin::legend-->
+								<div class="legend d-flex align-items-center py-1">
+									<span class="label label-dot label-primary mr-2"></span>
+									<span id="subDeal_Quantity"
+										class="font-weight-bolder font-size-lg text-muted"></span>
+								</div>
+								<!--end::legend-->
+							</div>
+							<!--end::legends-->
+						</div>
+						<!--end::Visuals-->
+					</div>
+					<!--end::Body-->
+				</div>
+				<!--end::Stats Widget 2-->
+			</div>
+			<div class="col-xl-5">
+				<!--begin::Stats Widget 2-->
+				<div class="card card-custom card-stretch gutter-b">
+					<!--begin::Header-->
+					<div class="card-header border-0 pt-6">
+						<h3 class="card-title">
+							<a href="#" class="btn btn-light-danger font-weight-bold mr-2 disabled"
+								aria-disabled="true">受補貼</a> <span
+								class="card-label font-weight-bolder font-size-h2 text-dark-75">業者材質分佈</span>
+						</h3>
+
+					</div>
+					<!--end::Header-->
+					<!--begin::Chart-->
+					<div class="" id="subsidyChart2"></div>
+					<!--end::Chart-->
+				</div>
+				<!--end::Stats Widget 2-->
+			</div>
+			<div class="col-xl-4">
+				<!--begin::Stats Widget 3-->
+				<div class="card card-custom card-stretch gutter-b">
+					<!--begin::Header-->
+					<div class="card-header border-0 pt-6">
+						<h3 class="card-title">
+							<a href="#" class="btn btn-light-danger font-weight-bold mr-2 disabled"
+								aria-disabled="true">受補貼</a>
+							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">案件趨勢圖</span>
+						</h3>
+
+					</div>
+					<!--end::Header-->
+					<!--begin::Body-->
+					<div id="caseChart2"></div>
+					<!--end::Body-->
+				</div>
+				<!--end::Stats Widget 3-->
+			</div>
+		</div>
+		<!--end::Row-->
+
 		<!--begin::Row-->
 		<div class="row">
 			<div class="col-lg-8">
