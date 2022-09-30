@@ -101,31 +101,31 @@ axios
         },
       },
       colors: [
-        "#33b2df",
-        "#546E7A",
-        "#d4526e",
-        "#13d8aa",
-        "#A5978B",
-        "#2b908f",
-        "#f9a3a4",
-        "#f48024",
+        "#d2f4ea",
+        "#a6e9d5",
+        "#79dfc1",
+        "#4dd4ac",
+        "#20c997",
+        "#1aa179",
+        "#13795b",
+        "#0d503c",
       ],
       dataLabels: {
         enabled: true,
         textAnchor: "start",
         style: {
-          colors: ["#fff"],
+          colors: ["#"],
         },
         formatter: function (val, opt) {
           return opt.w.globals.labels[opt.dataPointIndex] + " " + val;
         },
         offsetX: 0,
         dropShadow: {
-          enabled: true,
+          enabled: false,
         },
       },
       stroke: {
-        width: 1,
+        width: 0,
         colors: ["#fff"],
       },
       xaxis: {
