@@ -124,10 +124,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<table class="table table-hover announcement_table">
 						<thead>
 							<tr class="text-center align-items-center">
-								<th class="col-1">序號</th>
-								<th class="col-2">公告日期</th>
+								<th class="col-1 px-0">序號</th>
+								<th class="col-1">公告日期</th>
 								<th class="col-6">公告內容</th>
-								<th class="col-3">公告人</th>
+								<th class="col-4">公告人</th>
 							</tr>
 						</thead>
 						<tbody class="text-center align-items-center" id="system_announcement_1">
@@ -147,26 +147,26 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 						<div class="card-toolbar-block">
 							<form class="form-inline">
 								<input class="form-control" type="search" placeholder="請輸入關鍵字" aria-label="Search">
-								<button class="btn btn-outline-danger my-2 my-sm-0" type="submit">查詢</button>
+								<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">查詢</button>
 							</form>
 						</div>
 						<div class="card-toolbar-block">
-							<a href="#" class="btn btn-outline-danger">
+							<a href="#" class="btn btn-outline-primary">
 								<i class="flaticon2-chat-1"></i>發佈訊息
 							</a>
-							<a href="#" class="btn btn-outline-danger">
+							<a href="#" class="btn btn-outline-primary">
 								<i class="flaticon-browser"></i>看更多
 							</a>
 						</div>
 					</div>
 					<!--end::card-header-->
-					<table class="table table-hover ">
+					<table class="table table-hover announcement_table">
 						<thead>
 							<tr class="text-center align-items-center">
-								<th class="col-1">序號</th>
-								<th class="col-2">公告日期</th>
+								<th class="col-1 px-0">序號</th>
+								<th class="col-1">公告日期</th>
 								<th class="col-6">公告內容</th>
-								<th class="col-3">公告人</th>
+								<th class="col-4">公告人</th>
 							</tr>
 						</thead>
 						<tbody class="text-center align-items-center" id="system_announcement_2"></tbody>
@@ -190,7 +190,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title align-items-start flex-column">
 							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">
-								<a href="#" class="btn btn-light-success font-weight-bold mr-2 disabled"
+								<a href="#" class="btn btn-success font-weight-bold mr-2 disabled"
 									aria-disabled="true">地方</a>
 								待審案件
 							</span>
@@ -291,7 +291,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title align-items-start flex-column">
 							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">
-								<a href="#" class="btn btn-light-success font-weight-bold mr-2 disabled"
+								<a href="#" class="btn btn-success font-weight-bold mr-2 disabled"
 									aria-disabled="true">地方</a>
 								未審案件預警
 							</span>
@@ -392,7 +392,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title align-items-start flex-column">
 							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">
-								<a href="#" class="btn btn-light-danger font-weight-bold mr-2 disabled"
+								<a href="#" class="btn btn-primary font-weight-bold mr-2 disabled"
 									aria-disabled="true">受補貼</a>待審案件
 							</span>
 							<span class="text-muted mt-3 font-weight-bold font-size-lg"
@@ -493,7 +493,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title align-items-start flex-column">
 							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">
-								<a href="#" class="btn btn-light-danger font-weight-bold mr-2 disabled"
+								<a href="#" class="btn btn-primary font-weight-bold mr-2 disabled"
 									aria-disabled="true">受補貼</a> 未審案件預警
 							</span>
 							<span class="text-muted mt-3 font-weight-bold font-size-lg"
@@ -602,7 +602,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<!--begin::Header-->
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title">
-							<a href="#" class="btn btn-light-success font-weight-bold mr-2 disabled"
+							<a href="#" class="btn btn-success font-weight-bold mr-2 disabled"
 								aria-disabled="true">地方</a>
 							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">完成登記家數</span>
 						</h3>
@@ -610,7 +610,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					</div>
 					<!--end::Header-->
 					<!--begin::Body-->
-					<div class="card-body d-flex align-items-start justify-content-center pt-7 flex-wrap">
+					<div class="card-body d-flex align-items-center justify-content-center pt-7 flex-wrap">
 
 						<!--begin::Visuals-->
 						<div class="d-flex align-items-center flex-column">
@@ -637,15 +637,13 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 								<!--begin::legend-->
 								<div class="legend d-flex align-items-center py-1">
 									<span class="label label-dot label-danger mr-2"></span>
-									<span id="localRecycle_Quantity"
-										class="font-weight-bolder font-size-lg text-muted"></span>
+									<span id="localRecycle_Quantity" class="font-weight-bolder font-size-lg "></span>
 								</div>
 								<!--end::legend-->
 								<!--begin::legend-->
 								<div class="legend d-flex align-items-center py-1">
 									<span class="label label-dot label-primary mr-2"></span>
-									<span id="localDeal_Quantity"
-										class="font-weight-bolder font-size-lg text-muted"></span>
+									<span id="localDeal_Quantity" class="font-weight-bolder font-size-lg "></span>
 								</div>
 								<!--end::legend-->
 							</div>
@@ -663,9 +661,9 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<!--begin::Header-->
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title">
-							<a href="#" class="btn btn-light-success font-weight-bold mr-2 disabled"
-								aria-disabled="true">地方</a> <span
-								class="card-label font-weight-bolder font-size-h2 text-dark-75">業者材質分佈</span>
+							<a href="#" class="btn btn-success font-weight-bold mr-2 disabled"
+								aria-disabled="true">地方</a>
+							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">業者材質分佈</span>
 						</h3>
 
 					</div>
@@ -682,7 +680,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<!--begin::Header-->
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title">
-							<a href="#" class="btn btn-light-success font-weight-bold mr-2 disabled"
+							<a href="#" class="btn btn-success font-weight-bold mr-2 disabled"
 								aria-disabled="true">地方</a>
 							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">案件趨勢圖</span>
 						</h3>
@@ -704,11 +702,11 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 		<div class="row">
 			<div class="col-xl-3">
 				<!--begin::Stats Widget 2-->
-				<div class="card card-custom card-stretch gutter-b wave wave-animate wave-danger mb-8 mb-lg-0">
+				<div class="card card-custom card-stretch gutter-b wave wave-animate wave-primary mb-8 mb-lg-0">
 					<!--begin::Header-->
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title">
-							<a href="#" class="btn btn-light-danger font-weight-bold mr-2 disabled"
+							<a href="#" class="btn btn-primary font-weight-bold mr-2 disabled"
 								aria-disabled="true">受補貼</a>
 							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">完成登記家數</span>
 						</h3>
@@ -716,11 +714,9 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					</div>
 					<!--end::Header-->
 					<!--begin::Body-->
-					<div class="card-body d-flex align-items-start justify-content-center pt-7 flex-wrap">
-
+					<div class="card-body d-flex align-items-center justify-content-center pt-7 flex-wrap">
 						<!--begin::Visuals-->
 						<div class="d-flex align-items-center flex-column">
-
 							<!--begin::Chart-->
 							<div class="d-flex flex-center position-relative">
 								<div class="chartjs-size-monitor">
@@ -743,15 +739,13 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 								<!--begin::legend-->
 								<div class="legend d-flex align-items-center py-1">
 									<span class="label label-dot label-danger mr-2"></span>
-									<span id="subRecycle_Quantity"
-										class="font-weight-bolder font-size-lg text-muted"></span>
+									<span id="subRecycle_Quantity" class="font-weight-bolder font-size-lg "></span>
 								</div>
 								<!--end::legend-->
 								<!--begin::legend-->
 								<div class="legend d-flex align-items-center py-1">
 									<span class="label label-dot label-primary mr-2"></span>
-									<span id="subDeal_Quantity"
-										class="font-weight-bolder font-size-lg text-muted"></span>
+									<span id="subDeal_Quantity" class="font-weight-bolder font-size-lg "></span>
 								</div>
 								<!--end::legend-->
 							</div>
@@ -769,7 +763,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<!--begin::Header-->
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title">
-							<a href="#" class="btn btn-light-danger font-weight-bold mr-2 disabled"
+							<a href="#" class="btn btn-primary font-weight-bold mr-2 disabled"
 								aria-disabled="true">受補貼</a> <span
 								class="card-label font-weight-bolder font-size-h2 text-dark-75">業者材質分佈</span>
 						</h3>
@@ -788,7 +782,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<!--begin::Header-->
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title">
-							<a href="#" class="btn btn-light-danger font-weight-bold mr-2 disabled"
+							<a href="#" class="btn btn-primary font-weight-bold mr-2 disabled"
 								aria-disabled="true">受補貼</a>
 							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">案件趨勢圖</span>
 						</h3>
@@ -816,14 +810,19 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 								class="card-label font-weight-bolder font-size-h2 text-dark-75">地方登記與受補貼資料不一致業者名單</span>
 							<span class="text-muted mt-3 font-weight-bold font-size-lg">共 6 家</span>
 						</h3>
-
+						<div class="card-toolbar-block">
+							<form class="form-inline">
+								<input class="form-control" type="search" placeholder="請輸入關鍵字" aria-label="Search">
+								<button class="btn btn-outline-success my-2 my-sm-0" type="submit">查詢</button>
+							</form>
+						</div>
 					</div>
 					<!--end::Header-->
 					<!--begin::Body-->
 					<div class="card-body pt-1 pb-4">
 						<!--begin::Table-->
 						<div class="table-responsive">
-							<table class="table  table-borderless table-vertical-center">
+							<table class="table table-borderless table-vertical-center">
 								<thead>
 									<tr>
 										<th class="p-0 w-50px"></th>
@@ -831,7 +830,6 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 										<th class="p-0 w-50px"></th>
 										<th class="p-0 min-w-110px"></th>
 										<th class="p-0 min-w-110px"></th>
-										<th class="p-0 w-50px"></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -856,7 +854,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 											<span class="text-muted font-weight-500">高雄市大社區中山路9號</span>
 										</td>
 										<td class="text-right">
-											<span class="label label-lg label-light-success label-inline">高雄市</span>
+											<span class="label label-xl label-gray-600 label-inline">高雄市</span>
 										</td>
 									</tr>
 									<tr>
@@ -880,7 +878,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 											<span class="text-muted font-weight-500">高雄市大社區中山路9號</span>
 										</td>
 										<td class="text-right">
-											<span class="label label-lg label-light-success label-inline">高雄市</span>
+											<span class="label label-xl label-gray-600 label-inline">高雄市</span>
 										</td>
 									</tr>
 									<tr>
@@ -904,7 +902,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 											<span class="text-muted font-weight-500">高雄市大社區中山路9號</span>
 										</td>
 										<td class="text-right">
-											<span class="label label-lg label-light-success label-inline">高雄市</span>
+											<span class="label label-xl label-gray-600 label-inline">高雄市</span>
 										</td>
 									</tr>
 									<tr>
@@ -928,7 +926,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 											<span class="text-muted font-weight-500">高雄市大社區中山路9號</span>
 										</td>
 										<td class="text-right">
-											<span class="label label-lg label-light-success label-inline">高雄市</span>
+											<span class="label label-xl label-gray-600 label-inline">高雄市</span>
 										</td>
 									</tr>
 									<tr>
@@ -952,7 +950,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 											<span class="text-muted font-weight-500">高雄市大社區中山路9號</span>
 										</td>
 										<td class="text-right">
-											<span class="label label-lg label-light-success label-inline">高雄市</span>
+											<span class="label label-xl label-gray-600 label-inline">高雄市</span>
 										</td>
 									</tr>
 								</tbody>

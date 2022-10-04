@@ -2,18 +2,17 @@
 
 // sweetalert2
 // Swal.fire({
-// 		title: '<strong>審查案件提醒</strong>',
-// 		icon: 'warning',
-// 		html:
-// 			'<b>地方登記</b>已逾期共<a href="https://rrms2.eri.com.tw/DNC/Factory_Data/Verify_Search?tp=1">10</a>件，7日內逾期共<a href="//sweetalert2.github.io">20</a>件</br>' +
-// 			'<b>受補貼</b>已逾期共<a href="https://rrms2.eri.com.tw/DNC/Factory_Data/Verify_Search?tp=2">5</a>件，7日內逾期共<a href="//sweetalert2.github.io">15</a>件',
-// 		showCloseButton: true,
-// 		showCancelButton: false,
-// 		focusConfirm: true,
-// 		confirmButtonText:
-// 			'我知道了',
-// 		confirmButtonAriaLabel: '我知道了',
-// 	})
+//   title: "<strong>審查案件提醒</strong>",
+//   icon: "warning",
+//   html:
+//     '<b>地方登記</b>已逾期共<a href="https://rrms2.eri.com.tw/DNC/Factory_Data/Verify_Search?tp=1">10</a>件，7日內逾期共<a href="//sweetalert2.github.io">20</a>件</br>' +
+//     '<b>受補貼</b>已逾期共<a href="https://rrms2.eri.com.tw/DNC/Factory_Data/Verify_Search?tp=2">5</a>件，7日內逾期共<a href="//sweetalert2.github.io">15</a>件',
+//   showCloseButton: true,
+//   showCancelButton: false,
+//   focusConfirm: true,
+//   confirmButtonText: "我知道了",
+//   confirmButtonAriaLabel: "我知道了",
+// });
 // end::sweetalert2
 
 // begin::ajax
@@ -84,7 +83,7 @@ axios
       ],
       chart: {
         type: "bar",
-        // height: 320,
+        height: 400,
         // width: 500,
       },
       grid: {
@@ -100,16 +99,7 @@ axios
           },
         },
       },
-      colors: [
-        "#d2f4ea",
-        "#a6e9d5",
-        "#79dfc1",
-        "#4dd4ac",
-        "#20c997",
-        "#1aa179",
-        "#13795b",
-        "#0d503c",
-      ],
+      colors: ["#a6e9d5"],
       dataLabels: {
         enabled: true,
         textAnchor: "start",
@@ -125,7 +115,7 @@ axios
         },
       },
       stroke: {
-        width: 0,
+        width: 1,
         colors: ["#fff"],
       },
       xaxis: {
@@ -191,7 +181,7 @@ axios
       ],
       chart: {
         type: "bar",
-        // height: 320,
+        height: 400,
         // width: 500,
       },
       grid: {
@@ -207,28 +197,19 @@ axios
           },
         },
       },
-      colors: [
-        "#33b2df",
-        "#546E7A",
-        "#d4526e",
-        "#13d8aa",
-        "#A5978B",
-        "#2b908f",
-        "#f9a3a4",
-        "#f48024",
-      ],
+      colors: ["#cfe2ff"],
       dataLabels: {
         enabled: true,
         textAnchor: "start",
         style: {
-          colors: ["#fff"],
+          colors: ["#"],
         },
         formatter: function (val, opt) {
           return opt.w.globals.labels[opt.dataPointIndex] + " " + val;
         },
         offsetX: 0,
         dropShadow: {
-          enabled: true,
+          enabled: false,
         },
       },
       stroke: {
@@ -310,7 +291,7 @@ axios
         },
       ],
       chart: {
-        height: 300,
+        height: 400,
         type: "area",
         toolbar: {
           show: true,
@@ -350,7 +331,7 @@ axios
       },
       stroke: {
         curve: "smooth",
-        width: 1,
+        width: [3,0]
       },
       xaxis: {
         type: "date",
@@ -385,7 +366,7 @@ axios
     var caseOptions2 = {
       series: [
         {
-          name: "今年(" + case_history[2].year + ")",
+          name: "去年同期(" + case_history[2].year + ")",
           data: [
             case_history[2].month.Jan,
             case_history[2].month.Feb,
@@ -402,7 +383,7 @@ axios
           ],
         },
         {
-          name: "去年同期(" + case_history[3].year + ")",
+          name: "今年(" + case_history[3].year + ")",
           data: [
             case_history[3].month.Jan,
             case_history[3].month.Feb,
@@ -420,7 +401,7 @@ axios
         },
       ],
       chart: {
-        height: 300,
+        height: 400,
         type: "area",
         toolbar: {
           show: true,
@@ -460,7 +441,7 @@ axios
       },
       stroke: {
         curve: "smooth",
-        width: 1,
+        width: [0,3],
       },
       xaxis: {
         type: "date",
@@ -513,56 +494,56 @@ axios
     system_announcement_1.innerHTML = `
     <tr>
     <th scope="row">${get_system_data[0].row}</th>
-    <td> <span class="label label-inline label-light-success font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-success font-weight-bold">
     ${get_system_data[0].date.year}/${get_system_data[0].date.month}/${get_system_data[0].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_system_data[0].content}</span>
     </td>
     <td>
-      <span class="label label-inline label-light-primary font-weight-bold">
+      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
       ${get_system_data[0].source}
       </span>
     </td>
   </tr>
   <tr>
     <th scope="row">${get_system_data[1].row}</th>
-    <td> <span class="label label-inline label-light-success font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-success font-weight-bold">
         ${get_system_data[1].date.year}/${get_system_data[1].date.month}/${get_system_data[1].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_system_data[1].content}</span>
     </td>
     <td>
-      <span class="label label-inline label-light-primary font-weight-bold">
+      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
       ${get_system_data[1].source}
       </span>
     </td>
   </tr>
   <tr>
     <th scope="row">${get_system_data[2].row}</th>
-    <td> <span class="label label-inline label-light-success font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-success font-weight-bold">
     ${get_system_data[2].date.year}/${get_system_data[2].date.month}/${get_system_data[2].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_system_data[2].content}</span>
     </td>
     <td>
-      <span class="label label-inline label-light-primary font-weight-bold">
+      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
       ${get_system_data[2].source}
       </span>
     </td>
   </tr>
   <tr>
     <th scope="row">${get_system_data[3].row}</th>
-    <td> <span class="label label-inline label-light-success font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-success font-weight-bold">
     ${get_system_data[3].date.year}/${get_system_data[3].date.month}/${get_system_data[3].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_system_data[3].content}</span>
     </td>
     <td>
-      <span class="label label-inline label-light-primary font-weight-bold">
+      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
       ${get_system_data[3].source}
       </span>
     </td>
@@ -571,56 +552,56 @@ axios
     system_announcement_2.innerHTML = `
     <tr>
     <th scope="row">${get_public_data[0].row}</th>
-    <td> <span class="label label-inline label-light-danger font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-primary font-weight-bold">
     ${get_public_data[0].date.year}/${get_public_data[0].date.month}/${get_public_data[0].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_public_data[0].content}</span>
     </td>
     <td>
-      <span class="label label-inline label-light-warning font-weight-bold">
+      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
       ${get_public_data[0].source}
       </span>
     </td>
   </tr>
     <tr>
     <th scope="row">${get_public_data[1].row}</th>
-    <td> <span class="label label-inline label-light-danger font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-primary font-weight-bold">
     ${get_public_data[1].date.year}/${get_public_data[1].date.month}/${get_public_data[1].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_public_data[1].content}</span>
     </td>
     <td>
-      <span class="label label-inline label-light-warning font-weight-bold">
+      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
       ${get_public_data[1].source}
       </span>
     </td>
   </tr>
     <tr>
     <th scope="row">${get_public_data[2].row}</th>
-    <td> <span class="label label-inline label-light-danger font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-primary font-weight-bold">
     ${get_public_data[2].date.year}/${get_public_data[2].date.month}/${get_public_data[2].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_public_data[2].content}</span>
     </td>
     <td>
-      <span class="label label-inline label-light-warning font-weight-bold">
+      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
       ${get_public_data[2].source}
       </span>
     </td>
   </tr>
     <tr>
     <th scope="row">${get_public_data[3].row}</th>
-    <td> <span class="label label-inline label-light-danger font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-primary font-weight-bold">
     ${get_public_data[3].date.year}/${get_public_data[3].date.month}/${get_public_data[3].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_public_data[3].content}</span>
     </td>
     <td>
-      <span class="label label-inline label-light-warning font-weight-bold">
+      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
       ${get_public_data[3].source}
       </span>
     </td>
@@ -629,7 +610,7 @@ axios
     `;
 
     // begin:: 判斷超過 35 字元，斷句變 ...more
-    const len = 35;
+    const len = 20;
     const announcement_text = document.querySelectorAll("#announcement_text");
     announcement_text.forEach((item) => {
       if (item.innerHTML.length > len) {
@@ -690,19 +671,29 @@ axios
       getCase_manager[3].early_warning.day8_to_14 +
       getCase_manager[3].early_warning.day15_to_30;
     // 取得 tag 並填入 dom :案件總數
-    let getid_local_total_states = document.querySelector('#local_total_states')
-    getid_local_total_states.innerHTML = "共 "+local_total_states+" 件"
-    let getid_sub_total_states = document.querySelector('#sub_total_states')
-    getid_sub_total_states.innerHTML = "共 "+sub_total_states+" 件"
-    let getid_local_total_early_warning = document.querySelector('#local_total_early_warning')
-    getid_local_total_early_warning.innerHTML = "共 "+local_total_early_warning+" 件"
-    let getid_sub_total_early_warning = document.querySelector('#sub_total_early_warning')
-    getid_sub_total_early_warning.innerHTML = "共 "+sub_total_early_warning+" 件"
+    let getid_local_total_states = document.querySelector(
+      "#local_total_states"
+    );
+    getid_local_total_states.innerHTML = "共 " + local_total_states + " 件";
+    let getid_sub_total_states = document.querySelector("#sub_total_states");
+    getid_sub_total_states.innerHTML = "共 " + sub_total_states + " 件";
+    let getid_local_total_early_warning = document.querySelector(
+      "#local_total_early_warning"
+    );
+    getid_local_total_early_warning.innerHTML =
+      "共 " + local_total_early_warning + " 件";
+    let getid_sub_total_early_warning = document.querySelector(
+      "#sub_total_early_warning"
+    );
+    getid_sub_total_early_warning.innerHTML =
+      "共 " + sub_total_early_warning + " 件";
     // 取得 tag 並填入 dom :個別案件數
-    // 地方 - 待審 
-    let getid_local_recycle_states_tab = document.querySelector('#kt_tab_mixed_1_1')
-    let getid_local_deal_states_tab = document.querySelector('#kt_tab_mixed_1_2')
-    getid_local_recycle_states_tab.innerHTML=`
+    // 地方 - 待審
+    let getid_local_recycle_states_tab =
+      document.querySelector("#kt_tab_mixed_1_1");
+    let getid_local_deal_states_tab =
+      document.querySelector("#kt_tab_mixed_1_2");
+    getid_local_recycle_states_tab.innerHTML = `
     <!--begin::Item-->
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
@@ -716,7 +707,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-success mr-10">
+        <span class="label label-xl pulse pulse-success mr-0">
           <span class="position-relative">${getCase_manager[0].states.new}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -737,7 +728,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-warning mr-10">
+        <span class="label label-xl pulse pulse-warning mr-0">
           <span class="position-relative">${getCase_manager[0].states.change}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -758,7 +749,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-danger mr-10">
+        <span class="label label-xl pulse pulse-danger mr-0">
           <span class="position-relative">${getCase_manager[0].states.extend}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -779,7 +770,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-primary mr-10">
+        <span class="label label-xl pulse pulse-primary mr-0">
           <span class="position-relative">${getCase_manager[0].states.review}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -787,8 +778,8 @@ axios
       <!--end::text-->
     </div>
     <!--end::Item-->
-    `
-    getid_local_deal_states_tab.innerHTML=`
+    `;
+    getid_local_deal_states_tab.innerHTML = `
     <!--begin::Item-->
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
@@ -802,7 +793,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-success mr-10">
+        <span class="label label-xl pulse pulse-success mr-0">
           <span class="position-relative">${getCase_manager[1].states.new}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -823,7 +814,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-warning mr-10">
+        <span class="label label-xl pulse pulse-warning mr-0">
           <span class="position-relative">${getCase_manager[1].states.change}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -844,7 +835,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-danger mr-10">
+        <span class="label label-xl pulse pulse-danger mr-0">
           <span class="position-relative">${getCase_manager[1].states.extend}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -865,7 +856,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-primary mr-10">
+        <span class="label label-xl pulse pulse-primary mr-0">
           <span class="position-relative">${getCase_manager[1].states.review}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -873,11 +864,13 @@ axios
       <!--end::text-->
     </div>
     <!--end::Item-->
-    `
-    // 地方 - 預警 
-    let getid_local_recycle_early_warning_tab = document.querySelector('#kt_tab_mixed_2_1')
-    let getid_local_deal_early_warning_tab = document.querySelector('#kt_tab_mixed_2_2')
-    getid_local_recycle_early_warning_tab.innerHTML=`
+    `;
+    // 地方 - 預警
+    let getid_local_recycle_early_warning_tab =
+      document.querySelector("#kt_tab_mixed_2_1");
+    let getid_local_deal_early_warning_tab =
+      document.querySelector("#kt_tab_mixed_2_2");
+    getid_local_recycle_early_warning_tab.innerHTML = `
     <!--begin::Item-->
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
@@ -893,7 +886,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-danger mr-10">
+      <span class="label label-xl pulse pulse-danger mr-0">
         <span class="position-relative">${getCase_manager[0].early_warning.expire}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -916,7 +909,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-warning mr-10">
+      <span class="label label-xl pulse pulse-warning mr-0">
         <span class="position-relative">${getCase_manager[0].early_warning.day7_to_0}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -939,7 +932,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-success mr-10">
+      <span class="label label-xl pulse pulse-success mr-0">
         <span class="position-relative">${getCase_manager[0].early_warning.day8_to_14}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -962,15 +955,15 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-primary mr-10">
+      <span class="label label-xl pulse pulse-primary mr-0">
         <span class="position-relative">${getCase_manager[0].early_warning.day15_to_30}</span>
         <span class="pulse-ring"></span>
       </span>
       <!--end::pulse-ring-->
     </div>
     <!--end::Item-->
-    `
-    getid_local_deal_early_warning_tab.innerHTML=`
+    `;
+    getid_local_deal_early_warning_tab.innerHTML = `
     <!--begin::Item-->
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
@@ -986,7 +979,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-danger mr-10">
+      <span class="label label-xl pulse pulse-danger mr-0">
         <span class="position-relative">${getCase_manager[1].early_warning.expire}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -1009,7 +1002,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-warning mr-10">
+      <span class="label label-xl pulse pulse-warning mr-0">
         <span class="position-relative">${getCase_manager[1].early_warning.day7_to_0}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -1032,7 +1025,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-success mr-10">
+      <span class="label label-xl pulse pulse-success mr-0">
         <span class="position-relative">${getCase_manager[1].early_warning.day8_to_14}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -1055,18 +1048,19 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-primary mr-10">
+      <span class="label label-xl pulse pulse-primary mr-0">
         <span class="position-relative">${getCase_manager[1].early_warning.day15_to_30}</span>
         <span class="pulse-ring"></span>
       </span>
       <!--end::pulse-ring-->
     </div>
     <!--end::Item-->
-    `
-    // 受補貼 - 待審 
-    let getid_sub_recycle_states_tab = document.querySelector('#kt_tab_mixed_3_1')
-    let getid_sub_deal_states_tab = document.querySelector('#kt_tab_mixed_3_2')
-    getid_sub_recycle_states_tab.innerHTML=`
+    `;
+    // 受補貼 - 待審
+    let getid_sub_recycle_states_tab =
+      document.querySelector("#kt_tab_mixed_3_1");
+    let getid_sub_deal_states_tab = document.querySelector("#kt_tab_mixed_3_2");
+    getid_sub_recycle_states_tab.innerHTML = `
     <!--begin::Item-->
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
@@ -1080,7 +1074,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-success mr-10">
+        <span class="label label-xl pulse pulse-success mr-0">
           <span class="position-relative">${getCase_manager[2].states.new}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -1101,7 +1095,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-warning mr-10">
+        <span class="label label-xl pulse pulse-warning mr-0">
           <span class="position-relative">${getCase_manager[2].states.change}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -1122,7 +1116,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-danger mr-10">
+        <span class="label label-xl pulse pulse-danger mr-0">
           <span class="position-relative">${getCase_manager[2].states.extend}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -1143,7 +1137,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-primary mr-10">
+        <span class="label label-xl pulse pulse-primary mr-0">
           <span class="position-relative">${getCase_manager[2].states.review}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -1151,8 +1145,8 @@ axios
       <!--end::text-->
     </div>
     <!--end::Item-->
-    `
-    getid_sub_deal_states_tab.innerHTML=`
+    `;
+    getid_sub_deal_states_tab.innerHTML = `
     <!--begin::Item-->
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
@@ -1166,7 +1160,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-success mr-10">
+        <span class="label label-xl pulse pulse-success mr-0">
           <span class="position-relative">${getCase_manager[3].states.new}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -1187,7 +1181,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-warning mr-10">
+        <span class="label label-xl pulse pulse-warning mr-0">
           <span class="position-relative">${getCase_manager[3].states.change}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -1208,7 +1202,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-danger mr-10">
+        <span class="label label-xl pulse pulse-danger mr-0">
           <span class="position-relative">${getCase_manager[3].states.extend}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -1229,7 +1223,7 @@ axios
       <!--end::Text-->
       <!--begin::text-->
       <div class="d-flex align-items-center">
-        <span class="label pulse pulse-primary mr-10">
+        <span class="label label-xl pulse pulse-primary mr-0">
           <span class="position-relative">${getCase_manager[3].states.review}</span>
           <span class="pulse-ring"></span>
         </span>
@@ -1237,11 +1231,13 @@ axios
       <!--end::text-->
     </div>
     <!--end::Item-->
-    `
-    // 受補貼 - 預警 
-    let getid_sub_recycle_early_warning_tab = document.querySelector('#kt_tab_mixed_4_1')
-    let getid_sub_deal_early_warning_tab = document.querySelector('#kt_tab_mixed_4_2')
-    getid_sub_recycle_early_warning_tab.innerHTML=`
+    `;
+    // 受補貼 - 預警
+    let getid_sub_recycle_early_warning_tab =
+      document.querySelector("#kt_tab_mixed_4_1");
+    let getid_sub_deal_early_warning_tab =
+      document.querySelector("#kt_tab_mixed_4_2");
+    getid_sub_recycle_early_warning_tab.innerHTML = `
     <!--begin::Item-->
     <div class="d-flex align-items-center justify-content-between mb-6">
 
@@ -1258,7 +1254,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-danger mr-10">
+      <span class="label label-xl pulse pulse-danger mr-0">
         <span class="position-relative">${getCase_manager[2].early_warning.expire}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -1281,7 +1277,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-warning mr-10">
+      <span class="label label-xl pulse pulse-warning mr-0">
         <span class="position-relative">${getCase_manager[2].early_warning.day7_to_0}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -1304,7 +1300,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-success mr-10">
+      <span class="label label-xl pulse pulse-success mr-0">
         <span class="position-relative">${getCase_manager[2].early_warning.day8_to_14}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -1327,15 +1323,15 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-primary mr-10">
+      <span class="label label-xl pulse pulse-primary mr-0">
         <span class="position-relative">${getCase_manager[2].early_warning.day15_to_30}</span>
         <span class="pulse-ring"></span>
       </span>
       <!--end::pulse-ring-->
     </div>
     <!--end::Item-->
-    `
-    getid_sub_deal_early_warning_tab.innerHTML=`
+    `;
+    getid_sub_deal_early_warning_tab.innerHTML = `
     <!--begin::Item-->
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
@@ -1351,7 +1347,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-danger mr-10">
+      <span class="label label-xl pulse pulse-danger mr-0">
         <span class="position-relative">${getCase_manager[3].early_warning.expire}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -1374,7 +1370,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-warning mr-10">
+      <span class="label label-xl pulse pulse-warning mr-0">
         <span class="position-relative">${getCase_manager[3].early_warning.day7_to_0}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -1397,7 +1393,7 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-success mr-10">
+      <span class="label label-xl pulse pulse-success mr-0">
         <span class="position-relative">${getCase_manager[3].early_warning.day8_to_14}</span>
         <span class="pulse-ring"></span>
       </span>
@@ -1420,17 +1416,14 @@ axios
       </div>
       <!--end::Text-->
       <!--begin::pulse-ring-->
-      <span class="label pulse pulse-primary mr-10">
+      <span class="label label-xl pulse pulse-primary mr-0">
         <span class="position-relative">${getCase_manager[3].early_warning.day15_to_30}</span>
         <span class="pulse-ring"></span>
       </span>
       <!--end::pulse-ring-->
     </div>
     <!--end::Item-->
-    `
-
-
-
+    `;
   })
   .catch(function (error) {
     console.log(error);
@@ -1441,8 +1434,7 @@ axios
 
 axios
   .get("./assets/data/3.local_operator_status.json")
-  .then((res) => {
-  })
+  .then((res) => {})
   .catch(function (error) {
     console.log(error);
   })
