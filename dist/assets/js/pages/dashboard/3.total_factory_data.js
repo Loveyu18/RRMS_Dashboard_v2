@@ -238,7 +238,7 @@ axios
     var caseOptions1 = {
       series: [
         {
-          name: "今年(" + case_history[0].year + ")",
+          name: "去年同期(" + case_history[0].year + ")",
           data: [
             case_history[0].month.Jan,
             case_history[0].month.Feb,
@@ -255,7 +255,7 @@ axios
           ],
         },
         {
-          name: "去年同期(" + case_history[1].year + ")",
+          name: "今年(" + case_history[1].year + ")",
           data: [
             case_history[1].month.Jan,
             case_history[1].month.Feb,
@@ -311,9 +311,10 @@ axios
       dataLabels: {
         enabled: false,
       },
+      colors: [ '#CED4DC','#00E396'],
       stroke: {
         curve: "smooth",
-        width: [3,0]
+        width: [3,3]
       },
       xaxis: {
         type: "date",
@@ -348,7 +349,7 @@ axios
     var caseOptions2 = {
       series: [
         {
-          name: "去年同期(" + case_history[2].year + ")",
+          name: "今年(" + case_history[2].year + ")",
           data: [
             case_history[2].month.Jan,
             case_history[2].month.Feb,
@@ -365,7 +366,7 @@ axios
           ],
         },
         {
-          name: "今年(" + case_history[3].year + ")",
+          name: "去年同期(" + case_history[3].year + ")",
           data: [
             case_history[3].month.Jan,
             case_history[3].month.Feb,
@@ -421,9 +422,10 @@ axios
       dataLabels: {
         enabled: false,
       },
+      colors: [ '#CED4DC','#008FFB'],
       stroke: {
         curve: "smooth",
-        width: [0,3],
+        width: [3,3],
       },
       xaxis: {
         type: "date",

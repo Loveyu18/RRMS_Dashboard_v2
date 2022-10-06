@@ -68,9 +68,9 @@ axios
     <!--begin::Item-->
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
-      <div class="d-flex align-items-center">
-        <a href="#" class="btn btn-light-success pulse pulse-primary mr-5">
-          &nbsp;&nbsp;&nbsp;&nbsp;NEW&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="d-flex align-items-center justify-content-start">
+        <a href="#" class="label label-light-secondary mr-5 label-case">
+          NEW
         </a>
         <a href="https://rrms2.eri.com.tw/DNC/Factory_Data/Verify_Search?tp=1"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">新登記</a>
@@ -90,7 +90,7 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-warning pulse pulse-primary mr-5">
+      <a href="#" class="label label-light-secondary mr-5 label-case">
           CHANGE
         </a>
         <a href="#"
@@ -111,8 +111,8 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-danger pulse pulse-primary mr-6">
-          &nbsp;EXTEND&nbsp;
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+          EXTEND
         </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">展延登記</a>
@@ -132,8 +132,8 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-primary pulse pulse-primary mr-5">
-          &nbsp;REVIEW&nbsp;
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+        REVIEW
         </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">申請覆核</a>
@@ -155,9 +155,9 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn btn-light-success pulse pulse-primary mr-5">
-          &nbsp;&nbsp;&nbsp;&nbsp;NEW&nbsp;&nbsp;&nbsp;&nbsp;
-        </a>
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+      NEW
+    </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">新登記</a>
       </div>
@@ -176,9 +176,9 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-warning pulse pulse-primary mr-5">
-          CHANGE
-        </a>
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+      CHANGE
+    </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">變更登記</a>
       </div>
@@ -197,8 +197,8 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-danger pulse pulse-primary mr-6">
-          &nbsp;EXTEND&nbsp;
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+         EXTEND
         </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">展延登記</a>
@@ -218,8 +218,8 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-primary pulse pulse-primary mr-5">
-          &nbsp;REVIEW&nbsp;
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+        REVIEW
         </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">申請覆核</a>
@@ -436,8 +436,8 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn btn-light-success pulse pulse-primary mr-5">
-          &nbsp;&nbsp;&nbsp;&nbsp;NEW&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+          NEW
         </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">新登記</a>
@@ -457,7 +457,7 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-warning pulse pulse-primary mr-5">
+      <a href="#" class="label label-light-secondary mr-5 label-case">
           CHANGE
         </a>
         <a href="#"
@@ -478,8 +478,8 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-danger pulse pulse-primary mr-6">
-          &nbsp;EXTEND&nbsp;
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+          EXTEND
         </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">展延登記</a>
@@ -499,8 +499,8 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-primary pulse pulse-primary mr-5">
-          &nbsp;REVIEW&nbsp;
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+          REVIEW
         </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">申請覆核</a>
@@ -522,8 +522,8 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn btn-light-success pulse pulse-primary mr-5">
-          &nbsp;&nbsp;&nbsp;&nbsp;NEW&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+          NEW
         </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">新登記</a>
@@ -543,7 +543,7 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-warning pulse pulse-primary mr-5">
+      <a href="#" class="label label-light-secondary mr-5 label-case">
           CHANGE
         </a>
         <a href="#"
@@ -564,8 +564,8 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-danger pulse pulse-primary mr-6">
-          &nbsp;EXTEND&nbsp;
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+          EXTEND
         </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">展延登記</a>
@@ -585,8 +585,8 @@ axios
     <div class="d-flex align-items-center justify-content-between mb-6">
       <!--begin::Text-->
       <div class="d-flex align-items-center">
-        <a href="#" class="btn  btn-light-primary pulse pulse-primary mr-5">
-          &nbsp;REVIEW&nbsp;
+      <a href="#" class="label label-light-secondary mr-5 label-case">
+          REVIEW
         </a>
         <a href="#"
           class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">申請覆核</a>

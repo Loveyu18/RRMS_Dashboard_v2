@@ -1,0 +1,22 @@
+/* 標題的 label */
+.label-title-block{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+.label-title{
+    height: 45px !important;
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    margin-right: 0.8rem;
+}
+
+/* 審查案件管理 - 案件狀態的 label */
+.label-case{
+    color: #4d4e51 !important;
+    height: 45px !important;
+    width: 100px !important;
+    border-radius: 5px;
+    font-size: 1rem;
+}

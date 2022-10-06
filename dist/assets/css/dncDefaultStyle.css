@@ -1,0 +1,65 @@
+html,
+body {
+    font-family: Verdana, 微軟正黑體;
+    font-size: 16.5px !important;
+}
+
+html.smFont,
+body.smFont {
+    font-size: 15px !important;
+}
+
+@media (max-width: 991.98px){
+html, body {
+    font-size: 12px !important;
+}}
+
+@media (max-width: 1199.98px){
+html, body {
+    font-size: 13px !important;
+}}
+
+
+*:focus, .header-menu .menu-nav > .menu-item .menu-link:focus { outline: 3px dotted #333 !important; }
+
+/* >> 配色調整 */
+/* 上方 brand、header */
+#kt_brand, #kt_header, #kt_header_menu_wrapper, #kt_header_menu_wrapper > .header-menu-mobile { background-color: #6FBDCD; }
+	#kt_header #kt_header_menu > .menu-nav > .menu-item > .menu-link { background-color: rgba(77, 89, 149, 0.3); color: #FFF; }
+	#kt_header #kt_header_menu > .menu-nav > .menu-item > .menu-link.disabled { background-color: rgba(80, 80, 80, 0.6); color: #999; }
+	#kt_header #kt_header_menu > .menu-nav > .menu-item.menu-item-active > .menu-link { background-color: rgba(77, 89, 149, 0.9); color: #FFF; }
+
+@media (max-width: 1500px) {
+	#kt_header #kt_header_menu > .menu-nav > .menu-item > .menu-link { padding: 0.1rem 0.4rem; }
+}
+
+@media (max-width: 992px) {
+	#kt_header #kt_header_menu > .menu-nav > .menu-item { margin-bottom: 4px; }
+		#kt_header #kt_header_menu > .menu-nav > .menu-item > .menu-link { padding: 0.3rem 0.4rem; align-items: center; }
+}
+
+/* 側邊 選單區 */
+#kt_aside_toggle > span > svg > g > path { fill: #555; }
+
+/* 選單的分層效果 */
+#RrmsMenuUl > li.menu-item-submenu > div.menu-submenu > ul.menu-subnav > li.menu-item
+	> a.menu-link > span { color: #D91100; }
+#RrmsMenuUl > li.menu-item-submenu > div.menu-submenu > ul.menu-subnav > li.menu-item
+	> div.menu-submenu > ul.menu-subnav > li.menu-item > a.menu-link > span { color: #003366; }
+#RrmsMenuUl > li.menu-item-submenu > div.menu-submenu > ul.menu-subnav > li.menu-item
+	> div.menu-submenu > ul.menu-subnav > li.menu-item
+	> div.menu-submenu > ul.menu-subnav > li.menu-item > a.menu-link > span { color: #339900; }
+
+/* 強化按鈕對比 */
+.btn.btn-primary { background-color: #0d6efd; border-color: #0d6efd; }
+	.btn.btn-primary:hover { background-color: #0b5ed7; border-color: #0a58ca; }
+/* << 配色調整 */
+/* 強化label對比 ，符合1:7對比*/
+.label.label-light-success  { color:#0c5855; }
+.label.label-light-primary  { color:#1c5086; }
+/* << 配色調整 */
+
+.card.card-custom > .card-body { padding: 1.25rem 1.75rem; }
+
+#liFontSize .fa-font { color: #0d6efd; }
+	#liFontSize .fa-font:hover { background-color: #0d6efd; color: #FFF; }

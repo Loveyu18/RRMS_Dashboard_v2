@@ -80,7 +80,7 @@
     "case_history": [
         {
             "administrative": "回收處理機構",
-            "year": "111年",
+            "year": "110年",
             "month": {
                 "Jan": 80,
                 "Feb": 90,
@@ -98,7 +98,7 @@
         },
         {
             "administrative": "回收處理機構",
-            "year": "110年",
+            "year": "111年",
             "month": {
                 "Jan": 70,
                 "Feb": 89,
@@ -116,7 +116,7 @@
         },
         {
             "administrative": "受補貼機構",
-            "year": "111年",
+            "year": "110年",
             "month": {
                 "Jan": 80,
                 "Feb": 90,
@@ -134,7 +134,7 @@
         },
         {
             "administrative": "受補貼機構",
-            "year": "110年",
+            "year": "111年",
             "month": {
                 "Jan": 70,
                 "Feb": 89,

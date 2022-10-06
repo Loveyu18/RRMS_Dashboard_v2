@@ -37,6 +37,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 	<link href="assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
 	<!--end::Layout Themes-->
+	<!--begin::Page Styles(used by this page)-->
+	<link href="assets/css/dncDefaultStyle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/pages/dashboard/dashboard.css" rel="stylesheet" type="text/css" />
+	<!--end::Page Styles(used by this page)-->
 	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
 
 
@@ -178,421 +182,462 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 
 		</div>
 		<!--end::announcementBlock-->
-		<!--begin::h2 Title-->
-		<h2>審查案件管理</h2>
-		<!--end::h2 Title-->
-		<!--begin::Row-->
+
+
+
 		<div class="row">
-			<div class="col-xl-3 col-lg-6">
-				<!--begin::Mixed Widget 2-->
-				<div class="card card-custom card-stretch gutter-b">
-					<!--begin::Header-->
-					<div class="card-header border-0 pt-6">
-						<h3 class="card-title align-items-start flex-column">
-							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">
-								<a href="#" class="btn btn-success font-weight-bold mr-2 disabled"
-									aria-disabled="true">地方</a>
-								待審案件
-							</span>
-							<span class="text-muted mt-3 font-weight-bold font-size-lg" id="local_total_states"></span>
-						</h3>
+			<div class="col-xl-6">
+				<!--begin::h2 Title-->
+				<h2>
+					<div class="label-title-block">
+						<div class="label label-xl label-inline label-success font-weight-bold label-title">地方</div>
+						審查案件管理
 					</div>
-					<!--end::Header-->
-					<!--begin::Body-->
-					<div class="card-body pt-6">
-						<!--begin::Nav-->
-						<ul class="nav nav-pills nav-fill flex-nowrap justify-content-between">
-							<!--begin::Nav Item-->
-							<li class="nav-item w-90px">
-								<a class="nav-link active d-flex flex-column shadow-sm h-80px" data-toggle="tab"
-									href="#kt_tab_mixed_1_1">
-									<span class="nav-icon">
-										<span class="svg-icon">
-											<span class="svg-icon svg-icon-xxl">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Media/Equalizer.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-													height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<rect x="0" y="0" width="24" height="24"></rect>
-														<rect fill="#000000" opacity="0.3" x="13" y="4" width="3"
-															height="16" rx="1.5"></rect>
-														<rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5">
-														</rect>
-														<rect fill="#000000" x="18" y="11" width="3" height="9"
-															rx="1.5">
-														</rect>
-														<rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5">
-														</rect>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
-										</span>
+				</h2>
+				<!--end::h2 Title-->
+				<div class="row">
+					<div class=" col-lg-6">
+						<!--begin::Mixed Widget 2-->
+						<div class="card card-custom card-stretch gutter-b">
+							<!--begin::Header-->
+							<div class="card-header border-0 pt-6">
+								<h3 class="card-title align-items-start flex-column">
+									<span class="card-label font-weight-bolder font-size-h2 text-dark-75">待審案件
 									</span>
-									<span class="nav-text pt-3 font-weight-bold">回收業</span>
-								</a>
-							</li>
-							<!--begin::Nav Item-->
-							<!--end::Nav Item-->
-							<li class="nav-item w-90px mx-5">
-								<a class="nav-link d-flex flex-column shadow-sm h-80px" data-toggle="tab"
-									href="#kt_tab_mixed_1_2">
-									<span class="nav-icon">
-										<span class="svg-icon">
-											<span class="svg-icon svg-icon-xxl">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-													height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<rect x="0" y="0" width="24" height="24"></rect>
-														<path
-															d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
-															fill="#000000"></path>
-														<rect fill="#000000" opacity="0.3"
-															transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)"
-															x="16.3255682" y="2.94551858" width="3" height="18" rx="1">
-														</rect>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
-										</span>
-									</span>
-									<span class="nav-text pt-3 font-weight-bold">處理業</span>
-								</a>
-							</li>
-							<!--begin::Nav Item-->
-
-						</ul>
-						<!--end::Nav-->
-						<!--begin::Tab Content-->
-						<div class="tab-content mt-9" id="myTabMixed2">
-							<!--begin::Tab Pane-->
-							<div class="tab-pane fade active show" id="kt_tab_mixed_1_1" role="tabpanel"
-								aria-labelledby="kt_tab_mixed_1_1"></div>
-							<!--end::Tab Pane-->
-							<!--begin::Tab Pane-->
-							<div class="tab-pane fade" id="kt_tab_mixed_1_2" role="tabpanel"
-								aria-labelledby="kt_tab_mixed_1_2"></div>
-							<!--end::Tab Pane-->
-						</div>
-						<!--end::Tab Content-->
-					</div>
-					<!--end::Body-->
-				</div>
-				<!--end::Mixed Widget 2-->
-			</div>
-			<div class="col-xl-3 col-lg-6">
-				<!--begin::Mixed Widget 2-->
-				<div class="card card-custom card-stretch gutter-b">
-					<!--begin::Header-->
-					<div class="card-header border-0 pt-6">
-						<h3 class="card-title align-items-start flex-column">
-							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">
-								<a href="#" class="btn btn-success font-weight-bold mr-2 disabled"
-									aria-disabled="true">地方</a>
-								未審案件預警
-							</span>
-							<span class="text-muted mt-3 font-weight-bold font-size-lg" id="sub_total_states"></span>
-						</h3>
-					</div>
-					<!--end::Header-->
-					<!--begin::Body-->
-					<div class="card-body pt-6">
-						<!--begin::Nav-->
-						<ul class="nav nav-pills nav-fill flex-nowrap justify-content-between">
-							<!--begin::Nav Item-->
-							<li class="nav-item w-90px">
-								<a class="nav-link active d-flex flex-column shadow-sm h-80px" data-toggle="tab"
-									href="#kt_tab_mixed_2_1">
-									<span class="nav-icon">
-										<span class="svg-icon">
-											<span class="svg-icon svg-icon-xxl">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Media/Equalizer.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-													height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<rect x="0" y="0" width="24" height="24"></rect>
-														<rect fill="#000000" opacity="0.3" x="13" y="4" width="3"
-															height="16" rx="1.5"></rect>
-														<rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5">
-														</rect>
-														<rect fill="#000000" x="18" y="11" width="3" height="9"
-															rx="1.5">
-														</rect>
-														<rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5">
-														</rect>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
-										</span>
-									</span>
-									<span class="nav-text pt-3 font-weight-bold">回收業</span>
-								</a>
-							</li>
-							<!--begin::Nav Item-->
-							<!--end::Nav Item-->
-							<li class="nav-item w-90px mx-5">
-								<a class="nav-link d-flex flex-column shadow-sm h-80px" data-toggle="tab"
-									href="#kt_tab_mixed_2_2">
-									<span class="nav-icon">
-										<span class="svg-icon">
-											<span class="svg-icon svg-icon-xxl">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-													height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<rect x="0" y="0" width="24" height="24"></rect>
-														<path
-															d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
-															fill="#000000"></path>
-														<rect fill="#000000" opacity="0.3"
-															transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)"
-															x="16.3255682" y="2.94551858" width="3" height="18" rx="1">
-														</rect>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
-										</span>
-									</span>
-									<span class="nav-text pt-3 font-weight-bold">處理業</span>
-								</a>
-							</li>
-							<!--begin::Nav Item-->
-
-						</ul>
-						<!--end::Nav-->
-						<!--begin::Tab Content-->
-						<div class="tab-content mt-9" id="myTabMixed2">
-							<!--begin::Tab Pane-->
-							<div class="tab-pane fade active show" id="kt_tab_mixed_2_1" role="tabpanel"
-								aria-labelledby="kt_tab_mixed_2_1"></div>
-							<!--end::Tab Pane-->
-							<!--begin::Tab Pane-->
-							<div class="tab-pane fade" id="kt_tab_mixed_2_2" role="tabpane1"
-								aria-labelledby="kt_tab_mixed_2_2"></div>
-							<!--end::Tab Pane-->
-						</div>
-						<!--end::Tab Content-->
-					</div>
-					<!--end::Body-->
-				</div>
-				<!--end::Mixed Widget 2-->
-			</div>
-			<div class="col-xl-3 col-lg-6">
-				<!--begin::Mixed Widget 2-->
-				<div class="card card-custom card-stretch gutter-b">
-					<!--begin::Header-->
-					<div class="card-header border-0 pt-6">
-						<h3 class="card-title align-items-start flex-column">
-							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">
-								<a href="#" class="btn btn-primary font-weight-bold mr-2 disabled"
-									aria-disabled="true">受補貼</a>待審案件
-							</span>
-							<span class="text-muted mt-3 font-weight-bold font-size-lg"
-								id="local_total_early_warning"></span>
-						</h3>
-					</div>
-					<!--end::Header-->
-					<!--begin::Body-->
-					<div class="card-body pt-6">
-						<!--begin::Nav-->
-						<ul class="nav nav-pills nav-fill flex-nowrap justify-content-between">
-							<!--begin::Nav Item-->
-							<li class="nav-item w-90px">
-								<a class="nav-link active d-flex flex-column shadow-sm h-80px" data-toggle="tab"
-									href="#kt_tab_mixed_3_1">
-									<span class="nav-icon">
-										<span class="svg-icon">
-											<span class="svg-icon svg-icon-xxl">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Media/Equalizer.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-													height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<rect x="0" y="0" width="24" height="24"></rect>
-														<rect fill="#000000" opacity="0.3" x="13" y="4" width="3"
-															height="16" rx="1.5"></rect>
-														<rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5">
-														</rect>
-														<rect fill="#000000" x="18" y="11" width="3" height="9"
-															rx="1.5">
-														</rect>
-														<rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5">
-														</rect>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
-										</span>
-									</span>
-									<span class="nav-text pt-3 font-weight-bold">回收業</span>
-								</a>
-							</li>
-							<!--begin::Nav Item-->
-							<!--end::Nav Item-->
-							<li class="nav-item w-90px mx-5">
-								<a class="nav-link d-flex flex-column shadow-sm h-80px" data-toggle="tab"
-									href="#kt_tab_mixed_3_2">
-									<span class="nav-icon">
-										<span class="svg-icon">
-											<span class="svg-icon svg-icon-xxl">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-													height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<rect x="0" y="0" width="24" height="24"></rect>
-														<path
-															d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
-															fill="#000000"></path>
-														<rect fill="#000000" opacity="0.3"
-															transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)"
-															x="16.3255682" y="2.94551858" width="3" height="18" rx="1">
-														</rect>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
-										</span>
-									</span>
-									<span class="nav-text pt-3 font-weight-bold">處理業</span>
-								</a>
-							</li>
-							<!--begin::Nav Item-->
-
-						</ul>
-						<!--end::Nav-->
-						<!--begin::Tab Content-->
-						<div class="tab-content mt-9" id="myTabMixed2">
-							<!--begin::Tab Pane-->
-							<div class="tab-pane fade active show" id="kt_tab_mixed_3_1" role="tabpanel"
-								aria-labelledby="kt_tab_mixed_3_1"></div>
-							<!--end::Tab Pane-->
-							<!--begin::Tab Pane-->
-							<div class="tab-pane fade" id="kt_tab_mixed_3_2" role="tabpanel"
-								aria-labelledby="kt_tab_mixed_3_2"></div>
-							<!--end::Tab Pane-->
-						</div>
-						<!--end::Tab Content-->
-					</div>
-					<!--end::Body-->
-				</div>
-				<!--end::Mixed Widget 2-->
-			</div>
-			<div class="col-xl-3 col-lg-6">
-				<!--begin::Mixed Widget 2-->
-				<div class="card card-custom card-stretch gutter-b">
-					<!--begin::Header-->
-					<div class="card-header border-0 pt-6">
-						<h3 class="card-title align-items-start flex-column">
-							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">
-								<a href="#" class="btn btn-primary font-weight-bold mr-2 disabled"
-									aria-disabled="true">受補貼</a> 未審案件預警
-							</span>
-							<span class="text-muted mt-3 font-weight-bold font-size-lg"
-								id="sub_total_early_warning"></span>
-						</h3>
-					</div>
-					<!--end::Header-->
-					<!--begin::Body-->
-					<div class="card-body pt-6">
-						<!--begin::Nav-->
-						<ul class="nav nav-pills nav-fill flex-nowrap justify-content-between">
-							<!--begin::Nav Item-->
-							<li class="nav-item w-90px">
-								<a class="nav-link active d-flex flex-column shadow-sm h-80px" data-toggle="tab"
-									href="#kt_tab_mixed_4_1">
-									<span class="nav-icon">
-										<span class="svg-icon">
-											<span class="svg-icon svg-icon-xxl">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Media/Equalizer.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-													height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<rect x="0" y="0" width="24" height="24"></rect>
-														<rect fill="#000000" opacity="0.3" x="13" y="4" width="3"
-															height="16" rx="1.5"></rect>
-														<rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5">
-														</rect>
-														<rect fill="#000000" x="18" y="11" width="3" height="9"
-															rx="1.5">
-														</rect>
-														<rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5">
-														</rect>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
-										</span>
-									</span>
-									<span class="nav-text pt-3 font-weight-bold">回收業</span>
-								</a>
-							</li>
-							<!--begin::Nav Item-->
-							<!--end::Nav Item-->
-							<li class="nav-item w-90px mx-5">
-								<a class="nav-link d-flex flex-column shadow-sm h-80px" data-toggle="tab"
-									href="#kt_tab_mixed_4_2">
-									<span class="nav-icon">
-										<span class="svg-icon">
-											<span class="svg-icon svg-icon-xxl">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-													height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<rect x="0" y="0" width="24" height="24"></rect>
-														<path
-															d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
-															fill="#000000"></path>
-														<rect fill="#000000" opacity="0.3"
-															transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)"
-															x="16.3255682" y="2.94551858" width="3" height="18" rx="1">
-														</rect>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
-										</span>
-									</span>
-									<span class="nav-text pt-3 font-weight-bold">處理業</span>
-								</a>
-							</li>
-							<!--begin::Nav Item-->
-						</ul>
-						<!--end::Nav-->
-						<!--begin::Tab Content-->
-						<div class="tab-content mt-9" id="myTabMixed2">
-							<!--begin::Tab Pane-->
-							<div class="tab-pane fade active show" id="kt_tab_mixed_4_1" role="tabpanel"
-								aria-labelledby="kt_tab_mixed_4_1"></div>
-							<!--end::Tab Pane-->
-							<!--begin::Tab Pane-->
-							<div class="tab-pane fade" id="kt_tab_mixed_4_2" role="tabpane1"
-								aria-labelledby="kt_tab_mixed_4_2">
+									<span class="text-muted mt-3 font-weight-bold font-size-lg"
+										id="local_total_states"></span>
+								</h3>
 							</div>
-							<!--end::Tab Pane-->
+							<!--end::Header-->
+							<!--begin::Body-->
+							<div class="card-body pt-6">
+								<!--begin::Nav-->
+								<ul class="nav nav-pills nav-fill flex-nowrap justify-content-between">
+									<!--begin::Nav Item-->
+									<li class="nav-item w-90px">
+										<a class="nav-link active d-flex flex-column shadow-sm h-80px" data-toggle="tab"
+											href="#kt_tab_mixed_1_1">
+											<span class="nav-icon">
+												<span class="svg-icon">
+													<span class="svg-icon svg-icon-xxl">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Media/Equalizer.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg"
+															xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+															height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none"
+																fill-rule="evenodd">
+																<rect x="0" y="0" width="24" height="24"></rect>
+																<rect fill="#000000" opacity="0.3" x="13" y="4"
+																	width="3" height="16" rx="1.5"></rect>
+																<rect fill="#000000" x="8" y="9" width="3" height="11"
+																	rx="1.5">
+																</rect>
+																<rect fill="#000000" x="18" y="11" width="3" height="9"
+																	rx="1.5">
+																</rect>
+																<rect fill="#000000" x="3" y="13" width="3" height="7"
+																	rx="1.5">
+																</rect>
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span>
+												</span>
+											</span>
+											<span class="nav-text pt-3 font-weight-bold">回收業</span>
+										</a>
+									</li>
+									<!--begin::Nav Item-->
+									<!--end::Nav Item-->
+									<li class="nav-item w-90px mx-5">
+										<a class="nav-link d-flex flex-column shadow-sm h-80px" data-toggle="tab"
+											href="#kt_tab_mixed_1_2">
+											<span class="nav-icon">
+												<span class="svg-icon">
+													<span class="svg-icon svg-icon-xxl">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg"
+															xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+															height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none"
+																fill-rule="evenodd">
+																<rect x="0" y="0" width="24" height="24"></rect>
+																<path
+																	d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
+																	fill="#000000"></path>
+																<rect fill="#000000" opacity="0.3"
+																	transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)"
+																	x="16.3255682" y="2.94551858" width="3" height="18"
+																	rx="1">
+																</rect>
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span>
+												</span>
+											</span>
+											<span class="nav-text pt-3 font-weight-bold">處理業</span>
+										</a>
+									</li>
+									<!--begin::Nav Item-->
+
+								</ul>
+								<!--end::Nav-->
+								<!--begin::Tab Content-->
+								<div class="tab-content mt-9" id="myTabMixed2">
+									<!--begin::Tab Pane-->
+									<div class="tab-pane fade active show" id="kt_tab_mixed_1_1" role="tabpanel"
+										aria-labelledby="kt_tab_mixed_1_1"></div>
+									<!--end::Tab Pane-->
+									<!--begin::Tab Pane-->
+									<div class="tab-pane fade" id="kt_tab_mixed_1_2" role="tabpanel"
+										aria-labelledby="kt_tab_mixed_1_2"></div>
+									<!--end::Tab Pane-->
+								</div>
+								<!--end::Tab Content-->
+							</div>
+							<!--end::Body-->
 						</div>
-						<!--end::Tab Content-->
+						<!--end::Mixed Widget 2-->
 					</div>
-					<!--end::Body-->
+					<div class="col-lg-6">
+						<!--begin::Mixed Widget 2-->
+						<div class="card card-custom card-stretch gutter-b">
+							<!--begin::Header-->
+							<div class="card-header border-0 pt-6">
+								<h3 class="card-title align-items-start flex-column">
+									<span class="card-label font-weight-bolder font-size-h2 text-dark-75">
+										未審案件預警
+									</span>
+									<span class="text-muted mt-3 font-weight-bold font-size-lg"
+										id="sub_total_states"></span>
+								</h3>
+							</div>
+							<!--end::Header-->
+							<!--begin::Body-->
+							<div class="card-body pt-6">
+								<!--begin::Nav-->
+								<ul class="nav nav-pills nav-fill flex-nowrap justify-content-between">
+									<!--begin::Nav Item-->
+									<li class="nav-item w-90px">
+										<a class="nav-link active d-flex flex-column shadow-sm h-80px" data-toggle="tab"
+											href="#kt_tab_mixed_2_1">
+											<span class="nav-icon">
+												<span class="svg-icon">
+													<span class="svg-icon svg-icon-xxl">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Media/Equalizer.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg"
+															xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+															height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none"
+																fill-rule="evenodd">
+																<rect x="0" y="0" width="24" height="24"></rect>
+																<rect fill="#000000" opacity="0.3" x="13" y="4"
+																	width="3" height="16" rx="1.5"></rect>
+																<rect fill="#000000" x="8" y="9" width="3" height="11"
+																	rx="1.5">
+																</rect>
+																<rect fill="#000000" x="18" y="11" width="3" height="9"
+																	rx="1.5">
+																</rect>
+																<rect fill="#000000" x="3" y="13" width="3" height="7"
+																	rx="1.5">
+																</rect>
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span>
+												</span>
+											</span>
+											<span class="nav-text pt-3 font-weight-bold">回收業</span>
+										</a>
+									</li>
+									<!--begin::Nav Item-->
+									<!--end::Nav Item-->
+									<li class="nav-item w-90px mx-5">
+										<a class="nav-link d-flex flex-column shadow-sm h-80px" data-toggle="tab"
+											href="#kt_tab_mixed_2_2">
+											<span class="nav-icon">
+												<span class="svg-icon">
+													<span class="svg-icon svg-icon-xxl">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg"
+															xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+															height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none"
+																fill-rule="evenodd">
+																<rect x="0" y="0" width="24" height="24"></rect>
+																<path
+																	d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
+																	fill="#000000"></path>
+																<rect fill="#000000" opacity="0.3"
+																	transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)"
+																	x="16.3255682" y="2.94551858" width="3" height="18"
+																	rx="1">
+																</rect>
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span>
+												</span>
+											</span>
+											<span class="nav-text pt-3 font-weight-bold">處理業</span>
+										</a>
+									</li>
+									<!--begin::Nav Item-->
+
+								</ul>
+								<!--end::Nav-->
+								<!--begin::Tab Content-->
+								<div class="tab-content mt-9" id="myTabMixed2">
+									<!--begin::Tab Pane-->
+									<div class="tab-pane fade active show" id="kt_tab_mixed_2_1" role="tabpanel"
+										aria-labelledby="kt_tab_mixed_2_1"></div>
+									<!--end::Tab Pane-->
+									<!--begin::Tab Pane-->
+									<div class="tab-pane fade" id="kt_tab_mixed_2_2" role="tabpane1"
+										aria-labelledby="kt_tab_mixed_2_2"></div>
+									<!--end::Tab Pane-->
+								</div>
+								<!--end::Tab Content-->
+							</div>
+							<!--end::Body-->
+						</div>
+						<!--end::Mixed Widget 2-->
+					</div>
 				</div>
-				<!--end::Mixed Widget 2-->
 			</div>
+			<div class="col-xl-6">
+				<!--begin::h2 Title-->
+				<h2>
+					<div class="label-title-block">
+						<div class="label label-xl label-inline label-primary font-weight-bold label-title">受補貼</div>
+						審查案件管理
+					</div>
+				</h2>
+				<!--end::h2 Title-->
+				<!--begin::Row-->
+				<div class="row">
+					<div class="col-lg-6">
+						<!--begin::Mixed Widget 2-->
+						<div class="card card-custom card-stretch gutter-b">
+							<!--begin::Header-->
+							<div class="card-header border-0 pt-6">
+								<h3 class="card-title align-items-start flex-column">
+									<span class="card-label font-weight-bolder font-size-h2 text-dark-75">
+										待審案件
+									</span>
+									<span class="text-muted mt-3 font-weight-bold font-size-lg"
+										id="local_total_early_warning"></span>
+								</h3>
+							</div>
+							<!--end::Header-->
+							<!--begin::Body-->
+							<div class="card-body pt-6">
+								<!--begin::Nav-->
+								<ul class="nav nav-pills nav-fill flex-nowrap justify-content-between">
+									<!--begin::Nav Item-->
+									<li class="nav-item w-90px">
+										<a class="nav-link active d-flex flex-column shadow-sm h-80px" data-toggle="tab"
+											href="#kt_tab_mixed_3_1">
+											<span class="nav-icon">
+												<span class="svg-icon">
+													<span class="svg-icon svg-icon-xxl">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Media/Equalizer.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg"
+															xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+															height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none"
+																fill-rule="evenodd">
+																<rect x="0" y="0" width="24" height="24"></rect>
+																<rect fill="#000000" opacity="0.3" x="13" y="4"
+																	width="3" height="16" rx="1.5"></rect>
+																<rect fill="#000000" x="8" y="9" width="3" height="11"
+																	rx="1.5">
+																</rect>
+																<rect fill="#000000" x="18" y="11" width="3" height="9"
+																	rx="1.5">
+																</rect>
+																<rect fill="#000000" x="3" y="13" width="3" height="7"
+																	rx="1.5">
+																</rect>
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span>
+												</span>
+											</span>
+											<span class="nav-text pt-3 font-weight-bold">回收業</span>
+										</a>
+									</li>
+									<!--begin::Nav Item-->
+									<!--end::Nav Item-->
+									<li class="nav-item w-90px mx-5">
+										<a class="nav-link d-flex flex-column shadow-sm h-80px" data-toggle="tab"
+											href="#kt_tab_mixed_3_2">
+											<span class="nav-icon">
+												<span class="svg-icon">
+													<span class="svg-icon svg-icon-xxl">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg"
+															xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+															height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none"
+																fill-rule="evenodd">
+																<rect x="0" y="0" width="24" height="24"></rect>
+																<path
+																	d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
+																	fill="#000000"></path>
+																<rect fill="#000000" opacity="0.3"
+																	transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)"
+																	x="16.3255682" y="2.94551858" width="3" height="18"
+																	rx="1">
+																</rect>
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span>
+												</span>
+											</span>
+											<span class="nav-text pt-3 font-weight-bold">處理業</span>
+										</a>
+									</li>
+									<!--begin::Nav Item-->
+
+								</ul>
+								<!--end::Nav-->
+								<!--begin::Tab Content-->
+								<div class="tab-content mt-9" id="myTabMixed2">
+									<!--begin::Tab Pane-->
+									<div class="tab-pane fade active show" id="kt_tab_mixed_3_1" role="tabpanel"
+										aria-labelledby="kt_tab_mixed_3_1"></div>
+									<!--end::Tab Pane-->
+									<!--begin::Tab Pane-->
+									<div class="tab-pane fade" id="kt_tab_mixed_3_2" role="tabpanel"
+										aria-labelledby="kt_tab_mixed_3_2"></div>
+									<!--end::Tab Pane-->
+								</div>
+								<!--end::Tab Content-->
+							</div>
+							<!--end::Body-->
+						</div>
+						<!--end::Mixed Widget 2-->
+					</div>
+					<div class="col-lg-6">
+						<!--begin::Mixed Widget 2-->
+						<div class="card card-custom card-stretch gutter-b">
+							<!--begin::Header-->
+							<div class="card-header border-0 pt-6">
+								<h3 class="card-title align-items-start flex-column">
+									<span class="card-label font-weight-bolder font-size-h2 text-dark-75">未審案件預警</span>
+									<span class="text-muted mt-3 font-weight-bold font-size-lg"
+										id="sub_total_early_warning"></span>
+								</h3>
+							</div>
+							<!--end::Header-->
+							<!--begin::Body-->
+							<div class="card-body pt-6">
+								<!--begin::Nav-->
+								<ul class="nav nav-pills nav-fill flex-nowrap justify-content-between">
+									<!--begin::Nav Item-->
+									<li class="nav-item w-90px">
+										<a class="nav-link active d-flex flex-column shadow-sm h-80px" data-toggle="tab"
+											href="#kt_tab_mixed_4_1">
+											<span class="nav-icon">
+												<span class="svg-icon">
+													<span class="svg-icon svg-icon-xxl">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Media/Equalizer.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg"
+															xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+															height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none"
+																fill-rule="evenodd">
+																<rect x="0" y="0" width="24" height="24"></rect>
+																<rect fill="#000000" opacity="0.3" x="13" y="4"
+																	width="3" height="16" rx="1.5"></rect>
+																<rect fill="#000000" x="8" y="9" width="3" height="11"
+																	rx="1.5">
+																</rect>
+																<rect fill="#000000" x="18" y="11" width="3" height="9"
+																	rx="1.5">
+																</rect>
+																<rect fill="#000000" x="3" y="13" width="3" height="7"
+																	rx="1.5">
+																</rect>
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span>
+												</span>
+											</span>
+											<span class="nav-text pt-3 font-weight-bold">回收業</span>
+										</a>
+									</li>
+									<!--begin::Nav Item-->
+									<!--end::Nav Item-->
+									<li class="nav-item w-90px mx-5">
+										<a class="nav-link d-flex flex-column shadow-sm h-80px" data-toggle="tab"
+											href="#kt_tab_mixed_4_2">
+											<span class="nav-icon">
+												<span class="svg-icon">
+													<span class="svg-icon svg-icon-xxl">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg"
+															xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+															height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none"
+																fill-rule="evenodd">
+																<rect x="0" y="0" width="24" height="24"></rect>
+																<path
+																	d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
+																	fill="#000000"></path>
+																<rect fill="#000000" opacity="0.3"
+																	transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)"
+																	x="16.3255682" y="2.94551858" width="3" height="18"
+																	rx="1">
+																</rect>
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span>
+												</span>
+											</span>
+											<span class="nav-text pt-3 font-weight-bold">處理業</span>
+										</a>
+									</li>
+									<!--begin::Nav Item-->
+								</ul>
+								<!--end::Nav-->
+								<!--begin::Tab Content-->
+								<div class="tab-content mt-9" id="myTabMixed2">
+									<!--begin::Tab Pane-->
+									<div class="tab-pane fade active show" id="kt_tab_mixed_4_1" role="tabpanel"
+										aria-labelledby="kt_tab_mixed_4_1"></div>
+									<!--end::Tab Pane-->
+									<!--begin::Tab Pane-->
+									<div class="tab-pane fade" id="kt_tab_mixed_4_2" role="tabpane1"
+										aria-labelledby="kt_tab_mixed_4_2">
+									</div>
+									<!--end::Tab Pane-->
+								</div>
+								<!--end::Tab Content-->
+							</div>
+							<!--end::Body-->
+						</div>
+						<!--end::Mixed Widget 2-->
+					</div>
+				</div>
+				<!--end::Row-->
+			</div>
+
 
 		</div>
-		<!--end::Row-->
+
+
 		<!--begin::Dashboard-->
 		<!--begin::H2 Title-->
-		<h2>業者現況分析</h2>
+
+		<h2><a href="#" class="btn btn-success font-weight-bold mr-2 disabled" aria-disabled="true">地方</a>業者現況分析</h2>
 		<!--end::H2 Title-->
 		<!--begin::Row-->
 		<div class="row">
@@ -602,8 +647,6 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<!--begin::Header-->
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title">
-							<a href="#" class="btn btn-success font-weight-bold mr-2 disabled"
-								aria-disabled="true">地方</a>
 							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">完成登記家數</span>
 						</h3>
 
@@ -661,8 +704,6 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<!--begin::Header-->
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title">
-							<a href="#" class="btn btn-success font-weight-bold mr-2 disabled"
-								aria-disabled="true">地方</a>
 							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">業者材質分佈</span>
 						</h3>
 
@@ -680,8 +721,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 					<!--begin::Header-->
 					<div class="card-header border-0 pt-6">
 						<h3 class="card-title">
-							<a href="#" class="btn btn-success font-weight-bold mr-2 disabled"
-								aria-disabled="true">地方</a>
+
 							<span class="card-label font-weight-bolder font-size-h2 text-dark-75">案件趨勢圖</span>
 						</h3>
 
@@ -1072,10 +1112,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 	<!--end::Page Vendors-->
 	<!--begin::Page Scripts(used by this page)-->
 	<script src="assets/js/pages/widgets.js"></script>
-	<!-- <script src="assets/js/pages/index/0.alert.js"></script>  -->
-	 <script src="assets/js/pages/index/1.announcement.js"></script>
-	 <script src="assets/js/pages/index/2.case_manager.js"></script>
-	 <script src="assets/js/pages/index/3.total_factory_data.js"></script>
+	<!-- <script src="assets/js/pages/dashboard/0.alert.js"></script>  -->
+	<script src="assets/js/pages/dashboard/1.announcement.js"></script>
+	<script src="assets/js/pages/dashboard/2.case_manager.js"></script>
+	<script src="assets/js/pages/dashboard/3.total_factory_data.js"></script>
 	<!--end::Page Scripts-->
 
 </body>

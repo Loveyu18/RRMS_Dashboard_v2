@@ -43,7 +43,6 @@
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 1.3rem;
 }
 
 html {
@@ -60,7 +59,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: Poppins, Helvetica, "sans-serif";
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #3F4254;
@@ -86,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 abbr[title],
@@ -182,7 +181,7 @@ code,
 kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 pre {
@@ -366,7 +365,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
 }
 
@@ -380,9 +379,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 1.8rem;
-  font-width:700
-
+  font-size: 1.75rem;
 }
 @media (max-width: 1200px) {
   h2, .h2 {
@@ -2699,7 +2696,7 @@ pre code {
   width: 100%;
   height: calc(1.5em + 1.3rem + 2px);
   padding: 0.65rem 1rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #3F4254;
@@ -2797,7 +2794,7 @@ select.form-control:focus::-ms-value {
 .col-form-label-sm {
   padding-top: calc(0.55rem + 1px);
   padding-bottom: calc(0.55rem + 1px);
-  font-size: 1.325rem;
+  font-size: 0.925rem;
   line-height: 1.35;
 }
 
@@ -2806,7 +2803,7 @@ select.form-control:focus::-ms-value {
   width: 100%;
   padding: 0.65rem 0;
   margin-bottom: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: #3F4254;
   background-color: transparent;
@@ -2821,7 +2818,7 @@ select.form-control:focus::-ms-value {
 .form-control-sm {
   height: calc(1.35em + 1.1rem + 2px);
   padding: 0.55rem 0.75rem;
-  font-size: 1.325rem;
+  font-size: 0.925rem;
   line-height: 1.35;
   border-radius: 0.28rem;
 }
@@ -2906,7 +2903,7 @@ textarea.form-control {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   color: #1BC5BD;
 }
 
@@ -2919,7 +2916,7 @@ textarea.form-control {
   max-width: 100%;
   padding: 0.75rem 1rem;
   margin-top: 0.1rem;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   color: #ffffff;
   background-color: #1bc5bd;
@@ -3006,7 +3003,7 @@ textarea.form-control {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   color: #F64E60;
 }
 
@@ -3019,7 +3016,7 @@ textarea.form-control {
   max-width: 100%;
   padding: 0.75rem 1rem;
   margin-top: 0.1rem;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   color: #ffffff;
   background-color: #f64e60;
@@ -3205,7 +3202,7 @@ textarea.form-control {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.65rem 1rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.42rem;
   -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
@@ -3820,7 +3817,7 @@ fieldset:disabled a.btn {
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.55rem 0.75rem;
-  font-size: 1.325rem;
+  font-size: 0.925rem;
   line-height: 1.35;
   border-radius: 0.42rem;
 }
@@ -3905,7 +3902,7 @@ input[type=button].btn-block {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #3F4254;
   text-align: left;
   list-style: none;
@@ -4106,7 +4103,7 @@ input[type=button].btn-block {
   display: block;
   padding: 0.5rem 1.25rem;
   margin-bottom: 0;
-  font-size: 1.325rem;
+  font-size: 0.925rem;
   color: #7E8299;
   white-space: nowrap;
 }
@@ -4365,7 +4362,7 @@ input[type=button].btn-block {
   align-items: center;
   padding: 0.65rem 1rem;
   margin-bottom: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #3F4254;
@@ -4409,7 +4406,7 @@ input[type=button].btn-block {
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
   padding: 0.55rem 0.75rem;
-  font-size: 1.325rem;
+  font-size: 0.925rem;
   line-height: 1.35;
   border-radius: 0.28rem;
 }
@@ -4595,7 +4592,7 @@ input[type=button].btn-block {
   width: 100%;
   height: calc(1.5em + 1.3rem + 2px);
   padding: 0.65rem 2rem 0.65rem 1rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #3F4254;
@@ -4641,7 +4638,7 @@ input[type=button].btn-block {
   padding-top: 0.55rem;
   padding-bottom: 0.55rem;
   padding-left: 0.75rem;
-  font-size: 1.325rem;
+  font-size: 0.925rem;
 }
 
 .custom-select-lg {
@@ -5857,7 +5854,7 @@ input[type=button].btn-block {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 1.325rem;
+  font-size: 0.925rem;
   line-height: 1.35;
 }
 .pagination-sm .page-item:first-child .page-link {
@@ -6978,7 +6975,7 @@ a.close.disabled {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -7080,7 +7077,7 @@ a.close.disabled {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   word-wrap: break-word;
   background-color: #ffffff;
   background-clip: padding-box;
@@ -7191,7 +7188,7 @@ a.close.disabled {
 .popover-header {
   padding: 1rem 1.25rem;
   margin-bottom: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #181C32;
   background-color: #ffffff;
   border-bottom: 1px solid #f2f2f2;
@@ -51842,11 +51839,11 @@ a.text-hover-muted:hover .svg-icon svg:hover g [fill],
 }
 
 .font-size-base {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .font-size-sm {
-  font-size: 1.325rem;
+  font-size: 0.925rem;
 }
 
 .font-size-xs {
@@ -51854,7 +51851,7 @@ a.text-hover-muted:hover .svg-icon svg:hover g [fill],
 }
 
 .font-size-lg {
-  font-size: 1.3rem;
+  font-size: 1.08rem;
 }
 
 .font-size-h1 {
@@ -51862,7 +51859,7 @@ a.text-hover-muted:hover .svg-icon svg:hover g [fill],
 }
 
 .font-size-h2 {
-  font-size: 1.8rem !important;
+  font-size: 1.75rem !important;
 }
 
 .font-size-h3 {
@@ -52206,7 +52203,7 @@ i {
 }
 
 .icon-nm {
-  font-size: 1.3rem !important;
+  font-size: 0.9rem !important;
 }
 
 .icon-ms {
@@ -52230,7 +52227,7 @@ i {
 }
 
 .icon-1x {
-  font-size: 1.3rem !important;
+  font-size: 1rem !important;
 }
 
 .icon-2x {
@@ -52283,7 +52280,7 @@ i {
   }
 
   .icon-sm-nm {
-    font-size: 1.3rem !important;
+    font-size: 0.9rem !important;
   }
 
   .icon-sm-ms {
@@ -52307,7 +52304,7 @@ i {
   }
 
   .icon-sm-1x {
-    font-size: 1.3rem !important;
+    font-size: 1rem !important;
   }
 
   .icon-sm-2x {
@@ -52360,7 +52357,7 @@ i {
   }
 
   .icon-md-nm {
-    font-size: 1.3rem !important;
+    font-size: 0.9rem !important;
   }
 
   .icon-md-ms {
@@ -52384,7 +52381,7 @@ i {
   }
 
   .icon-md-1x {
-    font-size: 1.3rem !important;
+    font-size: 1rem !important;
   }
 
   .icon-md-2x {
@@ -52437,7 +52434,7 @@ i {
   }
 
   .icon-lg-nm {
-    font-size: 1.3rem !important;
+    font-size: 0.9rem !important;
   }
 
   .icon-lg-ms {
@@ -52461,7 +52458,7 @@ i {
   }
 
   .icon-lg-1x {
-    font-size: 1.3rem !important;
+    font-size: 1rem !important;
   }
 
   .icon-lg-2x {
@@ -52514,7 +52511,7 @@ i {
   }
 
   .icon-xl-nm {
-    font-size: 1.3rem !important;
+    font-size: 0.9rem !important;
   }
 
   .icon-xl-ms {
@@ -52538,7 +52535,7 @@ i {
   }
 
   .icon-xl-1x {
-    font-size: 1.3rem !important;
+    font-size: 1rem !important;
   }
 
   .icon-xl-2x {
@@ -52591,7 +52588,7 @@ i {
   }
 
   .icon-xxl-nm {
-    font-size: 1.3rem !important;
+    font-size: 0.9rem !important;
   }
 
   .icon-xxl-ms {
@@ -52615,7 +52612,7 @@ i {
   }
 
   .icon-xxl-1x {
-    font-size: 1.3rem !important;
+    font-size: 1rem !important;
   }
 
   .icon-xxl-2x {
@@ -52860,7 +52857,7 @@ i {
 }
 .card.card-custom > .card-header .card-title small {
   color: #B5B5C3;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .card.card-custom > .card-header .card-toolbar {
   display: -webkit-box;
@@ -53161,7 +53158,7 @@ i {
 }
 
 .lead {
-  font-size: 1.3rem !important;
+  font-size: 1.25rem !important;
 }
 
 .display-1 {
@@ -53275,7 +53272,7 @@ button {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #7E8299;
   font-weight: 400;
   -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
@@ -55628,7 +55625,7 @@ button {
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .alert.alert-custom .alert-close i.ki {
   font-size: 0.75rem;
@@ -56264,7 +56261,7 @@ button {
   width: 18px;
 }
 .btn.btn-xs i {
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding-right: 0.3rem;
 }
 .btn.btn-xs .svg-icon {
@@ -56306,7 +56303,7 @@ button {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  /* padding: 1px; */
+  padding: 0;
   height: calc(1.5em + 1.3rem + 2px);
   width: calc(1.5em + 1.3rem + 2px);
 }
@@ -64409,17 +64406,17 @@ code {
   }
 }
 .form-group label {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #3F4254;
 }
 .form-group .invalid-feedback,
 .form-group .valid-feedback {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 .form-group .form-text {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -64552,7 +64549,7 @@ code {
 }
 .input-group.input-group-sm i {
   line-height: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .input-group.input-group-lg i {
   line-height: 0;
@@ -64771,7 +64768,7 @@ code {
 }
 .modal .modal-header .modal-title small {
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   color: #B5B5C3;
 }
 .modal .modal-header .close {
@@ -64916,7 +64913,7 @@ code {
 
 .table thead th, .table thead td {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1rem;
   border-bottom-width: 1px;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -64966,14 +64963,14 @@ code {
 .table.table-head-custom thead tr, .table.table-head-custom thead th {
   font-weight: 600;
   color: #B5B5C3 !important;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 .table.table-foot-custom tfoot th, .table.table-foot-custom tfoot td {
   font-weight: 600;
   color: #B5B5C3 !important;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
@@ -65037,7 +65034,7 @@ code {
   */
 }
 .popover .popover-header {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
   border-bottom: 1px solid #EBEDF3;
 }
@@ -65194,7 +65191,7 @@ code {
 }
 .accordion .card .card-body {
   padding: 1rem 1.25rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .accordion:last-child {
   margin-bottom: 0;
@@ -65400,7 +65397,7 @@ code {
 .datatable.datatable-default > .datatable-table > .datatable-foot .datatable-row > .datatable-cell {
   vertical-align: middle;
   padding: 1rem 1rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .datatable.datatable-default > .datatable-table > .datatable-head .datatable-row > .datatable-cell:first-child,
 .datatable.datatable-default > .datatable-table > .datatable-body .datatable-row > .datatable-cell:first-child,
@@ -65679,7 +65676,7 @@ code {
 .datatable.datatable-default.datatable-head-custom > .datatable-table > .datatable-head .datatable-row > .datatable-cell > span,
 .datatable.datatable-default.datatable-head-custom > .datatable-table > .datatable-foot .datatable-row > .datatable-cell > span {
   color: #B5B5C3;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.1rem;
@@ -65869,7 +65866,7 @@ code {
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
   position: relative;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   line-height: 1rem;
   font-weight: 500;
   border-radius: 0.42rem;
@@ -65960,7 +65957,7 @@ code {
 .datatable.datatable-default > .datatable-pager > .datatable-pager-info .datatable-pager-size .btn.dropdown-toggle {
   height: 2.25rem;
   padding: 0.45rem 1rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
   border: 0 !important;
   color: #7E8299;
@@ -66022,7 +66019,7 @@ code {
   position: relative;
   text-align: left;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin: 0;
@@ -66574,7 +66571,7 @@ code {
   position: relative;
   text-align: left;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin: 0;
@@ -67290,7 +67287,7 @@ code {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .switch label {
   margin: 0;
@@ -67756,7 +67753,7 @@ code {
 .option .option-label .option-body {
   display: block;
   padding-top: 0.7rem;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   color: #B5B5C3;
 }
 .option.option-plain {
@@ -67811,7 +67808,7 @@ code {
   transition: top 0.6s ease;
 }
 .dialog.dialog-loader {
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 0.75rem;
   font-weight: 400;
   color: #3F4254;
@@ -67981,7 +67978,7 @@ code {
   font-weight: 400;
   height: 20px;
   width: 20px;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
 }
 .label.label-primary {
   color: #FFFFFF;
@@ -68184,7 +68181,7 @@ code {
 .label.label-lg {
   height: 24px;
   width: 24px;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
 }
 .label.label-lg.label-inline {
   width: auto;
@@ -68199,7 +68196,7 @@ code {
 .label.label-xl {
   height: 28px;
   width: 28px;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .label.label-xl.label-inline {
   width: auto;
@@ -74632,7 +74629,7 @@ code {
   margin-bottom: 1.5rem;
 }
 .quick-search.quick-search-offcanvas .quick-search-form .form-control {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 .quick-search.quick-search-offcanvas .quick-search-form .input-group:before {
@@ -75758,7 +75755,7 @@ code {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 0 0 0 0.75rem;
 }
 .timeline.timeline-1 .timeline-item:last-child {
@@ -76229,7 +76226,7 @@ code {
   width: 50px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
   position: relative;
   color: #3F4254;
@@ -76669,10 +76666,10 @@ code {
 }
 
 .navi .navi-item .navi-link {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .navi .navi-item .navi-link .navi-text {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .navi.navi-font-lg .navi-item .navi-link {
   font-size: 1.1rem;
@@ -77771,7 +77768,7 @@ code {
 }
 .fv-plugins-message-container .fv-help-block {
   color: #F64E60;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -77796,7 +77793,7 @@ code {
 .blockui > span {
   color: #3F4254;
   padding: 0.75rem 1.2rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
@@ -77819,7 +77816,7 @@ code {
 }
 .datepicker td,
 .datepicker th {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: regular;
   width: 33px;
   height: 33px;
@@ -77968,7 +77965,7 @@ code {
 .daterangepicker .ranges li {
   padding: 0.7rem 1.75rem;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #7E8299;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -77992,13 +77989,13 @@ code {
   border-top: 1px solid #EBEDF3;
 }
 .daterangepicker .drp-buttons .btn {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 0.42rem;
 }
 .daterangepicker .drp-selected {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
 }
 .daterangepicker .drp-calendar.left, .daterangepicker .drp-calendar.right {
   padding: 1rem 1rem;
@@ -78008,7 +78005,7 @@ code {
 }
 .daterangepicker .drp-calendar th,
 .daterangepicker .drp-calendar td {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: regular;
   width: 33px;
   height: 33px;
@@ -78105,7 +78102,7 @@ code {
   color: #3F4254;
   font-weight: 500;
   display: table-cell;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .bootstrap-datetimepicker-widget .datepicker table thead th.picker-switch:hover {
   color: #3699FF;
@@ -78124,7 +78121,7 @@ code {
 }
 .bootstrap-datetimepicker-widget .datepicker .datepicker-days table tr td,
 .bootstrap-datetimepicker-widget .datepicker .datepicker-days table tr th {
-  font-size: 1.3rem;
+  font-size: 1rem;
   width: 35px;
   height: 35px;
   padding: 0;
@@ -78179,7 +78176,7 @@ code {
 .bootstrap-datetimepicker-widget .datepicker .datepicker-years table tr th,
 .bootstrap-datetimepicker-widget .datepicker .datepicker-decades table tr td,
 .bootstrap-datetimepicker-widget .datepicker .datepicker-decades table tr th {
-  font-size: 1.3rem;
+  font-size: 1rem;
   width: 35px;
   height: 35px;
   padding: 0;
@@ -78311,7 +78308,7 @@ code {
 }
 .bootstrap-datetimepicker-widget .timepicker .timepicker-picker table td .timepicker-minute,
 .bootstrap-datetimepicker-widget .timepicker .timepicker-picker table td .timepicker-hour {
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #7E8299;
   font-weight: 400;
 }
@@ -78329,7 +78326,7 @@ code {
   height: 35px;
   width: 35px;
   line-height: 35px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #7E8299;
 }
@@ -78396,7 +78393,7 @@ code {
 }
 .md-editor .md-header .btn-group .btn span {
   line-height: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .md-editor .md-header .btn-group .btn:hover, .md-editor .md-header .btn-group .btn:focus, .md-editor .md-header .btn-group .btn:active, .md-editor .md-header .btn-group .btn.active {
   color: #3699FF;
@@ -78746,7 +78743,7 @@ code {
   padding-right: 1rem;
   line-height: 1.5;
   letter-spacing: 0.1rem;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on, .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off, .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-label {
@@ -78758,7 +78755,7 @@ code {
   padding-bottom: 0.55rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   line-height: 1.35;
 }
 .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-on, .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-off, .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-label {
@@ -78978,7 +78975,7 @@ code {
 }
 .dataTables_wrapper .dataTable th, .dataTables_wrapper .dataTable td {
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1rem;
   vertical-align: middle;
   color: #3F4254;
   -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
@@ -79056,7 +79053,7 @@ code {
   margin-top: 0.5rem;
 }
 .dataTables_wrapper .dataTable .group th, .dataTables_wrapper .dataTable .group td {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 .dataTables_wrapper .dataTables_scroll {
@@ -79088,7 +79085,7 @@ code {
   padding: 0.5rem;
   text-align: center;
   position: relative;
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 1rem;
   font-weight: 500;
   border-radius: 0.42rem;
@@ -79341,7 +79338,7 @@ code {
 .dropzone.dropzone-default .dropzone-msg-desc {
   color: #B5B5C3;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .dropzone.dropzone-default .dz-preview .dz-image {
   border-radius: 0.42rem;
@@ -79419,20 +79416,20 @@ code {
   flex-grow: 1;
 }
 .dropzone.dropzone-multi .dropzone-item .dropzone-file .dropzone-filename {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: #7E8299;
   text-overflow: ellipsis;
   margin-right: 0.5rem;
 }
 .dropzone.dropzone-multi .dropzone-item .dropzone-file .dropzone-filename b {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: #B5B5C3;
 }
 .dropzone.dropzone-multi .dropzone-item .dropzone-file .dropzone-error {
   margin-top: 0.25rem;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #F64E60;
   text-overflow: ellipsis;
@@ -79568,7 +79565,7 @@ code {
   padding: 0.55rem 0.75rem;
   color: #7E8299;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   background-color: #F3F6F9;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -79678,7 +79675,7 @@ code {
 }
 .fc-unthemed th.fc-day-header {
   padding: 0.75rem 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 .fc-unthemed .fc-list-heading .fc-widget-header {
@@ -79686,7 +79683,7 @@ code {
 }
 .fc-unthemed .fc-list-heading .fc-list-heading-main,
 .fc-unthemed .fc-list-heading .fc-list-heading-alt {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 .fc-unthemed .fc-list-heading .fc-list-heading-main {
@@ -79725,26 +79722,26 @@ code {
 }
 .fc-unthemed .fc-event .fc-time,
 .fc-unthemed .fc-event-dot .fc-time {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   font-weight: 500;
 }
 .fc-unthemed .fc-event .fc-title,
 .fc-unthemed .fc-event-dot .fc-title {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 .fc-unthemed .fc-description {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   margin-top: 0.25rem;
   font-weight: normal;
 }
 .fc-unthemed .fc-list-item-title > a {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 .fc-unthemed a.fc-more {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 .fc-unthemed .fc-popover {
@@ -79789,7 +79786,7 @@ code {
   outline: none !important;
   height: 2.75rem;
   padding: 0 1.25rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .fc-unthemed .fc-toolbar .fc-button.fc-corner-left {
   border-top-left-radius: 0.42rem;
@@ -79834,7 +79831,7 @@ code {
   content: "";
 }
 .fc-unthemed .fc-axis > span {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
 }
 
 .ui-draggable-handle {
@@ -80553,7 +80550,7 @@ code {
   width: 20px;
   background-color: #EBEDF3;
   color: #3F4254;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .jqvmap .jqvmap-zoomout {
   top: 40px;
@@ -80634,7 +80631,7 @@ code {
 .vakata-context ul {
   padding: 0.5rem 0;
   min-width: 150px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-family: Poppins, Helvetica, "sans-serif";
   background: #ffffff;
   -webkit-box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
@@ -81565,7 +81562,7 @@ code {
   -ms-flex-align: center;
   align-items: center;
   padding: 0.25rem 0.75rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin: 0.1rem 0.4rem 0.1rem 0;
   position: relative;
   float: left/*rtl:right*/;
@@ -81731,7 +81728,7 @@ select.select2 {
   border: 1px solid #EBEDF3;
 }
 .note-editor .note-toolbar .note-btn-group .btn i {
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 0;
   padding-right: 0;
   color: #7E8299;
@@ -82440,7 +82437,7 @@ body.swal2-height-auto {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   content: "";
-  font-size: 1.3rem;
+  font-size: 0.9rem;
 }
 .toast .toast-title {
   font-size: 1.1rem;
@@ -82448,7 +82445,7 @@ body.swal2-height-auto {
   margin-bottom: 0.25rem;
 }
 .toast .toast-message {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .toast.toast-success {
   background-color: #1BC5BD;
@@ -82489,7 +82486,7 @@ body.swal2-height-auto {
 }
 .typeahead .tt-menu .tt-dataset .tt-suggestion {
   padding: 0.65rem 1rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #3F4254;
   cursor: pointer;
 }
@@ -82521,11 +82518,11 @@ body.swal2-height-auto {
 }
 .uppy .uppy-Dashboard-inner .uppy-DashboardContent-title {
   color: #3F4254;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 .uppy .uppy-Dashboard-inner .uppy-DashboardContent-addMoreCaption {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
 }
 .uppy .uppy-Dashboard-inner .uppy-DashboardTabs .uppy-Dashboard-dropFilesTitle {
   color: #3F4254;
@@ -82552,11 +82549,11 @@ body.swal2-height-auto {
 }
 .uppy .uppy-Dashboard-note {
   color: #3F4254;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 .uppy .uppy-btn-primary {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   background: #3699FF;
   color: #ffffff;
@@ -82566,7 +82563,7 @@ body.swal2-height-auto {
   background-color: #1789ff;
 }
 .uppy .uppy-DashboardContent-back {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #3699FF;
   outline: none !important;
@@ -82594,11 +82591,11 @@ body.swal2-height-auto {
 }
 .uppy .uppy-ProgressBar .uppy-ProgressBar-percentage {
   color: #3F4254;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 .uppy .uppy-DragDrop-label {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #3F4254;
 }
@@ -82619,7 +82616,7 @@ body.swal2-height-auto {
   background-color: #3699FF;
 }
 .uppy .uppy-StatusBar .uppy-StatusBar-content .uppy-StatusBar-statusPrimary {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #3F4254;
 }
@@ -82995,7 +82992,7 @@ body.swal2-height-auto {
   padding: 0;
   background-color: #F3F6F9;
   border-radius: 0.42rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .example .example-code pre[class*=language-] code {
   padding: 0;
@@ -83055,7 +83052,7 @@ body.swal2-height-auto {
 
 .apexcharts-pie-label {
   font-weight: 400;
-  font-size: 1.325rem;
+  font-size: 0.925rem;
 }
 
 .apexcharts-toolbar {
@@ -83144,7 +83141,7 @@ body.swal2-height-auto {
 }
 .leaflet-container .leaflet-popup-content-wrapper .leaflet-popup-content {
   font-family: Poppins, Helvetica, "sans-serif";
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -83638,7 +83635,7 @@ body {
     -ms-flex-align: center;
     align-items: center;
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: initial;
   }
   .header-menu .menu-nav > .menu-item .menu-inner > .menu-item .menu-link .menu-label,
@@ -83764,7 +83761,7 @@ body {
   }
   .header-menu .menu-nav > .menu-item > .menu-link .menu-text {
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: initial;
   }
   .header-menu .menu-nav > .menu-item > .menu-link .menu-label {
@@ -83843,7 +83840,7 @@ body {
   }
   .header-menu .menu-nav > .menu-item .menu-submenu > .menu-subnav > .menu-item > .menu-link .menu-text {
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: initial;
   }
   .header-menu .menu-nav > .menu-item .menu-submenu > .menu-subnav > .menu-item > .menu-link .menu-label {
@@ -83955,7 +83952,7 @@ body {
   }
   .header-menu .menu-nav > .menu-item .menu-submenu > .menu-subnav .menu-content .menu-inner > .menu-item > .menu-link .menu-text {
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: initial;
   }
   .header-menu .menu-nav > .menu-item .menu-submenu > .menu-subnav .menu-content .menu-inner > .menu-item > .menu-link .menu-label {
@@ -84470,7 +84467,7 @@ body {
   .header-menu-mobile .menu-nav > .menu-item .menu-submenu .menu-item > .menu-heading .menu-text,
 .header-menu-mobile .menu-nav > .menu-item .menu-submenu .menu-item > .menu-link .menu-text {
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: initial;
   }
   .header-menu-mobile .menu-nav > .menu-item .menu-submenu .menu-item > .menu-heading .menu-icon,
@@ -85184,7 +85181,7 @@ body {
 .aside-menu .menu-nav > .menu-item > .menu-heading .menu-text,
 .aside-menu .menu-nav > .menu-item > .menu-link .menu-text {
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-transform: initial;
 }
 .aside-menu .menu-nav > .menu-item > .menu-heading .menu-icon,
@@ -85279,7 +85276,7 @@ body {
 .aside-menu .menu-nav > .menu-item .menu-submenu .menu-item > .menu-heading .menu-text,
 .aside-menu .menu-nav > .menu-item .menu-submenu .menu-item > .menu-link .menu-text {
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-transform: initial;
 }
 .aside-menu .menu-nav > .menu-item .menu-submenu .menu-item > .menu-heading .menu-icon,
@@ -85381,7 +85378,7 @@ body {
   height: 40px;
 }
 .aside-menu .menu-nav > .menu-section .menu-text {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.3px;
@@ -85581,7 +85578,7 @@ body {
 .aside-menu.aside-menu-dropdown .menu-nav .menu-item:not([data-menu-submenu-mode=accordion]).menu-item-hover > .menu-submenu .menu-subnav > .menu-item > .menu-heading .menu-text,
 .aside-menu.aside-menu-dropdown .menu-nav .menu-item:not([data-menu-submenu-mode=accordion]).menu-item-hover > .menu-submenu .menu-subnav > .menu-item > .menu-link .menu-text {
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: initial;
   }
   .aside-minimize:not(.aside-minimize-hover) .aside-menu .menu-nav .menu-item:not([data-menu-submenu-mode=accordion]).menu-item-hover > .menu-submenu .menu-subnav > .menu-item > .menu-heading .menu-icon,
