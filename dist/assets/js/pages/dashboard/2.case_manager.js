@@ -3,7 +3,6 @@ axios
   .then((res) => {
     // 取得 json 資料
     let getCase_manager = res.data.case_manager;
-    console.log(getCase_manager);
     // 案件數量加總
     let local_total_states =
       getCase_manager[0].states.new +
