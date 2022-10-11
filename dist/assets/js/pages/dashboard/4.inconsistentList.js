@@ -9,7 +9,7 @@ fetch(jsonUrl, { method: "get" })
   })
   .then((data) => {
     jsonData = data.inconsistentList;
-    console.log(jsonData)
+    console.log(jsonData);
     pagination(jsonData, 1);
   });
 
@@ -68,24 +68,28 @@ function pagination(jsonData, nowPage) {
 function displayData(data) {
   let str = "";
   data.forEach((item) => {
-    str += `<div class="col-md-6 py-2 px-1">
-        <div class="card">
-          <div class="card bg-dark text-white text-left">
-            <img class="card-img-top bg-cover" height="155px" src="${item.Picture1}">
-            <div class="card-img-overlay d-flex justify-content-between align-items-end p-0 px-3" style="background-color: rgba(0, 0, 0, .2)">
-             <h5 class="card-img-title-lg">${item.Name}</h5><h5 class="card-img-title-sm">${item.Zone}</h5>
-           </div>
-          </div>
-          <div class="card-body text-left">
-              <p class="card-p-text"><i class="far fa-clock fa-clock-time"></i>&nbsp;${item.Opentime}</p>
-              <p class="card-p-text"><i class="fas fa-map-marker-alt fa-map-gps"></i>&nbsp;${item.Add}</p>
-            <div class="d-flex justify-content-between align-items-end">
-              <p class="card-p-text"><i class="fas fa-mobile-alt fa-mobile"></i>&nbsp;${item.Tel}</p>
-              <p class="card-p-text"><i class="fas fa-tags text-warning"></i>&nbsp;${item.Ticketinfo}</p>
-            </div>
-          </div>
-        </div>
-      </div>`;
+    str += `<tr >
+    <td class="py-5 pl-0">
+      <div class="symbol symbol-45 symbol-light mr-2">
+        <span class="symbol-label">${item.row}</span>
+      </div>
+    </td>
+    <td class="pl-0">
+      <a href="#"
+        class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">${item.name}</a>
+      <span class="text-muted font-weight-bold d-block">${item.category}</span>
+    </td>
+    <td class="text-right">
+      <span
+        class="text-muted font-weight-bolder d-block font-size-lg">${item.taxID}</span>
+    </td>
+    <td class="text-right">
+      <span class="text-muted font-weight-500">${item.address}</span>
+    </td>
+    <td class="text-right">
+      <span class="label label-xl label-gray-600 label-inline">${item.jurisdiction}</span>
+    </td>
+    </tr>`;
   });
   content.innerHTML = str;
 }
@@ -104,9 +108,13 @@ function pageBtn(page) {
 
   for (let i = 1; i <= total; i++) {
     if (Number(page.currentPage) === i) {
-      str += `<li class="page-item active"><a class="page-link" href="#" data-page="${i}">${i}</a></li>`;
+      str += `<li class="page-item active">
+      <a class="page-link" href="#" data-page="${i}">${i}</a>
+      </li>`;
     } else {
-      str += `<li class="page-item"><a class="page-link" href="#" data-page="${i}">${i}</a></li>`;
+      str += `<li class="page-item">
+      <a class="page-link" href="#" data-page="${i}">${i}</a>
+      </li>`;
     }
   }
 
