@@ -98,12 +98,18 @@ function pageBtn(page) {
   let str = "";
   const total = page.pageTotal;
 
+  if (page.currentPage === '1') {
+    str += `<li class="page-item disabled"><span class="page-link">最前頁</span></li>`;
+  } else {
+    str += `<li class="page-item"><a class="page-link" href="#" data-page="1">最前頁</a></li>`;
+  }
+
   if (page.hasPage) {
     str += `<li class="page-item"><a class="page-link" href="#" data-page="${
       Number(page.currentPage) - 1
-    }">Previous</a></li>`;
+    }">上一頁</a></li>`;
   } else {
-    str += `<li class="page-item disabled"><span class="page-link">Previous</span></li>`;
+    str += `<li class="page-item disabled"><span class="page-link">上一頁</span></li>`;
   }
 
   for (let i = 1; i <= total; i++) {
@@ -116,14 +122,41 @@ function pageBtn(page) {
       <a class="page-link" href="#" data-page="${i}">${i}</a>
       </li>`;
     }
+    // test
+    // if (Number(page.currentPage - i > 1)) {
+    //   str = page.currentPage - i + " " + str;
+    // }
+    // if (Number(page.currentPage + i < total)) {
+    //   str =
+    //     str +
+    //     `<li class="page-item">
+    //   <a class="page-link" href="#" data-page="${page.currentPage + i}">${
+    //       page.currentPage + i
+    //     }</a>
+    //   </li>`;
+    // }
+    // if (Number(page.currentPage - 3 > 1)) {
+    //   str += `<li class="page-item active">
+    //   <a class="page-link" href="#" data-page="${i}">${i}</a>
+    //   </li>` + "..." + total;
+    // }
+    // if (Number(page.currentPage > 1)) {
+    //   str += "上一頁" + "..." + 1 + " " + str;
+    // }
+    //  test
   }
-
   if (page.hasNext) {
     str += `<li class="page-item"><a class="page-link" href="#" data-page="${
       Number(page.currentPage) + 1
-    }">Next</a></li>`;
+    }">下一頁</a></li>`;
   } else {
-    str += `<li class="page-item disabled"><span class="page-link">Next</span></li>`;
+    str += `<li class="page-item disabled"><span class="page-link">下一頁</span></li>`;
+  }
+
+  if (Number(page.currentPage) === total) {
+    str += `<li class="page-item disabled"><span class="page-link">最後頁</span></li>`;
+  } else {
+    str += `<li class="page-item"><a class="page-link" href="#" data-page="${total}">最後頁</a></li>`;
   }
 
   pageid.innerHTML = str;

@@ -1,13 +1,15 @@
 /* 標題的 label */
 .label-title-block{
     display: flex;
-    justify-content: start;
-    align-items: center;
+    justify-content: start !important;
+    align-items: center !important;
     margin-bottom: 0.8rem;
+    margin: auto;
 }
 .label-title{
     height: 45px !important;
-    font-size: 1.3rem !important;
+    width: 77.53px !important;
+    font-size: 1rem !important;
     font-weight: 700 !important;
     margin-right: 0.8rem;
 }
@@ -19,4 +21,10 @@
     width: 100px !important;
     border-radius: 5px;
     font-size: 1rem;
+}
+
+
+.announcement-card-header{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
 }
