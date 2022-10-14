@@ -802,25 +802,25 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 				<!--begin::Tables Widget 1-->
 				<div class="card card-custom card-stretch gutter-b">
 					<!--begin::Header-->
-					<div class="card-header border-0 pt-7">
+					<div class="card-header border-0 p-6 ml-6">
 						<h3 class="card-title align-items-start flex-column">
 							<span
 								class="card-label font-weight-bolder font-size-h2 text-dark-75">地方登記與受補貼資料不一致業者名單</span>
-							<span class="text-muted mt-3 font-weight-bold font-size-lg">共 6 家</span>
+							<span class="text-muted mt-3 font-weight-bold font-size-lg list_of_operators_count"></span>
 						</h3>
-						<div class="card-toolbar-block">
-							<form class="form-inline">
-								<input class="form-control" type="search" placeholder="請輸入關鍵字" aria-label="Search">
-								<button class="btn btn-outline-success my-2 my-sm-0" type="submit">查詢</button>
-							</form>
-						</div>
+		
 					</div>
 					<!--end::Header-->
 					<!--begin::Body-->
-					<div class="card-body pt-1 pb-4">
-						<!--begin::Table-->
+					<!-- <div class="card-body p-6 ml-6 ">
+						<div id="kt_datatable">			
+							<table class="datatable datatable-bordered datatable-head-custom" id="ktdatatable"></table>						
+						</div> 
+					</div> -->
+					
+					<div class="card-body p-6 ml-6 ">
 						<div class="table-responsive">
-							<table class="table table-borderless table-vertical-center">
+							<table class="table  table-borderless table-vertical-center">
 								<thead>
 									<tr>
 										<th class="p-0 w-50px"></th>
@@ -828,18 +828,52 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 										<th class="p-0 w-50px"></th>
 										<th class="p-0 min-w-110px"></th>
 										<th class="p-0 min-w-110px"></th>
+										<th class="p-0 w-50px"></th>
 									</tr>
 								</thead>
-								<!-- from D:\Loveyu18\Desktop\RRMS_Dashboard_v2\dist\assets\js\pages\dashboard\4.inconsistentList.js -->
-								<tbody id="content"></tbody>
+								<tbody class="list_of_operators">
+														
+								</tbody>
 							</table>
-						</div>
-						<!--end::Tablet-->
+						</div>	
+								<tbody class="page-data" id="page-content">
+		
+								</tbody>
+		   
+							
+						 
 					</div>
 					<!--end::Body-->
-					<!--begin::Pagination-->
-					<div class="d-flex align-items-end justify-content-center mb-5 list-unstyled" id="pageid"></div>
-					<!--end::Pagination-->
+					<!--begin::Pagination-->				
+					<nav aria-label="Page navigation example " class="d-flex align-items-end justify-content-center mb-5 pagination " >
+						<ul class="pagination d-flex flex-wrp py-2 mr-3 cdp" actpage="1">		
+							
+								<li onclick="firstPage()" class="page-item cdp_i">								
+									<a class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1" href="#Page">
+										<i class="ki ki-bold-double-arrow-back icon-xs"></i>
+									</a>
+								</li>					
+								<li onclick="prePage()" class="page-item cdp_i">								
+									<a class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1" href="#Page">
+										<i class="ki ki-bold-arrow-back icon-xs"></i>
+									</a>
+								</li>
+								<li class="page-list"></li>
+							
+							<li onclick="nextPage()" class="page-item cdp_i">
+								<a href="#Page" aria-label="Next" class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1">
+									<i class="ki ki-bold-arrow-next icon-xs"></i>
+								</a>
+								
+							</li>
+							<li onclick="endPage()" class="page-item cdp_i">
+								<a href="#Page" aria-label="Next" class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1">
+									<i class="ki ki-bold-double-arrow-next icon-xs"></i>
+								</a>
+								
+							</li>
+						</ul>
+					</nav>
 				</div>
 				<!--end::Tables Widget 1-->
 			</div>
@@ -898,10 +932,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 	</div>
 
 
-	<div class="container">
+	<!-- <div class="container">
 		<div class="row" id="content"></div>
 		<div class="row" id="pageid"></div>
-	</div>
+	</div> -->
 
 
 
@@ -933,7 +967,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 	<script src="assets/js/pages/dashboard/2.case_manager.js"></script>
 	<script src="assets/js/pages/dashboard/3.total_factory_data.js"></script>
 	<script src="assets/js/pages/dashboard/4.inconsistentList.js"></script>
-	<!-- <script src="assets/js/pages/dashboard/4-1.inconsistentList.js"></script> -->
+	<script src="assets/js/pages/dashboard/4-1.inconsistentList.js"></script>
 	<script src="assets/js/pages/dashboard/5.exception_notification.js"></script>
 	<!--end::Page Scripts-->
 
