@@ -52,17 +52,29 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 <body id="kt_body"
 	class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-fixed aside-minimize-hoverable page-loading">
 
-
-
 	<div class="container">
 
 		<!-- begin::indexTitle -->
 		<h2 class="mt-10 mb-10">首頁－個人工作管理</h2>
 		<!-- end::indexTitle -->
+		<!-- brgin::RRDB專區 -->
+
+		<div class="RRDB_block mbr-parallax-background-fixed bg-style">
+			<div class="RRDB_inline">
+				<!-- <img src="./assets/media/RRDB_block/RRDB_index.jpg" alt="資源回收戰情室主視覺圖片"> -->
+				<!-- <img src="./assets/media/RRDB_block/RESOURCE RECYCLE DASHBOARD.png" alt="RRDB背景字樣"> -->
+				<h3>資源回收管理戰情室</h3>
+				<h4>Resource Recycle DashBoard</h4>
+				<a href="#" class="RRDB_button">點擊進入</a>
+			</div>
+		</div>
+		<!-- end::RRDB專區 -->
 		<!-- begin::downloadBlock -->
+		<h2>實用工具下載</h2>
 		<div class="row">
 			<div class="col-xl-12">
-				<a href="#" class="btn btn-primary font-weight-bold mr-2 mb-5" id="alertDownload">
+				<!-- begin::下載查登王app按鈕 -->
+				<a href="#" class="btn btn-primary mr-2 mb-5" id="alertDownload">
 					<span class="svg-icon">
 						<span class="svg-icon svg-icon-3x">
 							<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\keen\theme\demo1\dist/../src/media/svg/icons\Devices\iPhone-X.svg-->
@@ -80,9 +92,11 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 							</svg>
 							<!--end::Svg Icon-->
 						</span>
-					</span>下載查登王APP
+					</span>查登王APP
 				</a>
-				<a href="#" class="btn btn-primary font-weight-bold mr-2 mb-5">
+				<!-- end::下載查登王app按鈕 -->
+				<!-- begin::下載輔導未登記責任業者作業指引按鈕 -->
+				<a href="#" class="btn btn-primary mr-2 mb-5">
 					<span class="svg-icon  svg-icon-3x">
 						<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\keen\theme\demo1\dist/../src/media/svg/icons\Map\Compass.svg--><svg
 							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -95,7 +109,9 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 							</g>
 						</svg>
 						<!--end::Svg Icon-->
-					</span>下載輔導未登記責任業者作業指引</a>
+					</span>輔導未登記責任業者作業指引
+				</a>
+				<!-- end::下載輔導未登記責任業者作業指引按鈕 -->
 			</div>
 		</div>
 		<!-- end::downloadBlock -->
@@ -107,6 +123,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 				<!--end::H2 Title-->
 				<!--begin::Stats Widget 1-->
 				<div class="card card-custom  gutter-b">
+
 					<!--begin::card-header-->
 					<div class="card-header border-0 pt-6 justify-content-between announcement-card-header">
 						<div class="card-toolbar-block">
@@ -808,7 +825,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 								class="card-label font-weight-bolder font-size-h2 text-dark-75">地方登記與受補貼資料不一致業者名單</span>
 							<span class="text-muted mt-3 font-weight-bold font-size-lg list_of_operators_count"></span>
 						</h3>
-		
+
 					</div>
 					<!--end::Header-->
 					<!--begin::Body-->
@@ -817,7 +834,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 							<table class="datatable datatable-bordered datatable-head-custom" id="ktdatatable"></table>						
 						</div> 
 					</div> -->
-					
+
 					<div class="card-body p-6 ml-6 ">
 						<div class="table-responsive">
 							<table class="table  table-borderless table-vertical-center">
@@ -832,45 +849,48 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 									</tr>
 								</thead>
 								<tbody class="list_of_operators">
-														
+
 								</tbody>
 							</table>
-						</div>	
-								<tbody class="page-data" id="page-content">
-		
-								</tbody>
-		   
-							
-						 
+						</div>
+						<tbody class="page-data" id="page-content">
+
+						</tbody>
+
+
+
 					</div>
 					<!--end::Body-->
-					<!--begin::Pagination-->				
-					<nav aria-label="Page navigation example " class="d-flex align-items-end justify-content-center mb-5 pagination " >
-						<ul class="pagination d-flex flex-wrp py-2 mr-3 cdp" actpage="1">		
-							
-								<li onclick="firstPage()" class="page-item cdp_i">								
-									<a class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1" href="#Page">
-										<i class="ki ki-bold-double-arrow-back icon-xs"></i>
-									</a>
-								</li>					
-								<li onclick="prePage()" class="page-item cdp_i">								
-									<a class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1" href="#Page">
-										<i class="ki ki-bold-arrow-back icon-xs"></i>
-									</a>
-								</li>
-								<li class="page-list"></li>
-							
+					<!--begin::Pagination-->
+					<nav aria-label="Page navigation example "
+						class="d-flex align-items-end justify-content-center mb-5 pagination ">
+						<ul class="pagination d-flex flex-wrp py-2 mr-3 cdp" actpage="1">
+
+							<li onclick="firstPage()" class="page-item cdp_i">
+								<a class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1" href="#Page">
+									<i class="ki ki-bold-double-arrow-back icon-xs"></i>
+								</a>
+							</li>
+							<li onclick="prePage()" class="page-item cdp_i">
+								<a class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1" href="#Page">
+									<i class="ki ki-bold-arrow-back icon-xs"></i>
+								</a>
+							</li>
+							<li class="page-list"></li>
+
 							<li onclick="nextPage()" class="page-item cdp_i">
-								<a href="#Page" aria-label="Next" class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1">
+								<a href="#Page" aria-label="Next"
+									class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1">
 									<i class="ki ki-bold-arrow-next icon-xs"></i>
 								</a>
-								
+
 							</li>
 							<li onclick="endPage()" class="page-item cdp_i">
-								<a href="#Page" aria-label="Next" class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1">
+								<a href="#Page" aria-label="Next"
+									class="page-link btn btn-icon btn-sm btn-light-success mr-2 my-1">
 									<i class="ki ki-bold-double-arrow-next icon-xs"></i>
 								</a>
-								
+
 							</li>
 						</ul>
 					</nav>
@@ -931,7 +951,6 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 		<!--end::Dashboard-->
 	</div>
 
-
 	<!-- <div class="container">
 		<div class="row" id="content"></div>
 		<div class="row" id="pageid"></div>
@@ -970,7 +989,6 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
 	<script src="assets/js/pages/dashboard/4-1.inconsistentList.js"></script>
 	<script src="assets/js/pages/dashboard/5.exception_notification.js"></script>
 	<!--end::Page Scripts-->
-
 </body>
 <!--end::Body- ->
 
