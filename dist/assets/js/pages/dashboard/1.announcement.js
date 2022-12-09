@@ -13,56 +13,56 @@ axios
     system_announcement_1.innerHTML = `
     <tr>
     <th scope="row">${get_system_data[0].row}</th>
-    <td> <span class="label label-xl label-inline label-light-success  font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-success">
     ${get_system_data[0].date.year}/${get_system_data[0].date.month}/${get_system_data[0].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_system_data[0].content}</span>
     </td>
     <td>
-      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
+      <span>
       ${get_system_data[0].source}
       </span>
     </td>
   </tr>
   <tr>
     <th scope="row">${get_system_data[1].row}</th>
-    <td> <span class="label label-xl label-inline label-light-success font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-success">
         ${get_system_data[1].date.year}/${get_system_data[1].date.month}/${get_system_data[1].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_system_data[1].content}</span>
     </td>
     <td>
-      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
+      <span>
       ${get_system_data[1].source}
       </span>
     </td>
   </tr>
   <tr>
     <th scope="row">${get_system_data[2].row}</th>
-    <td> <span class="label label-xl label-inline label-light-success font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-success">
     ${get_system_data[2].date.year}/${get_system_data[2].date.month}/${get_system_data[2].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_system_data[2].content}</span>
     </td>
     <td>
-      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
+      <span>
       ${get_system_data[2].source}
       </span>
     </td>
   </tr>
   <tr>
     <th scope="row">${get_system_data[3].row}</th>
-    <td> <span class="label label-xl label-inline label-light-success font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-success">
     ${get_system_data[3].date.year}/${get_system_data[3].date.month}/${get_system_data[3].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_system_data[3].content}</span>
     </td>
     <td>
-      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
+      <span>
       ${get_system_data[3].source}
       </span>
     </td>
@@ -71,56 +71,56 @@ axios
     system_announcement_2.innerHTML = `
     <tr>
     <th scope="row">${get_public_data[0].row}</th>
-    <td> <span class="label label-xl label-inline label-light-primary font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-primary">
     ${get_public_data[0].date.year}/${get_public_data[0].date.month}/${get_public_data[0].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_public_data[0].content}</span>
     </td>
     <td>
-      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
+      <span>
       ${get_public_data[0].source}
       </span>
     </td>
   </tr>
     <tr>
     <th scope="row">${get_public_data[1].row}</th>
-    <td> <span class="label label-xl label-inline label-light-primary font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-primary">
     ${get_public_data[1].date.year}/${get_public_data[1].date.month}/${get_public_data[1].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_public_data[1].content}</span>
     </td>
     <td>
-      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
+      <span>
       ${get_public_data[1].source}
       </span>
     </td>
   </tr>
     <tr>
     <th scope="row">${get_public_data[2].row}</th>
-    <td> <span class="label label-xl label-inline label-light-primary font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-primary">
     ${get_public_data[2].date.year}/${get_public_data[2].date.month}/${get_public_data[2].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_public_data[2].content}</span>
     </td>
     <td>
-      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
+      <span>
       ${get_public_data[2].source}
       </span>
     </td>
   </tr>
     <tr>
     <th scope="row">${get_public_data[3].row}</th>
-    <td> <span class="label label-xl label-inline label-light-primary font-weight-bold">
+    <td> <span class="label label-xl label-inline label-light-primary">
     ${get_public_data[3].date.year}/${get_public_data[3].date.month}/${get_public_data[3].date.day}
       </span></td>
     <td class="text-left">
     <span id="announcement_text">${get_public_data[3].content}</span>
     </td>
     <td>
-      <span class="label label-xl label-inline label-light-gray-600 font-weight-bold">
+      <span>
       ${get_public_data[3].source}
       </span>
     </td>

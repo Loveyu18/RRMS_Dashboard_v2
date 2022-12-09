@@ -122,28 +122,6 @@ function pageBtn(page) {
       <a class="page-link" href="#" data-page="${i}">${i}</a>
       </li>`;
     }
-    // test
-    // if (Number(page.currentPage - i > 1)) {
-    //   str = page.currentPage - i + " " + str;
-    // }
-    // if (Number(page.currentPage + i < total)) {
-    //   str =
-    //     str +
-    //     `<li class="page-item">
-    //   <a class="page-link" href="#" data-page="${page.currentPage + i}">${
-    //       page.currentPage + i
-    //     }</a>
-    //   </li>`;
-    // }
-    // if (Number(page.currentPage - 3 > 1)) {
-    //   str += `<li class="page-item active">
-    //   <a class="page-link" href="#" data-page="${i}">${i}</a>
-    //   </li>` + "..." + total;
-    // }
-    // if (Number(page.currentPage > 1)) {
-    //   str += "上一頁" + "..." + 1 + " " + str;
-    // }
-    //  test
   }
   if (page.hasNext) {
     str += `<li class="page-item"><a class="page-link" href="#" data-page="${

@@ -29,113 +29,23 @@
     padding-right: 15px !important;
 }
 
-/* RRDB_Block */
-
-/*--body底圖--*/
-.mbr-parallax-background-fixed {
-    position: relative;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-
-.bg-style {
-    background-image: url(https://edm.bnext.com.tw/digital_marketing/assets/images/bg-line.svg);
-    background-color: #06100e;
-    background-size: cover;
-}
-
-.RRDB_block {
-    height: 150px;
-    margin-bottom: 50px;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-/*--body底圖--*/
-
-.RRDB_inline {
-    background:
-        url(../../../media/RRDB_block/RESOURCE\ RECYCLE\ DASHBOARD.png) center center / 90% no-repeat;
-    background-color: rgba(255, 255, 255, 0.05);
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.RRDB_inline img {
-    position: absolute;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.RRDB_inline h3 {
-    color: #A1EE26;
-    font-size: 2rem;
-    text-align: center;
+.index_title{
+    font-size: 2.5rem;
     font-weight: 700;
+    border-left: 10px solid rgb(111, 189, 205);
+    padding-left: 7px;
 }
 
-.RRDB_inline h4 {
-    color: rgb(255, 255, 255);
-    background: rgba(0, 0, 0, 0.411);
-    text-align: center;
-    font-size: small;
-    height: 2rem;
-    width: 80%;
-    margin: auto;
-    border-top: 1px solid #A1EE26;
-    border-bottom: 1px solid #A1EE26;
-    margin-bottom: 10px;
-    padding-top: 3px;
-    font-weight: 700;
+.post_and_more{
+    margin-bottom: 0.5rem;
 }
 
-.RRDB_button {
-    display: inline-block;
-    background-color: #A1EE26;
-    color: #000000;
-    font-weight: 700;
-    font-size: 1.2rem;
-    padding: 5px 15px;
-    border-radius: 50px;
-    margin-left: 50%;
-    transform: translate(-50%);
-    text-decoration: none;
+.font_color_level_AA_with_white{
+    color: #58585e !important;
 }
-
-.RRDB_button:hover {
-    background-color: #ffffff;
-    color: #06100e;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+.local_color{
+    color: #1BC5BD;
 }
-
-@media (min-width:576px) {
-    .RRDB_block {
-        height: 250px;
-    }
-
-    .RRDB_inline {
-        background-size: 80%;
-    }
-
-    .RRDB_inline h3 {
-        font-size: 3.2rem;
-        padding-top: 20px;
-    }
-
-    .RRDB_inline h4 {
-        font-size: 1.6rem;
-        height: 2.6rem;
-        width: 40%;
-        margin-bottom: 15px;
-    }
+.sub_color{
+    color: #3699FF;
 }
-

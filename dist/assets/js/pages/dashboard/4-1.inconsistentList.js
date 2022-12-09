@@ -94,13 +94,13 @@ function prePage() {
 						<td class="pl-0">
 							<a href="#"
 							class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">${item.company}</a>
-							<span class="text-muted font-weight-bold d-block">${item.category}</span>
+							<span class="text-muted font-weight-bold d-block font_color_level_AA_with_white">${item.category}</span>
 						</td>
 						<td class="text-right">
-							<span class="text-muted font-weight-bolder d-block font-size-lg">${item.number}</span>
+							<span class="text-muted font-weight-bolder d-block font-size-lg font_color_level_AA_with_white">${item.number}</span>
 						</td>
 						<td class="text-right">
-							<span class="text-muted font-weight-500">${item.address}</span>
+							<span class="text-muted font-weight-500 font_color_level_AA_with_white">${item.address}</span>
 						</td>
 						<td class="text-right">
 							<span class="label label-lg label-light-success label-inline">${item.county}</span>
@@ -124,133 +124,3 @@ function prePage() {
 		  return acc
 	  }, [])
   }
-
-
-  
- 
-
-
-
-
-
-
-// keen  ajax
-
-
-// var datatable = $('#ktdatatable').KTDatatable({
-// 	// datasource definition
-// 		data: {
-// 			type: 'remote',
-// 			source: {
-// 				read: {
-// 					url: '../datasample/7.list_of_operators.json',
-// 					map: function(raw) {
-// 						var dataSet = raw;
-// 						if (typeof raw.data !== 'undefined') {
-// 							dataSet = raw.data;
-// 						}
-// 						return dataSet;
-// 					},
-// 				},
-// 			},
-// 			pageSize: 5,
-// 			saveState: true,
-// 		},
-	
-// 		layout: {
-// 			scroll: false,
-// 			footer: false,
-// 		},
-	
-// 		sortable: true,
-	
-// 		pagination: true,
-	
-// 		columns: [{
-// 			field: 'id',
-// 			title: ''
-// 		}, {
-// 			field: 'company',
-// 			title: '公司名'
-// 		}, {
-// 			field: 'category',
-// 			title: '分類'
-// 		}, {
-// 			field: 'number',
-// 			title: '統編'
-// 		}, {
-// 			field: 'address',
-// 			title: '地址'
-// 		}, {
-// 			field: 'county',
-// 			title: '縣市'
-// 		}]
-// 	});
-	
-
-
-//  keen ajax jq
-
-// var KTDatatablesDataSourceAjaxClient = function() {
-
-// 	var initTable1 = function() {
-// 		var table = $('#ktdatatable');
-
-// 		// begin first table
-// 		table.KTDatatable({
-// 			responsive: true,
-// 			ajax: {
-// 				url: '../datasample/7.list_of_operators.json' ,
-// 				type: 'GET',
-// 				data: {
-// 					pagination: {
-// 						perpage: 50,
-// 					},
-// 				},
-// 			},
-// 			columns: [{
-// 				field: 'id',
-// 				title: '編號'
-// 			}, {
-// 				field: 'company',
-// 				title: '公司名'
-// 			}, {
-// 				field: 'category',
-// 				title: '分類'
-// 			}, {
-// 				field: 'number',
-// 				title: '統編'
-// 			}, {
-// 				field: 'address',
-// 				title: '地址'
-// 			}, {
-// 				field: 'county',
-// 				title: '縣市'
-// 			}],
-// 			layout: {
-// 				scroll: false,
-// 				footer: false,
-// 			},
-// 			sortable: true,
-	
-// 			pagination: true,
-			
-			
-// 		});
-// 	};
-
-// 	return {
-
-// 		//main function to initiate the module
-// 		init: function() {
-// 			initTable1();
-// 		},
-
-// 	};
-
-// }();
-
-// jQuery(document).ready(function() {
-// 	KTDatatablesDataSourceAjaxClient.init();
-// });
-
