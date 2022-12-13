@@ -43,6 +43,145 @@ axios
     // 1. 宣告資料指向材質material
     let local_recycle_material = totalFactory_Data[0].industryResult.material;
     let local_deal_material = totalFactory_Data[1].industryResult.material;
+
+    // brgin:: 業者現況分析 - 登記家數的圓餅圖
+    var KTWidgets = (function () {
+      var _initStatsWidget2_1 = function () {
+        var element = document.getElementById("kt_stats_widget_2_1_chart");
+        if (!element) {
+          return;
+        }
+        var config = {
+          type: "doughnut",
+          data: {
+            datasets: [
+              {
+                data: [localRecycleQuantity_Data, localDealQuantity_Data],
+                backgroundColor: [
+                  KTApp.getSettings()["colors"]["theme"]["base"]["success"],
+                  KTApp.getSettings()["colors"]["theme"]["base"]["primary"],
+                ],
+              },
+            ],
+            labels: ["回收業", "處理業"],
+          },
+          options: {
+            cutoutPercentage: 75,
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              position: "top",
+            },
+            title: {
+              display: false,
+              text: "Technology",
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true,
+            },
+            tooltips: {
+              enabled: true,
+              intersect: false,
+              mode: "nearest",
+              bodySpacing: 5,
+              yPadding: 10,
+              xPadding: 10,
+              caretPadding: 0,
+              displayColors: false,
+              // backgroundColor:
+              //   KTApp.getSettings()["colors"]["theme"]["base"]["dark"],
+              titleFontColor: "#ffffff",
+              cornerRadius: 4,
+              footerSpacing: 0,
+              titleSpacing: 0,
+            },
+          },
+        };
+        var ctx = element.getContext("2d");
+        var myDoughnut = new Chart(ctx, config);
+      };
+      var _initStatsWidget2_2 = function () {
+        var element = document.getElementById("kt_stats_widget_2_2_chart");
+
+        if (!element) {
+          return;
+        }
+
+        var randomScalingFactor = function () {
+          return Math.round(Math.random() * 100);
+        };
+
+        var config = {
+          type: "doughnut",
+          data: {
+            datasets: [
+              {
+                data: [subRecycleQuantity_Data, subDealQuantity_Data],
+                backgroundColor: [
+                  KTApp.getSettings()["colors"]["theme"]["base"]["success"],
+                  KTApp.getSettings()["colors"]["theme"]["base"]["primary"],
+                ],
+              },
+            ],
+            labels: ["回收業", "處理業"],
+          },
+          options: {
+            cutoutPercentage: 75,
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              position: "bottom",
+            },
+            title: {
+              display: false,
+              text: "Technology",
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true,
+            },
+            tooltips: {
+              enabled: true,
+              intersect: false,
+              mode: "nearest",
+              bodySpacing: 5,
+              yPadding: 10,
+              xPadding: 10,
+              caretPadding: 0,
+              displayColors: false,
+              //   backgroundColor:
+              //     KTApp.getSettings()["colors"]["theme"]["base"]["danger"],
+              titleFontColor: "#ffffff",
+              cornerRadius: 4,
+              footerSpacing: 0,
+              titleSpacing: 0,
+            },
+          },
+        };
+
+        var ctx = element.getContext("2d");
+        var myDoughnut = new Chart(ctx, config);
+      };
+
+      return {
+        init: function () {
+          _initStatsWidget2_1();
+          _initStatsWidget2_2();
+        },
+      };
+    })();
+    if (typeof module !== "undefined") {
+      module.exports = KTWidgets;
+    }
+    jQuery(document).ready(function () {
+      KTWidgets.init();
+    });
+
+    // end:: 業者現況分析 - 登記家數的圓餅圖
+
     var subsidyChartOptions1 = {
       series: [
         {
@@ -311,10 +450,10 @@ axios
       dataLabels: {
         enabled: false,
       },
-      colors: [ '#CED4DC','#00E396'],
+      colors: ["#CED4DC", "#00E396"],
       stroke: {
         curve: "smooth",
-        width: [3,3]
+        width: [3, 3],
       },
       xaxis: {
         type: "date",
@@ -422,10 +561,10 @@ axios
       dataLabels: {
         enabled: false,
       },
-      colors: [ '#CED4DC','#008FFB'],
+      colors: ["#CED4DC", "#008FFB"],
       stroke: {
         curve: "smooth",
-        width: [3,3],
+        width: [3, 3],
       },
       xaxis: {
         type: "date",
