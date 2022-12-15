@@ -39,10 +39,6 @@ axios
       "回收業 " + subRecycleQuantity_Data + " 家";
     subDeal_Quantity.innerHTML += "處理業 " + subDealQuantity_Data + " 家";
     subVerify_Quantity.innerHTML += subVerifyQuantity_Data + " 家";
-    // 地方 - 業者材質分佈
-    // 1. 宣告資料指向材質material
-    let local_recycle_material = totalFactory_Data[0].industryResult.material;
-    let local_deal_material = totalFactory_Data[1].industryResult.material;
 
     // brgin:: 業者現況分析 - 登記家數的圓餅圖
     var KTWidgets = (function () {
@@ -56,6 +52,7 @@ axios
           data: {
             datasets: [
               {
+                //串接資料放這邊
                 data: [localRecycleQuantity_Data, localDealQuantity_Data],
                 backgroundColor: [
                   KTApp.getSettings()["colors"]["theme"]["base"]["success"],
@@ -118,6 +115,7 @@ axios
           data: {
             datasets: [
               {
+                //串接資料放這邊
                 data: [subRecycleQuantity_Data, subDealQuantity_Data],
                 backgroundColor: [
                   KTApp.getSettings()["colors"]["theme"]["base"]["success"],
@@ -179,9 +177,13 @@ axios
     jQuery(document).ready(function () {
       KTWidgets.init();
     });
-
     // end:: 業者現況分析 - 登記家數的圓餅圖
 
+    // brgin:: 業者現況分析 - 業者材質分佈
+    // 1. 宣告資料指向材質material
+    let local_recycle_material = totalFactory_Data[0].industryResult.material;
+    let local_deal_material = totalFactory_Data[1].industryResult.material;
+    // 地方 - 業者材質分佈
     var subsidyChartOptions1 = {
       series: [
         {
@@ -225,12 +227,14 @@ axios
         enabled: true,
         textAnchor: "start",
         style: {
-          colors: ["#"],
+          colors: ["#3F4254"],
+          fontSize:'1.1rem'
         },
         formatter: function (val, opt) {
           return opt.w.globals.labels[opt.dataPointIndex] + " " + val;
         },
-        offsetX: 0,
+        offsetX: 10,
+        offsetY: 9,
         dropShadow: {
           enabled: false,
         },
@@ -238,6 +242,9 @@ axios
       stroke: {
         width: 1,
         colors: ["#fff"],
+      },
+      legend: {
+        show: false,
       },
       xaxis: {
         categories: [
@@ -276,7 +283,6 @@ axios
     );
     subsidyChart1.render();
     // 受補貼 - 業者材質分佈
-    // 1. 宣告資料指向材質material
     // 1. 宣告資料指向材質material
     let sub_recycle_material = totalFactory_Data[2].industryResult.material;
     let sub_deal_material = totalFactory_Data[3].industryResult.material;
@@ -318,17 +324,19 @@ axios
           },
         },
       },
-      colors: ["#cfe2ff"],
+      colors: ["#B7E2FF"],
       dataLabels: {
         enabled: true,
         textAnchor: "start",
         style: {
-          colors: ["#"],
+          colors: ["#3F4254"],
+          fontSize:'1.1rem'
         },
         formatter: function (val, opt) {
           return opt.w.globals.labels[opt.dataPointIndex] + " " + val;
         },
-        offsetX: 0,
+        offsetX: 10,
+        offsetY: 9,
         dropShadow: {
           enabled: false,
         },
@@ -336,6 +344,9 @@ axios
       stroke: {
         width: 1,
         colors: ["#fff"],
+      },
+      legend: {
+        show: false,
       },
       xaxis: {
         categories: [
@@ -373,6 +384,8 @@ axios
       subsidyChartOptions2
     );
     subsidyChart2.render();
+    // end:: 業者現況分析 - 業者材質分佈
+
     // 地方 - 案件趨勢系統
     var caseOptions1 = {
       series: [

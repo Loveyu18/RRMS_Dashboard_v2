@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu-item</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <!--end::Fonts-->
+    <!--begin::Page Vendors Styles(used by this page)-->
+    <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Page Vendors Styles-->
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Theme Styles-->
+    <!--begin::Page Styles(used by this page)-->
+    <link href="assets/css/dncDefaultStyle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/pages/dashboard/dashboard.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/pages/dashboard/RRDB_entrance.css" rel="stylesheet" type="text/css" />
+    <!--end::Page Styles(used by this page)-->
+    <style>
+        /* begin::RRDB按鈕css */
+        .RRDE_button_link {
+            position: relative;
+            display: inline-block;
+            padding: 0.65em 1.1em;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            color: #A1EE26 !important;
+        }
+
+        .RRDE_button_link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(135deg, #06100e, #15473d);
+            border-radius: 4px;
+            transition: box-shadow .5s ease, transform .2s ease;
+            will-change: transform;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+            transform:
+                translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+        }
+
+        .RRDE_button_link:hover::before {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+        }
+
+        .RRDE_button_link::after {
+            position: relative;
+            display: inline-block;
+            content: attr(data-title);
+            transition: transform .2s ease;
+            font-weight: bold;
+            letter-spacing: .01em;
+            will-change: transform;
+            transform:
+                translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+        }
+
+        /* end::RRDB按鈕css */
+
+        /* begin::這是模擬bosy用的 */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200vh;
+            transform-style: preserve-3d;
+            transform: perspective(800px);
+        }
+
+        /* end::這是模擬bosy用的 */
+    </style>
+</head>
+
+<body>
+
+    <div id="kt_header" class="header header-fixed">
+        <!--begin::Container-->
+        <div class="container-fluid d-flex align-items-stretch justify-content-between">
+            <!--begin::Header Menu Wrapper-->
+            <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+                <!--begin::Header Menu-->
+                <div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
+                    <!--begin::Header Nav-->
+                    <ul class="menu-nav">
+                        <li class="menu-item menu-item-active">
+                            <a class="menu-link" data-subsystemcode="A" href="#">基管會行政業務與外部推廣宣導管理系統</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" data-subsystemcode="B" href="#">地方環保機關成果管理系統</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" data-subsystemcode="C" href="#">回收處理作業管理系統</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" data-subsystemcode="D" href="#">基金收支管理系統</a>
+                        </li>
+                        <li class="menu-item ">
+                            <a class="menu-link" data-subsystemcode="E" href="#">責任業者管理系統</a>
+                        </li>
+                        <li class="menu-item ">
+                            <!-- begin:: RRDB按鈕 -->
+                            <a class="RRDE_button_link" data-subsystemcode="F" href="#" data-title="RRDB 資源回收管理戰情室"></a>
+                            <!-- end:: RRDB按鈕 -->
+                        </li>
+
+                    </ul>
+                    <!--end::Header Nav-->
+                </div>
+                <!--end::Header Menu-->
+            </div>
+            <!--end::Header Menu Wrapper-->
+        </div>
+        <!--end::Container-->
+    </div>
+
+    <script>
+        // bigin::RRDB的JS
+        const docStyle = document.documentElement.style
+        const aElem = document.querySelector('.RRDE_button_link')
+        const boundingClientRect = aElem.getBoundingClientRect()
+
+        aElem.onmousemove = function (e) {
+
+            const x = e.clientX - boundingClientRect.left
+            const y = e.clientY - boundingClientRect.top
+
+            const xc = boundingClientRect.width / 2
+            const yc = boundingClientRect.height / 2
+
+            const dx = x - xc
+            const dy = y - yc
+
+            docStyle.setProperty('--rx', `${dy / -1}deg`)
+            docStyle.setProperty('--ry', `${dx / 10}deg`)
+
+        }
+
+        aElem.onmouseleave = function (e) {
+
+            docStyle.setProperty('--ty', '0')
+            docStyle.setProperty('--rx', '0')
+            docStyle.setProperty('--ry', '0')
+
+        }
+
+        aElem.onmousedown = function (e) {
+
+            docStyle.setProperty('--tz', '-25px')
+
+        }
+
+        document.body.onmouseup = function (e) {
+
+            docStyle.setProperty('--tz', '-12px')
+
+        }
+        // end::RRDB的JS
+    </script>
+</body>
+
+</html>
