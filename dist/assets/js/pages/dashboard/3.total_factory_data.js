@@ -228,7 +228,7 @@ axios
         textAnchor: "start",
         style: {
           colors: ["#3F4254"],
-          fontSize:'1.1rem'
+          fontSize: "1.1rem",
         },
         formatter: function (val, opt) {
           return opt.w.globals.labels[opt.dataPointIndex] + " " + val;
@@ -330,7 +330,7 @@ axios
         textAnchor: "start",
         style: {
           colors: ["#3F4254"],
-          fontSize:'1.1rem'
+          fontSize: "1.1rem",
         },
         formatter: function (val, opt) {
           return opt.w.globals.labels[opt.dataPointIndex] + " " + val;
@@ -386,42 +386,23 @@ axios
     subsidyChart2.render();
     // end:: 業者現況分析 - 業者材質分佈
 
+    // begin:: 案件趨勢 - 取得值，帶入data中
+    let caseTrend_local_lastYear = Object.values(case_history[0].month);
+    let caseTrend_local_currentYear = Object.values(case_history[1].month);
+    let caseTrend_sub_lastYear = Object.values(case_history[2].month);
+    let caseTrend_sub_currentYear = Object.values(case_history[3].month);
+    // end:: 案件趨勢 - 取得值，帶入data中
+
     // 地方 - 案件趨勢系統
     var caseOptions1 = {
       series: [
         {
           name: "去年同期(" + case_history[0].year + ")",
-          data: [
-            case_history[0].month.Jan,
-            case_history[0].month.Feb,
-            case_history[0].month.Mar,
-            case_history[0].month.Apr,
-            case_history[0].month.May,
-            case_history[0].month.Jun,
-            case_history[0].month.Jul,
-            case_history[0].month.Aug,
-            case_history[0].month.Sep,
-            case_history[0].month.Oct,
-            case_history[0].month.Nov,
-            case_history[0].month.Dec,
-          ],
+          data: caseTrend_local_lastYear,
         },
         {
           name: "今年(" + case_history[1].year + ")",
-          data: [
-            case_history[1].month.Jan,
-            case_history[1].month.Feb,
-            case_history[1].month.Mar,
-            case_history[1].month.Apr,
-            case_history[1].month.May,
-            case_history[1].month.Jun,
-            case_history[1].month.Jul,
-            case_history[1].month.Aug,
-            case_history[1].month.Sep,
-            case_history[1].month.Oct,
-            case_history[1].month.Nov,
-            case_history[1].month.Dec,
-          ],
+          data: caseTrend_local_currentYear,
         },
       ],
       chart: {
@@ -495,6 +476,7 @@ axios
       document.querySelector("#caseChart1"),
       caseOptions1
     );
+
     caseChart1.render();
 
     // 受補貼 - 案件趨勢系統
@@ -502,37 +484,11 @@ axios
       series: [
         {
           name: "今年(" + case_history[2].year + ")",
-          data: [
-            case_history[2].month.Jan,
-            case_history[2].month.Feb,
-            case_history[2].month.Mar,
-            case_history[2].month.Apr,
-            case_history[2].month.May,
-            case_history[2].month.Jun,
-            case_history[2].month.Jul,
-            case_history[2].month.Aug,
-            case_history[2].month.Sep,
-            case_history[2].month.Oct,
-            case_history[2].month.Nov,
-            case_history[2].month.Dec,
-          ],
+          data: caseTrend_sub_lastYear,
         },
         {
           name: "去年同期(" + case_history[3].year + ")",
-          data: [
-            case_history[3].month.Jan,
-            case_history[3].month.Feb,
-            case_history[3].month.Mar,
-            case_history[3].month.Apr,
-            case_history[3].month.May,
-            case_history[3].month.Jun,
-            case_history[3].month.Jul,
-            case_history[3].month.Aug,
-            case_history[3].month.Sep,
-            case_history[3].month.Oct,
-            case_history[3].month.Nov,
-            case_history[3].month.Dec,
-          ],
+          data: caseTrend_sub_currentYear,
         },
       ],
       chart: {
