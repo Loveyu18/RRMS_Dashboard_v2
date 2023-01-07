@@ -1,135 +1,81 @@
 axios
   .get("./assets/data/announcement.json")
   .then((res) => {
-    let get_system_data = res.data.system_announcement;
-    let get_public_data = res.data.public_announcement;
-    const system_announcement_1 = document.querySelector(
-      "#system_announcement_1"
+    createDomElement_system(
+      res.data.system_announcement,
+      "system_announcement",
+      4
     );
-    const system_announcement_2 = document.querySelector(
-      "#system_announcement_2"
+    createDomElement_public(
+      res.data.public_announcement,
+      "public_announcement",
+      4
     );
 
-    system_announcement_1.innerHTML = `
-    <tr>
-    <th scope="row">${get_system_data[0].row}</th>
-    <td> <span class="label label-xl label-inline label-light-success">
-    ${get_system_data[0].date.year}/${get_system_data[0].date.month}/${get_system_data[0].date.day}
-      </span></td>
-    <td class="text-left">
-    <span id="announcement_text">${get_system_data[0].content}</span>
-    </td>
-    <td>
-      <span>
-      ${get_system_data[0].source}
-      </span>
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">${get_system_data[1].row}</th>
-    <td> <span class="label label-xl label-inline label-light-success">
-        ${get_system_data[1].date.year}/${get_system_data[1].date.month}/${get_system_data[1].date.day}
-      </span></td>
-    <td class="text-left">
-    <span id="announcement_text">${get_system_data[1].content}</span>
-    </td>
-    <td>
-      <span>
-      ${get_system_data[1].source}
-      </span>
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">${get_system_data[2].row}</th>
-    <td> <span class="label label-xl label-inline label-light-success">
-    ${get_system_data[2].date.year}/${get_system_data[2].date.month}/${get_system_data[2].date.day}
-      </span></td>
-    <td class="text-left">
-    <span id="announcement_text">${get_system_data[2].content}</span>
-    </td>
-    <td>
-      <span>
-      ${get_system_data[2].source}
-      </span>
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">${get_system_data[3].row}</th>
-    <td> <span class="label label-xl label-inline label-light-success">
-    ${get_system_data[3].date.year}/${get_system_data[3].date.month}/${get_system_data[3].date.day}
-      </span></td>
-    <td class="text-left">
-    <span id="announcement_text">${get_system_data[3].content}</span>
-    </td>
-    <td>
-      <span>
-      ${get_system_data[3].source}
-      </span>
-    </td>
-  </tr>
-    `;
-    system_announcement_2.innerHTML = `
-    <tr>
-    <th scope="row">${get_public_data[0].row}</th>
-    <td> <span class="label label-xl label-inline label-light-primary">
-    ${get_public_data[0].date.year}/${get_public_data[0].date.month}/${get_public_data[0].date.day}
-      </span></td>
-    <td class="text-left">
-    <span id="announcement_text">${get_public_data[0].content}</span>
-    </td>
-    <td>
-      <span>
-      ${get_public_data[0].source}
-      </span>
-    </td>
-  </tr>
-    <tr>
-    <th scope="row">${get_public_data[1].row}</th>
-    <td> <span class="label label-xl label-inline label-light-primary">
-    ${get_public_data[1].date.year}/${get_public_data[1].date.month}/${get_public_data[1].date.day}
-      </span></td>
-    <td class="text-left">
-    <span id="announcement_text">${get_public_data[1].content}</span>
-    </td>
-    <td>
-      <span>
-      ${get_public_data[1].source}
-      </span>
-    </td>
-  </tr>
-    <tr>
-    <th scope="row">${get_public_data[2].row}</th>
-    <td> <span class="label label-xl label-inline label-light-primary">
-    ${get_public_data[2].date.year}/${get_public_data[2].date.month}/${get_public_data[2].date.day}
-      </span></td>
-    <td class="text-left">
-    <span id="announcement_text">${get_public_data[2].content}</span>
-    </td>
-    <td>
-      <span>
-      ${get_public_data[2].source}
-      </span>
-    </td>
-  </tr>
-    <tr>
-    <th scope="row">${get_public_data[3].row}</th>
-    <td> <span class="label label-xl label-inline label-light-primary">
-    ${get_public_data[3].date.year}/${get_public_data[3].date.month}/${get_public_data[3].date.day}
-      </span></td>
-    <td class="text-left">
-    <span id="announcement_text">${get_public_data[3].content}</span>
-    </td>
-    <td>
-      <span>
-      ${get_public_data[3].source}
-      </span>
-    </td>
-  </tr>
-  
-    `;
+    function createDomElement_system(charge, elementName, limit = 0) {
+      if (limit > 0) {
+        charge = charge.filter((item, index) => index < limit);
+      }
+      let domElements_system = charge
+        .map((item, index) => {
+          return `
+        <tr>
+            <th scope="row">${index + 1}</th>
+              <td> 
+                <span class="label label-inline label-light-success font-weight-bold">${
+                  item.date
+                }</span>
+              </td>
+              <td class="text-left" id="announcement_text">${item.content}</td>
+              <td>
+                <span class="label label-lg label-inline label-light-primary font-weight-bold author">${
+                  item.author
+                }</span>
+              </td>
+        </tr>
+      `;
+        })
+        .join("");
+      const system_announcement = document.querySelector(
+        ".system_announcement"
+      );
+      system_announcement.innerHTML = domElements_system;
+    }
+
+    function createDomElement_public(charge, elementName, limit = 0) {
+      if (limit > 0) {
+        charge = charge.filter((item, index) => index < limit);
+      }
+      let domElements_public = charge
+        .map((item, index) => {
+          return `
+        <tr>
+            <th scope="row">${index + 1}</th>
+              <td> 
+                <span class="label label-inline label-light-success font-weight-bold">${
+                  item.date
+                }</span>
+              </td>
+              <td class="text-left" id="announcement_text">${item.content}</td>
+              <td>
+                <span class="label label-lg label-inline label-light-primary font-weight-bold author">${
+                  item.author
+                }</span>
+              </td>
+        </tr>
+      `;
+        })
+        .join("");
+      const public_announcement = document.querySelector(
+        ".public_announcement"
+      );
+      public_announcement.innerHTML = domElements_public;
+
+      
+    }
 
     // begin:: 判斷超過 35 字元，斷句變 ...more
-    const len = 20;
+    const len = 35;
     const announcement_text = document.querySelectorAll("#announcement_text");
     announcement_text.forEach((item) => {
       if (item.innerHTML.length > len) {

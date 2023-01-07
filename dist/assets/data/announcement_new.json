@@ -1,0 +1,111 @@
+{
+    "system_announcement": [
+        {
+            "Index_no": 3581,
+            "Use_Type": "ZZ",
+            "Bulletin_Content": "測試20230105",
+            "Deadline_Date": null,
+            "Upload_File": "../upload/Bulletin/ZZ/20230105/Bulletin_154211_0268.pdf",
+            "Is_del": false,
+            "Creat_id": null,
+            "Creat_Name": "凌振庭",
+            "Creat_Date": "2023-01-05T15:44:11.75",
+            "Update_id": null,
+            "Update_Date": null,
+            "SET_TOP": null,
+            "MsgClass": null
+        },
+        {
+            "Index_no": 2569,
+            "Use_Type": "ZZ",
+            "Bulletin_Content": "本系統將於109年12月29日(二)上午 7:00~9:00進行主機微軟例行性更新作業，無法對外提供服務，造成不便，敬請見諒。",
+            "Deadline_Date": null,
+            "Upload_File": "",
+            "Is_del": false,
+            "Creat_id": null,
+            "Creat_Name": "環保署基管會",
+            "Creat_Date": "2020-12-16T10:24:45.393",
+            "Update_id": null,
+            "Update_Date": null,
+            "SET_TOP": null,
+            "MsgClass": null
+        },
+        {
+            "Index_no": 2567,
+            "Use_Type": "ZZ",
+            "Bulletin_Content": "本系統將於109年11月12日(四)上午 7:00 ~ 9:00進行主機微軟例行性更新作業，無法對外提供服務，造成不便，敬請見諒。",
+            "Deadline_Date": null,
+            "Upload_File": "",
+            "Is_del": false,
+            "Creat_id": null,
+            "Creat_Name": "環保署基管會",
+            "Creat_Date": "2020-11-11T12:14:41.643",
+            "Update_id": null,
+            "Update_Date": null,
+            "SET_TOP": null,
+            "MsgClass": null
+        }
+    ],
+    "public_announcement": [
+        {
+            "Index_no": 3582,
+            "Use_Type": "E2",
+            "Bulletin_Content": "測試20230105",
+            "Deadline_Date": null,
+            "Upload_File": "../upload/Bulletin/E2/20230105/Bulletin_154248_0165.jpg",
+            "Is_del": false,
+            "Creat_id": null,
+            "Creat_Name": "凌振庭",
+            "Creat_Date": "2023-01-05T15:44:48.76",
+            "Update_id": null,
+            "Update_Date": null,
+            "SET_TOP": null,
+            "MsgClass": null
+        },
+        {
+            "Index_no": 2576,
+            "Use_Type": "E2",
+            "Bulletin_Content": "7z",
+            "Deadline_Date": null,
+            "Upload_File": "../upload/Bulletin/E2/20210128/Bulletin_093030_0752.7z",
+            "Is_del": false,
+            "Creat_id": null,
+            "Creat_Name": "李元凱",
+            "Creat_Date": "2021-01-28T09:30:21.547",
+            "Update_id": null,
+            "Update_Date": null,
+            "SET_TOP": null,
+            "MsgClass": null
+        },
+        {
+            "Index_no": 2575,
+            "Use_Type": "E2",
+            "Bulletin_Content": "zip",
+            "Deadline_Date": null,
+            "Upload_File": "../upload/Bulletin/E2/20210128/Bulletin_092937_0301.zip",
+            "Is_del": false,
+            "Creat_id": null,
+            "Creat_Name": "李元凱",
+            "Creat_Date": "2021-01-28T09:29:28.47",
+            "Update_id": null,
+            "Update_Date": null,
+            "SET_TOP": null,
+            "MsgClass": null
+        },
+        {
+            "Index_no": 2546,
+            "Use_Type": "E2",
+            "Bulletin_Content": "[重要提醒] 檢送修正後之「109年重點稽查取締責任業者與販賣業者稽查取締作業原則」。<br>本次主要修正評分標準項目五—輔導電子電器販賣業者使用線上取號表列印聯單之工作，詳細內容詳如附件，惠請直轄市、縣（市）環保機關依相關規定辦理。",
+            "Deadline_Date": null,
+            "Upload_File": "../upload/Bulletin/E2/20200205/Bulletin_171107_0942.rar",
+            "Is_del": false,
+            "Creat_id": null,
+            "Creat_Name": "駱姿樺",
+            "Creat_Date": "2020-02-05T17:11:19.367",
+            "Update_id": null,
+            "Update_Date": null,
+            "SET_TOP": null,
+            "MsgClass": null
+        }
+    ]
+}
